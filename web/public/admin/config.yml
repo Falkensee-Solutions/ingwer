@@ -1,0 +1,251 @@
+# Sveltia CMS Konfiguration für Interreligiöse Werkstätten
+#
+# WICHTIG:
+# Die Pfade unter "file:" gehen von der Repository-Wurzel aus.
+# Diese Konfiguration nimmt an, dass die Repo-Wurzel das "web/"-Verzeichnis ist
+# (z. B. wenn nur das web/-Verzeichnis als eigenes Git-Repo deployed wird).
+#
+# Falls das gesamte INTWER-Verzeichnis das Repo ist, müssen alle "file:"-Pfade
+# und "media_folder" mit "web/" beginnen, z. B. "web/content/site.json" und
+# "media_folder: web/public/images".
+
+backend:
+  name: github
+  repo: BENUTZER/REPO          # ← bitte anpassen, z. B. "interwerkstatt/website"
+  branch: main
+  # OAuth-Proxy (siehe README → "CMS-Login einrichten"):
+  base_url: https://YOUR-WORKER.workers.dev
+  # auth_endpoint: /auth        # bei Standard-Pfad nicht nötig
+  commit_messages:
+    create: "content: '{{collection}}' – '{{slug}}' angelegt"
+    update: "content: '{{collection}}' – '{{slug}}' aktualisiert"
+    delete: "content: '{{collection}}' – '{{slug}}' gelöscht"
+    uploadMedia: "media: '{{path}}' hochgeladen"
+    deleteMedia: "media: '{{path}}' gelöscht"
+
+# Medien (Logos, Bilder) liegen unter /public/images
+media_folder: public/images
+public_folder: /images
+
+locale: de
+slug:
+  encoding: ascii
+  clean_accents: true
+
+publish_mode: simple
+show_preview_links: false
+
+collections:
+  # ──────────────────────────────────────────────────────────────────────
+  - name: site
+    label: Website-Grunddaten
+    description: Name, Claim, Kontakt und Social Links der Werkstatt.
+    files:
+      - name: site
+        label: Grunddaten
+        file: content/site.json
+        format: json
+        fields:
+          - { name: name, label: Name der Initiative, widget: string }
+          - { name: claim, label: Claim / Untertitel, widget: string }
+          - { name: description, label: Beschreibung (für Meta-Tags), widget: text }
+          - { name: email, label: Kontakt-E-Mail, widget: string, pattern: ['^[^@]+@[^@]+\.[^@]+$', 'Bitte eine gültige E-Mail-Adresse eingeben'] }
+          - { name: instagramHandle, label: Instagram-Handle (ohne @), widget: string, required: false }
+          - { name: instagramUrl, label: Instagram-URL (oder leer lassen), widget: string, required: false }
+
+  # ──────────────────────────────────────────────────────────────────────
+  - name: partner
+    label: Partner & Kooperationen
+    description: Trägerinstitutionen und Kooperationspartner.
+    files:
+      - name: partner
+        label: Partnerliste
+        file: content/partner.json
+        format: json
+        fields:
+          - name: partner
+            label: Partner
+            widget: list
+            label_singular: Partner
+            summary: '{{fields.name}} – {{fields.rolle}}'
+            fields:
+              - { name: slug, label: Slug (URL-Kennung), widget: string, hint: "Kleinbuchstaben, Bindestriche, keine Umlaute" }
+              - { name: name, label: Name, widget: string }
+              - { name: rolle, label: Rolle, widget: string, hint: "z. B. 'Träger', 'Kooperationspartner'" }
+              - { name: beschreibung, label: Beschreibung, widget: text }
+              - { name: logoPfad, label: Logo-Pfad, widget: string, required: false, hint: "z. B. /logos/forum-dialog.svg – Datei muss separat hochgeladen werden" }
+              - { name: url, label: Website-URL, widget: string, required: false }
+
+  # ──────────────────────────────────────────────────────────────────────
+  - name: formate
+    label: Formate
+    description: Die vier Werkstattformate.
+    files:
+      - name: formate
+        label: Formate-Liste
+        file: content/formate.json
+        format: json
+        fields:
+          - name: formate
+            label: Formate
+            widget: list
+            label_singular: Format
+            summary: '{{fields.titel}}'
+            fields:
+              - name: slug
+                label: Slug (URL-Kennung)
+                widget: select
+                options: [universitaeten, schulen, ausbildung, gemeinden]
+              - { name: titel, label: Titel, widget: string }
+              - { name: kurz, label: Kurzbeschreibung, widget: string }
+              - { name: zielgruppe, label: Zielgruppe, widget: string }
+              - { name: einleitung, label: Einleitung, widget: text }
+              - { name: ziele, label: Ziele, widget: list, field: { name: punkt, label: Ziel, widget: string } }
+              - { name: ablauf, label: Ablauf, widget: list, field: { name: punkt, label: Schritt, widget: string } }
+              - { name: voraussetzungen, label: Voraussetzungen, widget: list, field: { name: punkt, label: Voraussetzung, widget: string } }
+              - { name: institutionsrolle, label: Rolle der Institution, widget: list, field: { name: punkt, label: Punkt, widget: string } }
+              - { name: besonderheiten, label: Besonderheiten, widget: list, required: false, field: { name: punkt, label: Besonderheit, widget: string } }
+              - { name: zertifikat, label: Hinweis Zertifikat / Anerkennung, widget: text, required: false }
+              - { name: cta, label: Call-to-Action Text, widget: string }
+
+  # ──────────────────────────────────────────────────────────────────────
+  - name: materialien
+    label: Materialien
+    description: Workshop-Materialien, Vorlagen, Werkstattprodukte.
+    files:
+      - name: materialien
+        label: Materialien-Liste
+        file: content/materialien.json
+        format: json
+        fields:
+          - name: materialien
+            label: Materialien
+            widget: list
+            label_singular: Material
+            summary: '{{fields.titel}} ({{fields.status}})'
+            fields:
+              - { name: slug, label: Slug, widget: string }
+              - { name: titel, label: Titel, widget: string }
+              - name: kategorie
+                label: Kategorie
+                widget: select
+                options:
+                  - workshop
+                  - werkstatt
+                  - jugendarbeit
+                  - ablaufplan
+                  - regelwerk
+                  - evaluation
+                  - finanzierung
+                  - vorlage
+                  - praesentation
+                  - produkt
+              - name: zielgruppen
+                label: Zielgruppen
+                widget: select
+                multiple: true
+                options:
+                  - alle
+                  - muslimisch
+                  - christlich-evangelisch
+                  - christlich-katholisch
+                  - konfessionslos
+                  - jugendliche
+                  - junge-erwachsene
+                  - fachkraefte
+              - { name: dauer, label: Dauer, widget: string }
+              - { name: gruppengroesse, label: Gruppengröße, widget: string, required: false }
+              - { name: bezug, label: Bezug / Kontext, widget: string, required: false }
+              - { name: kurzbeschreibung, label: Kurzbeschreibung, widget: text }
+              - { name: ziel, label: Ziel, widget: text, required: false }
+              - { name: vorbereitung, label: Vorbereitung, widget: list, required: false, field: { name: punkt, label: Schritt, widget: string } }
+              - { name: ablauf, label: Ablauf, widget: list, required: false, field: { name: punkt, label: Schritt, widget: string } }
+              - { name: tipps, label: Tipps, widget: list, required: false, field: { name: punkt, label: Tipp, widget: string } }
+              - { name: sensibilitaet, label: Sensibilitäts-Hinweise, widget: list, required: false, field: { name: punkt, label: Hinweis, widget: string } }
+              - { name: benoetigteMaterialien, label: Benötigte Materialien, widget: list, required: false, field: { name: punkt, label: Material, widget: string } }
+              - name: status
+                label: Status
+                widget: select
+                options: [oeffentlich, in-ueberarbeitung, auf-anfrage, entwurf]
+                default: entwurf
+              - { name: download, label: Download-Pfad, widget: string, required: false, hint: "z. B. /downloads/material.pdf – leer lassen, wenn nicht öffentlich" }
+              - name: dateiFormat
+                label: Dateiformat
+                widget: select
+                required: false
+                options: [PDF, Markdown, Word, Präsentation]
+              - name: sprache
+                label: Sprache
+                widget: select
+                options: [Deutsch]
+                default: Deutsch
+              - { name: verwandte, label: Verwandte Materialien (Slugs), widget: list, required: false, field: { name: slug, label: Slug, widget: string } }
+
+  # ──────────────────────────────────────────────────────────────────────
+  - name: termine
+    label: Termine
+    description: Aktuelle und vergangene Werkstatt-Termine.
+    files:
+      - name: termine
+        label: Termin-Liste
+        file: content/termine.json
+        format: json
+        fields:
+          - name: termine
+            label: Termine
+            widget: list
+            label_singular: Termin
+            summary: '{{fields.titel}} – {{fields.zeitraum}} ({{fields.status}})'
+            fields:
+              - { name: slug, label: Slug, widget: string }
+              - { name: titel, label: Titel, widget: string }
+              - { name: zeitraum, label: Zeitraum (Anzeige), widget: string, hint: "z. B. 29.01.–02.02.2027" }
+              - { name: sortDate, label: Sortier-Datum (ISO YYYY-MM-DD), widget: string, required: false, hint: "Leer lassen, wenn Datum noch unklar" }
+              - { name: ort, label: Ort, widget: string, required: false }
+              - name: status
+                label: Status
+                widget: select
+                options: [fix, geplant, in-klaerung, abgeschlossen]
+                default: geplant
+              - { name: zielgruppe, label: Zielgruppe, widget: string }
+              - { name: beschreibung, label: Beschreibung, widget: text }
+              - { name: hinweis, label: Hinweis, widget: text, required: false }
+              - name: downloads
+                label: Downloads
+                widget: list
+                required: false
+                label_singular: Download
+                summary: '{{fields.label}}'
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: Pfad / URL, widget: string }
+
+  # ──────────────────────────────────────────────────────────────────────
+  - name: regelwerk
+    label: Regelwerk & Schutzkonzept
+    description: 17 Regeln und sechs Schutz-Abschnitte.
+    files:
+      - name: regelwerk
+        label: Regelwerk
+        file: content/regelwerk.json
+        format: json
+        fields:
+          - name: regeln
+            label: Regeln (1–17)
+            widget: list
+            label_singular: Regel
+            summary: '{{fields.nr}}. {{fields.titel}}'
+            fields:
+              - { name: nr, label: Nummer, widget: number, value_type: int, min: 1, max: 99 }
+              - { name: titel, label: Titel, widget: string }
+              - { name: kurz, label: Kurzfassung, widget: string }
+              - { name: lang, label: Ausführliche Beschreibung, widget: text }
+          - name: schutzAbschnitte
+            label: Schutzkonzept-Abschnitte
+            widget: list
+            label_singular: Abschnitt
+            summary: '{{fields.titel}}'
+            fields:
+              - { name: titel, label: Titel, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: punkte, label: Aufzählungspunkte, widget: list, required: false, field: { name: punkt, label: Punkt, widget: string } }

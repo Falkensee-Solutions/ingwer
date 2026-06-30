@@ -1,0 +1,303 @@
+[
+  {
+    "slug": "sensibilisierung-diskriminierung",
+    "titel": "Sensibilisierung für Diskriminierung",
+    "kategorie": "workshop",
+    "zielgruppen": ["muslimisch", "alle"],
+    "dauer": "90–120 Minuten",
+    "gruppengroesse": "8–20 Personen",
+    "bezug": "Religiös und weltanschaulich offen, mit Schwerpunkt auf Diskriminierungserfahrungen aus muslimischer Perspektive.",
+    "kurzbeschreibung": "Diskriminierungsbarometer, Identitätszwiebel und Reflexion zu Zuschreibung statt Selbstbeschreibung. Mit Bezug auf das Allgemeine Gleichbehandlungsgesetz.",
+    "ziel": "Teilnehmende erkennen Mechanismen von Diskriminierung, reflektieren eigene Zuschreibungen und entwickeln eine respektvolle Gesprächshaltung.",
+    "vorbereitung": [
+      "Raum mit Platz für Bewegung",
+      "Diskriminierungsbarometer als Linie im Raum vorbereiten",
+      "Arbeitsblätter zur Identitätszwiebel kopieren"
+    ],
+    "ablauf": [
+      "Einstieg: Begriffsklärung Diskriminierung",
+      "Diskriminierungsbarometer: Positionierung zu Aussagen",
+      "Identitätszwiebel: persönliche Reflexion in Einzelarbeit",
+      "Austausch in Kleingruppen",
+      "Plenum: Zuschreibung vs. Selbstbeschreibung",
+      "Kurzinput Allgemeines Gleichbehandlungsgesetz",
+      "Abschluss: religiöse Perspektiven auf Würde und Respekt"
+    ],
+    "tipps": [
+      "Keine Person bloßstellen",
+      "Schutzraum benennen, Vertraulichkeit zusichern",
+      "Auf eigene Erfahrungen verweisen, nicht Dritte beurteilen lassen"
+    ],
+    "sensibilitaet": [
+      "Eigene Diskriminierungserfahrungen können belastend sein",
+      "Pausen und Rückzugsmöglichkeiten einplanen",
+      "Bei akuter Betroffenheit Einzelgespräch anbieten"
+    ],
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch",
+    "verwandte": ["dialog-muslimisch", "grundlagen-christlich"]
+  },
+  {
+    "slug": "dialog-muslimisch",
+    "titel": "Dialog aus muslimischer Perspektive",
+    "kategorie": "workshop",
+    "zielgruppen": ["muslimisch"],
+    "dauer": "90–120 Minuten",
+    "gruppengroesse": "8–20 Personen",
+    "bezug": "Muslimische Perspektive auf interreligiösen Dialog.",
+    "kurzbeschreibung": "Dialog als Kennenlernen, koranische Grundlagen, Sunna-Beispiele, Wertschätzung und Aufrichtigkeit. Grundregeln für gelingenden Austausch.",
+    "ziel": "Muslimische Teilnehmende reflektieren ihren eigenen Zugang zum Dialog und sind vorbereitet auf Begegnungen mit Menschen anderer religiöser und weltanschaulicher Hintergründe.",
+    "vorbereitung": [
+      "Auswahl relevanter Koranverse und Hadithe",
+      "Arbeitsblatt mit Reflexionsfragen"
+    ],
+    "ablauf": [
+      "Einstieg: Was bedeutet Dialog für mich?",
+      "Koranische Grundlagen und Sunna-Beispiele",
+      "Gruppenarbeit zu Wertschätzung und Aufrichtigkeit",
+      "Grundregeln für gelingenden Austausch",
+      "Abschluss: persönliche Vorsätze"
+    ],
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch",
+    "verwandte": ["dialog-evangelisch", "dialog-katholisch"]
+  },
+  {
+    "slug": "grundlagen-christlich",
+    "titel": "Grundlagen des christlichen Glaubens",
+    "kategorie": "workshop",
+    "zielgruppen": ["muslimisch", "konfessionslos"],
+    "dauer": "Halb- bis Ganztagseinheit",
+    "gruppengroesse": "8–25 Personen",
+    "bezug": "Einführung in christlichen Glauben für Menschen ohne christlichen Hintergrund.",
+    "kurzbeschreibung": "Apostolisches Glaubensbekenntnis, Bibel, Trinität, Rolle Jesu, Sakramente, Unterschiede zwischen katholischer und evangelischer Tradition. Besuch von Kirchenräumen möglich.",
+    "ziel": "Teilnehmende verstehen Grundlagen des christlichen Glaubens und können respektvoll Fragen stellen.",
+    "ablauf": [
+      "Einstieg: Was weiß ich bereits?",
+      "Kurzinput Apostolisches Glaubensbekenntnis",
+      "Bibel: Aufbau und Bedeutung",
+      "Trinität und Rolle Jesu",
+      "Sakramente",
+      "Katholisch und evangelisch im Vergleich",
+      "Optional: gemeinsamer Besuch eines Kirchenraums",
+      "Offene Fragerunde"
+    ],
+    "tipps": [
+      "Vielfalt innerhalb der christlichen Traditionen ernst nehmen",
+      "Keine vereinfachten Zuspitzungen verwenden"
+    ],
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch",
+    "verwandte": ["dialog-evangelisch", "dialog-katholisch"]
+  },
+  {
+    "slug": "dialog-evangelisch",
+    "titel": "Dialog aus evangelischer Perspektive",
+    "kategorie": "workshop",
+    "zielgruppen": ["christlich-evangelisch"],
+    "dauer": "90–120 Minuten",
+    "bezug": "Evangelische Theologie und Dialogverständnis, u. a. nach Ralf K. Wüstenberg.",
+    "kurzbeschreibung": "Dialogpyramide nach Wüstenberg: Dialog des Lebens, des Handelns, des religiösen Austauschs und der theologischen Reflexion. Mit Bezug zur eigenen Glaubensreflexion.",
+    "ziel": "Evangelische Teilnehmende verorten sich selbst auf den Ebenen interreligiösen Dialogs.",
+    "ablauf": [
+      "Einstieg: Erfahrungen mit Dialog",
+      "Vorstellung der Dialogpyramide",
+      "Arbeitsgruppen zu den vier Ebenen",
+      "Plenum: persönliche Verortung",
+      "Reflexion: Welche Ebenen möchte ich stärken?"
+    ],
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch",
+    "verwandte": ["dialog-katholisch", "dialog-muslimisch"]
+  },
+  {
+    "slug": "dialog-katholisch",
+    "titel": "Dialog aus katholischer Perspektive",
+    "kategorie": "workshop",
+    "zielgruppen": ["christlich-katholisch"],
+    "dauer": "90–120 Minuten",
+    "bezug": "Katholisches Dialogverständnis, Nostra Aetate, Lumen Gentium.",
+    "kurzbeschreibung": "Nostra Aetate, Lumen Gentium, christozentrische Offenheit für Wahrheit und Heiligkeit in anderen Religionen, Grundlagen des muslimischen Glaubens, offene Fragerunde.",
+    "ziel": "Katholische Teilnehmende reflektieren ihr Dialogverständnis im Licht lehramtlicher Dokumente und treten Menschen anderer Religionen mit informierter Offenheit gegenüber.",
+    "ablauf": [
+      "Einstieg: katholisches Selbstverständnis und Dialog",
+      "Kurzinput Nostra Aetate und Lumen Gentium",
+      "Christozentrik und Offenheit",
+      "Kurzinput Grundlagen des muslimischen Glaubens",
+      "Offene Fragerunde"
+    ],
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch",
+    "verwandte": ["dialog-evangelisch", "dialog-muslimisch"]
+  },
+  {
+    "slug": "moscheebesuch",
+    "titel": "Moscheebesuch und Fragerunde",
+    "kategorie": "werkstatt",
+    "zielgruppen": ["christlich-evangelisch", "christlich-katholisch", "konfessionslos"],
+    "dauer": "2–3 Stunden inkl. Wegezeit",
+    "gruppengroesse": "Kleingruppe bis ca. 25 Personen",
+    "kurzbeschreibung": "Einführung in den Moscheeraum, Beobachtung der Gebetspraxis, Gespräch mit Imam oder Gemeindemitgliedern. Mit klaren Beobachtungsregeln und Raum für Fragen zu Alltag, Rassismus, Gemeinde und Rolle des Imams.",
+    "ziel": "Teilnehmende erleben muslimische Gebetspraxis und Gemeinschaft direkt und können respektvoll Fragen stellen.",
+    "vorbereitung": [
+      "Termin und Ansprechperson in der Moschee abstimmen",
+      "Kleiderhinweise vorab kommunizieren",
+      "Beobachtungsregeln einführen"
+    ],
+    "tipps": [
+      "Vor dem Besuch klären, was beobachtet werden darf und was nicht",
+      "Fragerunde moderieren",
+      "Stille Phasen respektieren"
+    ],
+    "sensibilitaet": [
+      "Keine Fotos ohne ausdrückliche Zustimmung",
+      "Schuhe, Kleidung und Verhalten respektieren"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "interreligioeses-kochen",
+    "titel": "Interreligiöses Kochen",
+    "kategorie": "jugendarbeit",
+    "zielgruppen": ["alle"],
+    "dauer": "2–4 Stunden",
+    "gruppengroesse": "8–20 Personen",
+    "kurzbeschreibung": "Gemeinsames Kochen als nonverbaler Dialog. Speiseregeln werden sichtbar, vegetarisch oder vegan als Standard, gemeinsame Mahlzeit als verbindendes Erlebnis.",
+    "ziel": "Teilnehmende erleben religiöse Speiseregeln und kulinarische Vielfalt im gemeinsamen Tun und stärken die Gemeinschaft jenseits von Sprache.",
+    "vorbereitung": [
+      "Küche mit ausreichend Arbeitsplätzen",
+      "Vegetarische oder vegane Rezepte aus verschiedenen Traditionen",
+      "Allergien und Unverträglichkeiten vorher abfragen"
+    ],
+    "tipps": [
+      "Kleingruppen für einzelne Gänge",
+      "Verantwortliche Person für Hygiene",
+      "Gemeinsames Tischritual zum Abschluss"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "fragebox",
+    "titel": "Fragebox",
+    "kategorie": "jugendarbeit",
+    "zielgruppen": ["alle"],
+    "dauer": "Begleitend über die gesamte Werkstatt",
+    "kurzbeschreibung": "Anonyme Fragensammlung in einer Box. Sortierung durch das Leitungsteam, moderierte Beantwortung. Niedrigschwellige Teilhabe besonders bei sensiblen Themen.",
+    "ziel": "Teilnehmende können auch unsichere oder unangenehme Fragen stellen, ohne sich exponieren zu müssen.",
+    "vorbereitung": [
+      "Stabile Box mit Schlitz",
+      "Stifte und kleine Zettel",
+      "Klar kommunizieren, wie Fragen ausgewählt und beantwortet werden"
+    ],
+    "tipps": [
+      "Sensible Themen vor dem Plenum im Team besprechen",
+      "Fragen ggf. zusammenfassen, nicht wörtlich vorlesen"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "chaosspiel",
+    "titel": "Chaosspiel",
+    "kategorie": "jugendarbeit",
+    "zielgruppen": ["jugendliche", "junge-erwachsene"],
+    "dauer": "60–90 Minuten",
+    "gruppengroesse": "12–40 Personen",
+    "kurzbeschreibung": "Stationenspiel zum Kennenlernen und spielerischen Einstieg. Religiös gemischte Teams lösen Aufgaben zu Bibel, Koran, Religion, Alltag und Dialog.",
+    "ziel": "Teilnehmende lernen sich, das Gelände und Inhalte spielerisch kennen. Stärkt religiös gemischte Teambildung.",
+    "vorbereitung": [
+      "Stationen mit klaren Aufgaben",
+      "Lageplan und Teameinteilung",
+      "Materialien pro Station"
+    ],
+    "tipps": [
+      "Religiös gemischte Teams bilden",
+      "Aufgaben so wählen, dass alle einen Beitrag leisten können"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "wanderung-schoepfung",
+    "titel": "Wanderung: Schöpfung, Natur, Besinnung",
+    "kategorie": "jugendarbeit",
+    "zielgruppen": ["alle"],
+    "dauer": "2–4 Stunden",
+    "kurzbeschreibung": "Naturwahrnehmung, spirituelle Impulse, Austausch zu Schöpfung und Verantwortung. Stille Phasen und Kleingruppengespräche.",
+    "ziel": "Teilnehmende verbinden religiöse und weltanschauliche Reflexion mit der Erfahrung von Natur und Schöpfung.",
+    "vorbereitung": [
+      "Wegstrecke prüfen",
+      "Kurzimpulse vorbereiten",
+      "Wetterfeste Kleidung kommunizieren"
+    ],
+    "tipps": [
+      "Stille- und Sprechphasen wechseln",
+      "Kleine Reflexionsaufgaben unterwegs"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "gedenkstaettenbesuch",
+    "titel": "Besuch einer Gedenkstätte",
+    "kategorie": "werkstatt",
+    "zielgruppen": ["junge-erwachsene", "fachkraefte"],
+    "dauer": "Halbtagesformat",
+    "kurzbeschreibung": "Historisch-politisches Lernformat. Erinnerungskultur, Frieden, Gerechtigkeit, Menschlichkeit. Wenn angemessen, Gebet oder Reflexion am Lernort. Ausreichend Zeit für Nachbesprechung.",
+    "ziel": "Teilnehmende setzen sich mit Erinnerungskultur und Menschenwürde aus interreligiöser Perspektive auseinander.",
+    "vorbereitung": [
+      "Führung anfragen",
+      "Inhaltliche Vorbereitung im Plenum",
+      "Pausen und Rückzugsräume einplanen"
+    ],
+    "sensibilitaet": [
+      "Hohe emotionale Belastung möglich",
+      "Begleitung durch Leitungsteam sicherstellen",
+      "Nachbesprechung verbindlich einplanen"
+    ],
+    "status": "auf-anfrage",
+    "download": null,
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "regelwerk-uebersicht",
+    "titel": "Regelwerk für Teilnehmende",
+    "kategorie": "regelwerk",
+    "zielgruppen": ["alle"],
+    "dauer": "Begleitend",
+    "kurzbeschreibung": "Gemeinsame Regeln zur Würde, Selbstbeschreibung statt Zuschreibung, Vertraulichkeit, Schutzauftrag und Konfliktwegen.",
+    "status": "oeffentlich",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch"
+  },
+  {
+    "slug": "ablaufplan-vorlage",
+    "titel": "Ablaufplan-Vorlage (mehrtägig)",
+    "kategorie": "ablaufplan",
+    "zielgruppen": ["fachkraefte"],
+    "dauer": "Mehrtägig",
+    "kurzbeschreibung": "Vorlage für mehrtägige Werkstätten mit Zeitfenstern für Programm, Pausen, Gebetszeiten, Reflexion und Werkstattphasen.",
+    "status": "in-ueberarbeitung",
+    "download": null,
+    "dateiFormat": "PDF",
+    "sprache": "Deutsch"
+  }
+]

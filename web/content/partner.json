@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "forum-dialog",
+    "name": "Forum Dialog e.V.",
+    "rolle": "Träger des Projekts",
+    "beschreibung": "Forum Dialog e.V. ist Träger des Projekts und koordiniert Projektleitung, Organisation, Materialien, Förderanträge und Weiterentwicklung des Formats.",
+    "logoPfad": "/logos/forum-dialog.svg",
+    "url": null
+  },
+  {
+    "slug": "ekbo",
+    "name": "EKBO",
+    "rolle": "Kooperationspartner",
+    "beschreibung": "Die Evangelische Kirche Berlin-Brandenburg-schlesische Oberlausitz unterstützt das Projekt mit evangelischer Perspektive, theologischer Expertise und institutioneller Vernetzung.",
+    "logoPfad": "/logos/ekbo.svg",
+    "url": null
+  },
+  {
+    "slug": "erzbistum-berlin",
+    "name": "Erzbistum Berlin",
+    "rolle": "Kooperationspartner",
+    "beschreibung": "Das Erzbistum Berlin bringt römisch-katholische Perspektiven, Dialogexpertise und Zugang zu katholischen Bildungs- und Gemeindestrukturen ein.",
+    "logoPfad": "/logos/erzbistum-berlin.svg",
+    "url": null
+  },
+  {
+    "slug": "house-of-one",
+    "name": "House of One",
+    "rolle": "Kooperationspartner",
+    "beschreibung": "House of One steht für interreligiöse Begegnung und bringt Erfahrung, Symbolkraft und muslimisch-interreligiöse Perspektiven in das Projekt ein.",
+    "logoPfad": "/logos/house-of-one.svg",
+    "url": null
+  }
+]

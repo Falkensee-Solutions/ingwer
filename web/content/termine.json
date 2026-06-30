@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "iw-koerner-2027",
+    "titel": "Interreligiöse Werkstatt Körner",
+    "zeitraum": "29.01.–02.02.2027",
+    "sortDate": "2027-01-29",
+    "status": "fix",
+    "zielgruppe": "Studierende und Gasthörer:innen im universitären Kontext (Prof. Dr. Ralf Wüstenberg).",
+    "beschreibung": "Eingebunden in einen universitären Kurs mit vorbereitenden wöchentlichen Seminarsitzungen. Ziel: Studierende aus unterschiedlichen religiösen und theologischen Kontexten zusammenführen.",
+    "hinweis": "Teilnahme intern geregelt. Externe Studierende als Gasthörer:innen über die anbietende Hochschule."
+  },
+  {
+    "slug": "iw-lazarus",
+    "titel": "Interreligiöse Werkstatt Lazarus-Schulen",
+    "zeitraum": "06.–09.04. oder 13.–16.04. (Jahr in Klärung)",
+    "sortDate": null,
+    "ort": "Helenenhof bei Nauen (vorgesehen)",
+    "status": "in-klaerung",
+    "zielgruppe": "Bestehende Schulklasse der Lazarus-Schulen.",
+    "beschreibung": "Werkstatt mit einer bestehenden Klasse, konfessionslose Teilnehmende ausdrücklich eingeschlossen. Aufsichtspflicht bleibt bei der Schule. Wissenschaftlich begleitet, um ein übertragbares Format für Ausbildungsinstitutionen zu entwickeln.",
+    "hinweis": "Datum und Jahreszahl noch in Abstimmung mit Schule und Unterkunft."
+  },
+  {
+    "slug": "iw-schulen-2027",
+    "titel": "Interreligiöse Werkstatt Schulen",
+    "zeitraum": "Voraussichtlich Juni 2027",
+    "sortDate": "2027-06-01",
+    "status": "geplant",
+    "zielgruppe": "Oberstufen der Katholischen Schule Liebfrauen, Wilhelmstadtschulen und weiterer Partner (in Klärung).",
+    "beschreibung": "Begegnungsformat zwischen Schüler:innen verschiedener religiöser und weltanschaulicher Hintergründe. Rücksicht auf Abiturphase, Klausuren und Schulferien. Idealerweise zwischen Klausurphase und Zeugnisausgabe.",
+    "hinweis": "Teilnehmende Schulen, finaler Zeitraum und Anmeldung werden noch festgelegt."
+  },
+  {
+    "slug": "iw-simojoki-2027",
+    "titel": "Interreligiöse Werkstatt Simojoki",
+    "zeitraum": "Voraussichtlich August 2027",
+    "sortDate": "2027-08-01",
+    "status": "in-klaerung",
+    "zielgruppe": "Wird im Rahmen der Kooperation festgelegt.",
+    "beschreibung": "Format in Klärung. Details zu Zielgruppe, Inhalt und Ort werden in Abstimmung mit den Kooperationspartnern festgelegt.",
+    "hinweis": "Inhalte und Zeitraum vorläufig. Keine Anmeldung möglich, bis öffentlich freigegeben."
+  },
+  {
+    "slug": "iw-gemeinden-frauen-2027",
+    "titel": "Interreligiöse Werkstatt Gemeinden / Frauen und Spiritualität",
+    "zeitraum": "20.–24.10.2027",
+    "sortDate": "2027-10-20",
+    "status": "geplant",
+    "zielgruppe": "Junge Frauen aus christlichen und muslimischen Gemeinden, Jugendarbeit und interreligiösen Netzwerken.",
+    "beschreibung": "Thematischer Schwerpunkt: Spiritualität von Frauen in religiösen und weltanschaulichen Gemeinschaften. Kein vergleichendes oder normierendes Format. Raum für Ausdruck, Reflexion und Begegnung.",
+    "hinweis": "Konzeptidee in Vorbereitung. Themenführung ist bewusst nicht vergleichend angelegt."
+  },
+  {
+    "slug": "iw-ravensbrueck-2025",
+    "titel": "Interreligiöse Werkstatt Ravensbrück",
+    "zeitraum": "13.–17.11.2025",
+    "sortDate": "2025-11-13",
+    "ort": "Jugendherberge Ravensbrück",
+    "status": "abgeschlossen",
+    "zielgruppe": "Junge Erwachsene aus katholischen, evangelischen und muslimischen Gemeinden.",
+    "beschreibung": "Pilot-Werkstatt mit Wanderung, Workshops, Besuch der Mahn- und Gedenkstätte Ravensbrück, Podiumsdiskussion zum Thema „Frieden“, Besuch der Stadtkirche und interreligiöser Werkstattphase. Vollpension vegetarisch/pescetarisch.",
+    "hinweis": "Werkstatt abgeschlossen. Dokumentation und Auswertung in Vorbereitung.",
+    "downloads": [
+      {
+        "label": "Ablaufplan Freitag, 14.11.2025 (PDF)",
+        "href": "/downloads/ravensbrueck-2025/ablaufplan-freitag.pdf"
+      },
+      {
+        "label": "Ablaufplan Samstag, 15.11.2025 (PDF)",
+        "href": "/downloads/ravensbrueck-2025/ablaufplan-samstag.pdf"
+      },
+      {
+        "label": "Ablaufplan Sonntag, 16.11.2025 (PDF)",
+        "href": "/downloads/ravensbrueck-2025/ablaufplan-sonntag.pdf"
+      }
+    ]
+  }
+]

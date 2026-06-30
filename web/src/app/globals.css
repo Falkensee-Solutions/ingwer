@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+@theme {
+  /* ───────── Farbpalette ─────────
+     Brand-Palette gemäß Flyer/Ablaufplan/Broschüre:
+     freundlich-helle Pastelltöne (Teal, Koralle, Lavendel, Salbei, Sonne,
+     Orange) auf nahezu weißem Cream-Hintergrund. */
+  --color-bg: #fdfaf3;             /* sehr helles Cream */
+  --color-bg-deep: #f4ebd9;        /* warme Tiefenvariante */
+  --color-surface: #ffffff;        /* Karten / Panels: rein weiß */
+  --color-surface-alt: #f8f2e3;    /* leichte Abstufung */
+  --color-ink: #1c1d1d;            /* Haupttext */
+  --color-ink-soft: #3f4544;       /* Sekundärtext */
+  --color-ink-muted: #6f7372;      /* Meta */
+
+  /* Primär: Teal (wie Montag-Bar + Sage-Kreis im Flyer) */
+  --color-primary: #2f8f86;
+  --color-primary-hover: #226b65;
+  --color-primary-soft: #d9ece9;
+  --color-primary-ink: #1c4a45;    /* lesbares Dunkel-Teal für Text auf Soft */
+
+  /* Akzent: Koralle (wie Freitag-Bar) – warm + freundlich */
+  --color-accent: #de6f57;
+  --color-accent-hover: #b6543e;
+  --color-accent-soft: #f9dcd2;
+  --color-accent-ink: #7c3320;
+
+  /* Weitere Brand-Töne (Tag-Bars, dekorative Shapes) */
+  --color-lavender: #b9a3d6;
+  --color-lavender-soft: #ece1f5;
+  --color-lavender-ink: #4d3a73;
+
+  --color-sunny: #f3c44e;
+  --color-sunny-soft: #fdecbe;
+  --color-sunny-ink: #6e4f0a;
+
+  --color-orange: #efaa61;
+  --color-orange-soft: #fce0c5;
+  --color-orange-ink: #7a4510;
+
+  --color-sage: #95c7b3;
+  --color-sage-soft: #dcece4;
+  --color-sage-ink: #2d6757;
+
+  /* Legacy-Alias für bestehende Klassen (leaf == sage) */
+  --color-leaf: var(--color-sage);
+  --color-leaf-soft: var(--color-sage-soft);
+
+  --color-line: #e6dec8;           /* Trennlinien, warm */
+  --color-line-soft: #efe8d4;
+
+  /* Status (Termine, Materialien) – jeweils mit dunklem Ink-Wert für Lesbarkeit */
+  --color-status-fix: var(--color-sage-ink);
+  --color-status-fix-soft: var(--color-sage-soft);
+  --color-status-geplant: var(--color-orange-ink);
+  --color-status-geplant-soft: var(--color-orange-soft);
+  --color-status-klaerung: #5a4d2c;
+  --color-status-klaerung-soft: var(--color-sunny-soft);
+  --color-status-abgeschlossen: var(--color-ink-muted);
+  --color-status-abgeschlossen-soft: #ece6d5;
+
+  /* ───────── Schrift ─────────
+     Bold-Sans Headlines analog Flyer („INTERRELIGIÖSE WERKSTATT“).
+     Fraunces bleibt für Zitate / kursive Akzente verfügbar. */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Radien */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Schatten – weicher, dezenter */
+  --shadow-card: 0 1px 2px rgba(28, 30, 30, 0.03), 0 10px 30px -18px rgba(28, 30, 30, 0.18);
+  --shadow-card-hover: 0 2px 4px rgba(28, 30, 30, 0.04), 0 22px 40px -22px rgba(28, 30, 30, 0.24);
+
+  /* Container */
+  --container-content: 72rem;
+}
+
+/* ───────── Reset & Basis ─────────
+   In @layer base, damit Tailwind-Utilities (z. B. text-white, no-underline)
+   immer überschreiben können – Layered Rules verlieren gegen Utilities. */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga", "ss01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+    font-size: 16.5px;
+  }
+
+  /* Headlines: Bold-Sans („INTERRELIGIÖSE WERKSTATT“-Look aus dem Flyer). */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  h1 { font-weight: 800; letter-spacing: -0.025em; }
+  h2 { font-weight: 800; letter-spacing: -0.02em; }
+  h3 { font-weight: 700; letter-spacing: -0.015em; }
+  h4, h5, h6 { font-weight: 700; letter-spacing: -0.01em; }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s, color 0.2s;
+  }
+  a:hover {
+    color: var(--color-primary-hover);
+    text-decoration-color: var(--color-primary);
+  }
+}
+
+/* Display-Variante – analog Flyer-Wortmarke (uppercase, sehr fett). */
+.display-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+/* Skript-Akzent für Claim-/Subtitle-Zeilen („Lernen durch Begegnung“). */
+.script-claim {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-variation-settings: "opsz" 96, "SOFT" 100;
+}
+
+/* Eyebrow / Kleintext-Schrift bleibt Sans für klare Lesbarkeit. */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent-hover);
+}
+
+/* Sichtbarer Fokus, warm-akzentuiert */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip-Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  z-index: 100;
+  text-decoration: none;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.3);
+}
+.skip-link:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+/* ───────── Dekorative Trenner ─────────
+   Dünne, warme Linie mit kleinem zentrierten Akzentpunkt. Rein dekorativ. */
+.ornament-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-line);
+}
+.ornament-rule::before,
+.ornament-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+}
+.ornament-rule__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ───────── Prose – für Textseiten ───────── */
+.prose-iw {
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.prose-iw p { margin-bottom: 1.1rem; }
+.prose-iw p:last-child { margin-bottom: 0; }
+.prose-iw p + h2,
+.prose-iw ul + h2 { margin-top: 2.75rem; }
+.prose-iw p + h3,
+.prose-iw ul + h3 { margin-top: 2rem; }
+.prose-iw h2 {
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  margin-bottom: 0.9rem;
+  color: var(--color-ink);
+}
+.prose-iw h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-ink);
+}
+.prose-iw ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.2rem;
+}
+.prose-iw ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.55rem;
+}
+.prose-iw ul li::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-accent);
+}
+.prose-iw strong { color: var(--color-ink); font-weight: 600; }
+.prose-iw em { font-style: italic; }
+
+/* ───────── Brand Pills (analog Tag-Bars im Ablaufplan) ───────── */
+.brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.brand-pill--teal     { background: var(--color-primary);  color: #fff; }
+.brand-pill--coral    { background: var(--color-accent);   color: #fff; }
+.brand-pill--lavender { background: var(--color-lavender); color: #fff; }
+.brand-pill--sunny    { background: var(--color-sunny);    color: var(--color-sunny-ink); }
+.brand-pill--orange   { background: var(--color-orange);   color: #fff; }
+.brand-pill--sage     { background: var(--color-sage);     color: #fff; }
+
+/* Dekorative Blobs/Shapes (Flyer-Ästhetik). */
+.brand-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(0px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Handgezeichnete Squiggle-Linie für Akzente */
+.brand-squiggle {
+  display: inline-block;
+  width: 3.5rem;
+  height: 0.75rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12' fill='none'><path d='M2 6 Q 10 0, 18 6 T 34 6 T 50 6 T 58 6' stroke='%23f3c44e' stroke-width='2.5' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
