@@ -18,6 +18,7 @@ export const MAIN_NAV = [
   { href: "/materialien", label: "Materialien" },
   { href: "/werkstattprodukte", label: "Werkstattprodukte" },
   { href: "/termine", label: "Termine" },
+  { href: "/ueber-uns", label: "Über uns" },
   { href: "/partner", label: "Partner" },
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
@@ -25,6 +26,7 @@ export const MAIN_NAV = [
 export const FOOTER_NAV = [
   { href: "/kontakt", label: "Kontakt" },
   { href: "/regelwerk", label: "Regelwerk" },
+  { href: "/ueber-uns", label: "Über uns" },
   { href: "/partner", label: "Partner" },
   { href: "/impressum", label: "Impressum" },
   { href: "/datenschutz", label: "Datenschutz" },

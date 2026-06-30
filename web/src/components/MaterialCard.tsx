@@ -4,8 +4,23 @@ import {
   STATUS_LABEL,
   ZIELGRUPPE_LABEL,
   type Material,
+  type MaterialKategorie,
 } from "@/data/materialien";
 import { cn } from "@/lib/cn";
+
+// Pro Kategorie eine eigene Farbe → schnelle visuelle Orientierung im Grid.
+const KATEGORIE_FARBE: Record<MaterialKategorie, { bg: string; ink: string }> = {
+  workshop: { bg: "var(--color-primary-soft)", ink: "var(--color-primary-ink)" },
+  werkstatt: { bg: "var(--color-lavender-soft)", ink: "var(--color-lavender-ink)" },
+  jugendarbeit: { bg: "var(--color-sunny-soft)", ink: "var(--color-sunny-ink)" },
+  ablaufplan: { bg: "var(--color-orange-soft)", ink: "var(--color-orange-ink)" },
+  regelwerk: { bg: "var(--color-sage-soft)", ink: "var(--color-sage-ink)" },
+  evaluation: { bg: "var(--color-accent-soft)", ink: "var(--color-accent-ink)" },
+  finanzierung: { bg: "var(--color-orange-soft)", ink: "var(--color-orange-ink)" },
+  vorlage: { bg: "var(--color-lavender-soft)", ink: "var(--color-lavender-ink)" },
+  praesentation: { bg: "var(--color-sunny-soft)", ink: "var(--color-sunny-ink)" },
+  produkt: { bg: "var(--color-accent-soft)", ink: "var(--color-accent-ink)" },
+};
 
 function StatusBadge({ status }: { status: Material["status"] }) {
   const map: Record<Material["status"], string> = {
@@ -32,14 +47,23 @@ function StatusBadge({ status }: { status: Material["status"] }) {
 
 export function MaterialCard({ material }: { material: Material }) {
   const downloadLabel = downloadLabelFor(material);
+  const farbe = KATEGORIE_FARBE[material.kategorie];
 
   return (
     <article className="group flex h-full flex-col rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]">
       <div className="mb-4 flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center rounded-full bg-[color:var(--color-lavender-soft)] px-2.5 py-1 text-[0.7rem] font-bold uppercase tracking-wider text-[color:var(--color-lavender-ink)]">
+        <span
+          className="inline-flex items-center rounded-full px-2.5 py-1 text-[0.7rem] font-bold uppercase tracking-wider"
+          style={{ background: farbe.bg, color: farbe.ink }}
+        >
           {KATEGORIE_LABEL[material.kategorie]}
         </span>
         <StatusBadge status={material.status} />
+        {material.dateiFormat ? (
+          <span className="inline-flex items-center rounded-full bg-[color:var(--color-surface-alt)] px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[color:var(--color-ink-muted)]">
+            {material.dateiFormat}
+          </span>
+        ) : null}
       </div>
 
       <h3 className="text-[1.2rem] font-bold leading-snug tracking-[-0.01em] text-[color:var(--color-ink)]">

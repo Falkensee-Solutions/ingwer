@@ -41,6 +41,21 @@ export default function KonzeptPage() {
           abstrakt, persönlicher und nachhaltiger.
         </p>
 
+        {/* Pull-Quote als visuelle Pause analog zur Landingpage. */}
+        <aside className="relative my-12 overflow-hidden rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-sage-soft)]/55 p-7 md:p-9">
+          <span
+            aria-hidden="true"
+            className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[color:var(--color-lavender-soft)]/70"
+          />
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-8 -left-6 h-20 w-20 rounded-full bg-[color:var(--color-orange-soft)]/60"
+          />
+          <p className="script-claim relative text-2xl leading-snug text-[color:var(--color-primary-ink)] md:text-[1.75rem]">
+            &bdquo;Ein Workshop kann Wissen vermitteln. Eine Werkstatt schafft einen Erfahrungsraum.&ldquo;
+          </p>
+        </aside>
+
         <h2>Pädagogischer Ansatz</h2>
         <p>Die Werkstatt folgt dem Prinzip „Lernen durch Begegnung“. Dazu gehören:</p>
         <ul>

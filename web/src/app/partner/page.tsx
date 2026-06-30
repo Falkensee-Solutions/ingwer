@@ -21,27 +21,41 @@ export default function PartnerPage() {
 
       <Container padding="lg">
         <ul className="grid gap-6 md:grid-cols-2">
-          {PARTNER.map((p) => (
-            <li
-              key={p.slug}
-              className="flex h-full flex-col rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6 shadow-[var(--shadow-card)]"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wider text-[color:var(--color-accent-hover)]">
-                {p.rolle}
-              </p>
-              <h2 className="mt-1 text-xl font-bold text-[color:var(--color-ink)]">{p.name}</h2>
-              <p className="mt-3 text-[15px] text-[color:var(--color-ink-soft)]">
-                {p.beschreibung}
-              </p>
-              {p.url ? (
-                <p className="mt-4">
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[color:var(--color-primary)]">
-                    Website öffnen →
-                  </a>
+          {PARTNER.map((p) => {
+            const istTraeger = p.rolle === "Träger des Projekts";
+            return (
+              <li
+                key={p.slug}
+                className="flex h-full flex-col rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]"
+              >
+                <span
+                  className={
+                    istTraeger
+                      ? "inline-flex w-fit items-center rounded-full bg-[color:var(--color-primary)] px-3 py-1 text-[0.7rem] font-bold uppercase tracking-wider text-white"
+                      : "inline-flex w-fit items-center rounded-full bg-[color:var(--color-lavender-soft)] px-3 py-1 text-[0.7rem] font-bold uppercase tracking-wider text-[color:var(--color-lavender-ink)]"
+                  }
+                >
+                  {p.rolle}
+                </span>
+                <h2 className="mt-3 text-xl font-bold text-[color:var(--color-ink)]">{p.name}</h2>
+                <p className="mt-3 text-[15px] text-[color:var(--color-ink-soft)]">
+                  {p.beschreibung}
                 </p>
-              ) : null}
-            </li>
-          ))}
+                {p.url ? (
+                  <p className="mt-4">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-[color:var(--color-primary)]"
+                    >
+                      Website öffnen →
+                    </a>
+                  </p>
+                ) : null}
+              </li>
+            );
+          })}
         </ul>
       </Container>
 

@@ -1,13 +1,23 @@
 import Link from "next/link";
 import type { Format } from "@/data/formate";
 
+// Pro Format eine eigene Akzentfarbe → Karten werden auf einen Blick unterscheidbar.
+const ACCENT_BAR: Record<string, string> = {
+  universitaeten: "var(--color-primary)",
+  schulen: "var(--color-accent)",
+  ausbildung: "var(--color-lavender)",
+  gemeinden: "var(--color-sage)",
+};
+
 export function FormatCard({ format }: { format: Format }) {
+  const bar = ACCENT_BAR[format.slug] ?? "var(--color-primary)";
   return (
-    <article className="group relative flex h-full flex-col rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]">
-      {/* Dezenter Akzentstreifen oben links bei Hover. */}
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-7 pt-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]">
+      {/* Format-Akzent oben – immer sichtbar, ersetzt den Hover-Streifen. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-7 top-0 h-[2px] w-12 origin-left scale-x-0 rounded-full bg-[color:var(--color-accent)] transition-transform duration-300 group-hover:scale-x-100"
+        className="pointer-events-none absolute inset-x-0 top-0 h-1.5"
+        style={{ background: bar }}
       />
       <h3 className="text-[1.45rem] font-bold leading-tight tracking-[-0.015em] text-[color:var(--color-ink)]">
         <Link

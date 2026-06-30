@@ -143,9 +143,21 @@ export function MaterialFilter({ materialien }: Props) {
       </div>
 
       {gefiltert.length === 0 ? (
-        <p className="mt-12 rounded-xl border border-dashed border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-8 text-center text-[color:var(--color-ink-soft)]">
-          Keine Materialien entsprechen den aktuellen Filtern.
-        </p>
+        <div className="mt-12 rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-sage-soft)]/40 p-10 text-center">
+          <p className="font-semibold text-[color:var(--color-ink)]">
+            Keine Materialien gefunden
+          </p>
+          <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
+            Mit den aktuellen Filtern werden keine Materialien angezeigt. Setzen Sie die Filter zurück, um alle Materialien zu sehen.
+          </p>
+          <button
+            type="button"
+            onClick={reset}
+            className="mt-5 inline-flex items-center rounded-full bg-[color:var(--color-primary)] px-5 py-2 text-sm font-semibold text-white hover:bg-[color:var(--color-primary-hover)]"
+          >
+            Filter zurücksetzen
+          </button>
+        </div>
       ) : null}
     </div>
   );

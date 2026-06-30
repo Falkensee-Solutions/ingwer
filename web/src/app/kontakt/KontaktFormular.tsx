@@ -54,7 +54,7 @@ export function KontaktFormular() {
         <select
           value={form.format ?? ""}
           onChange={(e) => update("format", e.target.value)}
-          className="w-full rounded-md border border-[color:var(--color-line)] bg-[color:var(--color-bg)] px-3 py-2.5 text-base"
+          className="w-full rounded-lg border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-2.5 text-base transition-colors hover:border-[color:var(--color-ink-muted)]/40 focus:border-[color:var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary-soft)]"
         >
           {FORMAT_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -89,7 +89,7 @@ export function KontaktFormular() {
           value={form.anliegen ?? ""}
           onChange={(e) => update("anliegen", e.target.value)}
           rows={6}
-          className="w-full rounded-md border border-[color:var(--color-line)] bg-[color:var(--color-bg)] px-3 py-2.5 text-base"
+          className="w-full rounded-lg border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-2.5 text-base transition-colors hover:border-[color:var(--color-ink-muted)]/40 focus:border-[color:var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary-soft)]"
           placeholder="Worum geht es? Welche Rahmenbedingungen sind wichtig?"
         />
       </label>
@@ -141,7 +141,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-md border border-[color:var(--color-line)] bg-[color:var(--color-bg)] px-3 py-2.5 text-base"
+        className="w-full rounded-lg border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-3.5 py-2.5 text-base transition-colors hover:border-[color:var(--color-ink-muted)]/40 focus:border-[color:var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary-soft)]"
       />
       {hint ? <span className="mt-1 block text-xs text-[color:var(--color-ink-muted)]">{hint}</span> : null}
     </label>
