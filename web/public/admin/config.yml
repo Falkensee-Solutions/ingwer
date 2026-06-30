@@ -1,21 +1,24 @@
 # Sveltia CMS Konfiguration für Interreligiöse Werkstätten
 #
-# WICHTIG:
-# Die Pfade unter "file:" gehen von der Repository-Wurzel aus.
-# Diese Konfiguration nimmt an, dass die Repo-Wurzel das "web/"-Verzeichnis ist
-# (z. B. wenn nur das web/-Verzeichnis als eigenes Git-Repo deployed wird).
+# Pfade beziehen sich auf die Repository-Wurzel des GitHub-Repos
+# Falkensee-Solutions/ingwer. Die Next.js-App liegt im Unterordner web/,
+# deshalb beginnen alle Pfade mit web/.
 #
-# Falls das gesamte INTWER-Verzeichnis das Repo ist, müssen alle "file:"-Pfade
-# und "media_folder" mit "web/" beginnen, z. B. "web/content/site.json" und
-# "media_folder: web/public/images".
+# Anmeldung:
+#   - „Sign In Using Access Token": Funktioniert sofort. Ein GitHub Personal
+#     Access Token (classic) mit den Scopes "repo" und "workflow" reicht.
+#     Token unter https://github.com/settings/tokens anlegen.
+#   - „Sign In with GitHub" (OAuth): Erfordert einen Auth-Proxy (z. B. Sveltias
+#     öffentlichen Worker oder einen eigenen Cloudflare Worker). Optional –
+#     base_url + auth_endpoint dann setzen.
 
 backend:
   name: github
-  repo: BENUTZER/REPO          # ← bitte anpassen, z. B. "interwerkstatt/website"
+  repo: Falkensee-Solutions/ingwer
   branch: main
-  # OAuth-Proxy (siehe README → "CMS-Login einrichten"):
-  base_url: https://YOUR-WORKER.workers.dev
-  # auth_endpoint: /auth        # bei Standard-Pfad nicht nötig
+  # Für OAuth-Login (optional): eigenen Auth-Worker eintragen.
+  # base_url: https://YOUR-WORKER.workers.dev
+  # auth_endpoint: /auth
   commit_messages:
     create: "content: '{{collection}}' – '{{slug}}' angelegt"
     update: "content: '{{collection}}' – '{{slug}}' aktualisiert"
@@ -23,8 +26,8 @@ backend:
     uploadMedia: "media: '{{path}}' hochgeladen"
     deleteMedia: "media: '{{path}}' gelöscht"
 
-# Medien (Logos, Bilder) liegen unter /public/images
-media_folder: public/images
+# Medien (Logos, Bilder) liegen unter web/public/images
+media_folder: web/public/images
 public_folder: /images
 
 locale: de
@@ -43,7 +46,7 @@ collections:
     files:
       - name: site
         label: Grunddaten
-        file: content/site.json
+        file: web/content/site.json
         format: json
         fields:
           - { name: name, label: Name der Initiative, widget: string }
@@ -60,7 +63,7 @@ collections:
     files:
       - name: partner
         label: Partnerliste
-        file: content/partner.json
+        file: web/content/partner.json
         format: json
         fields:
           - name: partner
@@ -83,7 +86,7 @@ collections:
     files:
       - name: formate
         label: Formate-Liste
-        file: content/formate.json
+        file: web/content/formate.json
         format: json
         fields:
           - name: formate
@@ -115,7 +118,7 @@ collections:
     files:
       - name: materialien
         label: Materialien-Liste
-        file: content/materialien.json
+        file: web/content/materialien.json
         format: json
         fields:
           - name: materialien
@@ -188,7 +191,7 @@ collections:
     files:
       - name: termine
         label: Termin-Liste
-        file: content/termine.json
+        file: web/content/termine.json
         format: json
         fields:
           - name: termine
@@ -227,7 +230,7 @@ collections:
     files:
       - name: regelwerk
         label: Regelwerk
-        file: content/regelwerk.json
+        file: web/content/regelwerk.json
         format: json
         fields:
           - name: regeln
