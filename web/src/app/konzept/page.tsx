@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Konzept",
   description:
-    "Das Konzept der Interreligiösen Werkstätten: Begegnung statt Belehrung. Mehrtägig, gemeinsam, dialogisch.",
+    "Das Konzept der Interreligiösen Werkstatt: Begegnung statt Belehrung. Mehrtägig, gemeinsam, dialogisch.",
 };
 
 export default function KonzeptPage() {

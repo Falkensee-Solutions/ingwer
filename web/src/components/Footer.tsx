@@ -64,7 +64,7 @@ export function Footer() {
 
         <p className="mt-14 border-t border-[color:var(--color-line)]/60 pt-6 text-xs leading-relaxed text-[color:var(--color-ink-muted)]">
           © {new Date().getFullYear()} Forum Dialog e.V. – Interreligiöse
-          Werkstätten. Alle Inhalte vorbehaltlich juristischer Prüfung.
+          Werkstatt. Alle Inhalte vorbehaltlich juristischer Prüfung.
         </p>
       </div>
     </footer>

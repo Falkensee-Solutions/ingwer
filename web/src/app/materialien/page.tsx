@@ -9,7 +9,7 @@ import { MATERIALIEN, SICHTBARE_STATUS } from "@/data/materialien";
 export const metadata: Metadata = {
   title: "Materialien",
   description:
-    "Materialbibliothek für Interreligiöse Werkstätten: Workshopkonzepte, Methoden, Ablaufpläne, Regelwerk, Evaluation und mehr.",
+    "Materialbibliothek für die Interreligiöse Werkstatt: Workshopkonzepte, Methoden, Ablaufpläne, Regelwerk, Evaluation und mehr.",
 };
 
 export default function MaterialienPage() {
@@ -20,7 +20,7 @@ export default function MaterialienPage() {
       <Hero
         eyebrow="Materialien"
         titel="Materialien"
-        lead="Die Interreligiösen Werkstätten stellen Materialien für Planung, Durchführung und Auswertung zur Verfügung. Die Materialien richten sich an Institutionen, Lehrende, Teamer:innen, Gemeinden und Fachkräfte der Bildungs- und Jugendarbeit."
+        lead="Die Interreligiöse Werkstatt stellt Materialien für Planung, Durchführung und Auswertung zur Verfügung. Die Materialien richten sich an Institutionen, Lehrende, Teamer:innen, Gemeinden und Fachkräfte der Bildungs- und Jugendarbeit."
       />
 
       <Container padding="lg">

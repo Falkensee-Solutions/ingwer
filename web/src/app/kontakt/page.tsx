@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt zu den Interreligiösen Werkstätten. Anfragen per E-Mail. Werkstatt für Ihre Institution planen.",
+    "Kontakt zur Interreligiösen Werkstatt. Anfragen per E-Mail. Werkstatt für Ihre Institution planen.",
 };
 
 export default function KontaktPage() {

@@ -7,7 +7,7 @@ import { FORMATE } from "@/data/formate";
 export const metadata: Metadata = {
   title: "Formate",
   description:
-    "Formate der Interreligiösen Werkstätten für Universitäten, Schulen, Ausbildungsinstitutionen sowie Gemeinden und Jugendarbeit.",
+    "Formate der Interreligiösen Werkstatt für Universitäten, Schulen, Ausbildungsinstitutionen sowie Gemeinden und Jugendarbeit.",
 };
 
 export default function FormatePage() {
@@ -16,7 +16,7 @@ export default function FormatePage() {
       <Hero
         eyebrow="Formate"
         titel="Formate für unterschiedliche Institutionen"
-        lead="Die Interreligiösen Werkstätten sind modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt gleich."
+        lead="Die Interreligiöse Werkstatt ist modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt gleich."
       />
 
       <Container padding="lg">

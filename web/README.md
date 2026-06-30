@@ -1,7 +1,7 @@
-# Interreligiöse Werkstätten — Website
+# Interreligiöse Werkstatt — Website
 
 Statische Next.js-Website (App Router, TypeScript, Tailwind v4) für das Projekt
-**Interreligiöse Werkstätten** von Forum Dialog e.V. in Kooperation mit EKBO,
+**Interreligiöse Werkstatt** von Forum Dialog e.V. in Kooperation mit EKBO,
 Erzbistum Berlin und House of One.
 
 Die verbindlichen inhaltlichen Quellen liegen im übergeordneten Workspace-Ordner als
@@ -220,7 +220,7 @@ auf `web/public/images` gesetzt werden.
 
 1. GitHub → Settings → **Developer settings** → **OAuth Apps** → **New OAuth App**.
 2. Felder ausfüllen:
-   - **Application name**: z. B. „Interreligiöse Werkstätten CMS“
+   - **Application name**: z. B. „Interreligiöse Werkstatt CMS“
    - **Homepage URL**: `https://<euer-domain>`
    - **Authorization callback URL**: `https://YOUR-WORKER.workers.dev/callback`
      (wird im nächsten Schritt erzeugt)

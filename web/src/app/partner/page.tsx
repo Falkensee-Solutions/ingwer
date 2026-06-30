@@ -16,7 +16,7 @@ export default function PartnerPage() {
       <Hero
         eyebrow="Partner"
         titel="Partner"
-        lead="Die Interreligiösen Werkstätten werden von Forum Dialog e.V. getragen und gemeinsam mit kirchlichen und interreligiösen Kooperationspartnern weiterentwickelt."
+        lead="Die Interreligiöse Werkstatt wird von Forum Dialog e.V. getragen und gemeinsam mit kirchlichen und interreligiösen Kooperationspartnern weiterentwickelt."
       />
 
       <Container padding="lg">

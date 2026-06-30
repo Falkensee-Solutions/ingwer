@@ -20,7 +20,7 @@ export function buildMailto(fields: MailtoFields): string {
     : "Anfrage Interreligiöse Werkstatt";
 
   const lines = [
-    "Sehr geehrtes Team der Interreligiösen Werkstätten,",
+    "Sehr geehrtes Team der Interreligiösen Werkstatt,",
     "",
     "ich möchte folgende Anfrage stellen:",
     "",

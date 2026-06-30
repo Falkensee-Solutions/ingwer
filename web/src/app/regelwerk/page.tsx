@@ -8,7 +8,7 @@ import { REGELN, SCHUTZ_ABSCHNITTE } from "@/data/regelwerk";
 export const metadata: Metadata = {
   title: "Regelwerk",
   description:
-    "Würde, Selbstbeschreibung statt Zuschreibung, keine Missionierung, Vertraulichkeit, Schutzauftrag – die Grundlagen aller Interreligiösen Werkstätten.",
+    "Würde, Selbstbeschreibung statt Zuschreibung, keine Missionierung, Vertraulichkeit, Schutzauftrag – die Grundlagen der Interreligiösen Werkstatt.",
 };
 
 export default function RegelwerkPage() {
@@ -17,7 +17,7 @@ export default function RegelwerkPage() {
       <Hero
         eyebrow="Regelwerk"
         titel="Regeln, Schutz und Haltung"
-        lead="Unsere Werkstätten sind Räume der Begegnung, des Lernens und des Austauschs. Menschen mit unterschiedlichen religiösen, weltanschaulichen, kulturellen und persönlichen Hintergründen kommen zusammen. Damit dieser Austausch gelingen kann, gelten gemeinsame Regeln."
+        lead="Unsere Werkstatt ist ein Raum der Begegnung, des Lernens und des Austauschs. Menschen mit unterschiedlichen religiösen, weltanschaulichen, kulturellen und persönlichen Hintergründen kommen zusammen. Damit dieser Austausch gelingen kann, gelten gemeinsame Regeln."
       />
 
       <Container padding="lg">

@@ -6,7 +6,7 @@ import { HinweisBox } from "@/components/HinweisBox";
 export const metadata: Metadata = {
   title: "Datenschutz",
   description:
-    "Datenschutzerklärung der Interreligiösen Werkstätten – vorläufig, juristische Prüfung ausstehend.",
+    "Datenschutzerklärung der Interreligiösen Werkstatt – vorläufig, juristische Prüfung ausstehend.",
 };
 
 export default function DatenschutzPage() {

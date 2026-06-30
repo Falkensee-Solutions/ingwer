@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <>
       <Hero
-        titel="Interreligiöse Werkstätten"
+        titel="Interreligiöse Werkstatt"
         claim={SITE.claim}
-        lead="Die Interreligiösen Werkstätten sind mehrtägige Begegnungs- und Bildungsformate für Menschen unterschiedlicher religiöser und weltanschaulicher Hintergründe. Im Mittelpunkt stehen gemeinsames Wohnen, gegenseitiges Kennenlernen, sichtbare religiöse und spirituelle Praxis, geschützte Gespräche und gemeinsames Arbeiten an Werkstattprodukten."
+        lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Begegnungs- und Bildungsformat für Menschen unterschiedlicher religiöser und weltanschaulicher Hintergründe. Im Mittelpunkt stehen gemeinsames Wohnen, gegenseitiges Kennenlernen, sichtbare religiöse und spirituelle Praxis, geschützte Gespräche und gemeinsames Arbeiten an Werkstattprodukten."
         ctas={[
           { href: "/konzept", label: "Konzept kennenlernen", variant: "primary" },
           { href: "/materialien", label: "Materialien ansehen", variant: "ghost" },
@@ -87,7 +87,7 @@ export default function Home() {
               &bdquo;Begegnung beginnt da, wo Menschen einander beim Beten, Essen und Schweigen erleben dürfen.&ldquo;
             </p>
             <p className="relative mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-              Leitgedanke der Werkstätten
+              Leitgedanke der Werkstatt
             </p>
           </aside>
         </div>
@@ -138,7 +138,7 @@ export default function Home() {
           id="zielgruppen-titel"
           eyebrow="Für wen"
           titel="Für wen ist das Format geeignet?"
-          lead="Die Interreligiösen Werkstätten richten sich an Institutionen, die Dialog erfahrbar machen möchten."
+          lead="Die Interreligiöse Werkstatt richtet sich an Institutionen, die Dialog erfahrbar machen möchten."
         />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {FORMATE.map((f) => (

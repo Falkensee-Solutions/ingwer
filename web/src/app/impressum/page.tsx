@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum der Interreligiösen Werkstätten – vorläufig, juristische Prüfung ausstehend.",
+  description: "Impressum der Interreligiösen Werkstatt – vorläufig, juristische Prüfung ausstehend.",
 };
 
 export default function ImpressumPage() {
