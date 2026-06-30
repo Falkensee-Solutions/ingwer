@@ -58,18 +58,38 @@ export default function Home() {
           titel="Was ist eine Interreligiöse Werkstatt?"
           lead="Eine Interreligiöse Werkstatt ist kein klassischer Workshop und keine reine Exkursion. Sie ist ein gemeinsamer Erfahrungsraum."
         />
-        <div className="mt-8 max-w-3xl space-y-4 text-lg text-[color:var(--color-ink-soft)]">
-          <p>
-            Teilnehmende verbringen mehrere Tage miteinander, teilen Alltagssituationen,
-            erleben religiöse und spirituelle Praxis nebeneinander und kommen über
-            Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins
-            Gespräch.
-          </p>
-          <p>
-            Das Format schafft Nähe, ohne Unterschiede aufzulösen. Es lädt dazu ein, die
-            Perspektive anderer Menschen kennenzulernen und die eigene Haltung zu
-            reflektieren.
-          </p>
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+          <div className="space-y-4 text-lg text-[color:var(--color-ink-soft)]">
+            <p>
+              Teilnehmende verbringen mehrere Tage miteinander, teilen Alltagssituationen,
+              erleben religiöse und spirituelle Praxis nebeneinander und kommen über
+              Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins
+              Gespräch.
+            </p>
+            <p>
+              Das Format schafft Nähe, ohne Unterschiede aufzulösen. Es lädt dazu ein, die
+              Perspektive anderer Menschen kennenzulernen und die eigene Haltung zu
+              reflektieren.
+            </p>
+          </div>
+
+          <aside
+            aria-hidden="true"
+            className="relative self-start overflow-hidden rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-sage-soft)]/50 p-7"
+          >
+            <span
+              className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[color:var(--color-lavender-soft)]/70"
+            />
+            <span
+              className="absolute -bottom-8 -left-6 h-20 w-20 rounded-full bg-[color:var(--color-orange-soft)]/70"
+            />
+            <p className="script-claim relative text-2xl leading-snug text-[color:var(--color-primary-ink)] md:text-[1.75rem]">
+              &bdquo;Begegnung beginnt da, wo Menschen einander beim Beten, Essen und Schweigen erleben dürfen.&ldquo;
+            </p>
+            <p className="relative mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
+              Leitgedanke der Werkstätten
+            </p>
+          </aside>
         </div>
       </Container>
 

@@ -113,6 +113,8 @@
     line-height: 1.1;
     font-weight: 800;
     letter-spacing: -0.02em;
+    /* Verhindert hässliche Orphans („Ausbildungs-\ninstitutionen"). */
+    text-wrap: balance;
   }
 
   h1 { font-weight: 800; letter-spacing: -0.025em; }

@@ -80,9 +80,33 @@ export function Header() {
           aria-controls="mobile-menu"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-4 py-2 text-sm font-semibold text-[color:var(--color-ink)] hover:bg-[color:var(--color-bg-deep)] lg:hidden"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-surface)] px-4 py-2 text-sm font-semibold text-[color:var(--color-ink)] hover:bg-[color:var(--color-bg-deep)] lg:hidden"
         >
-          {open ? "Schließen" : "Menü"}
+          <svg
+            aria-hidden="true"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {open ? (
+              <>
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </>
+            ) : (
+              <>
+                <line x1="4" y1="7" x2="20" y2="7" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="17" x2="20" y2="17" />
+              </>
+            )}
+          </svg>
+          <span>{open ? "Schließen" : "Menü"}</span>
         </button>
       </div>
 
