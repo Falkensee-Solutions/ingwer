@@ -143,7 +143,7 @@ export default async function MaterialDetailPage({
               {verwandte.length > 0 ? (
                 <div className="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-5">
                   <h2 className="text-base font-bold text-[color:var(--color-ink)]">
-                    Verwandte Materialien
+                    Verwandte Workshops und Methoden
                   </h2>
                   <ul className="mt-3 space-y-2">
                     {verwandte.map((v) => (
@@ -165,7 +165,7 @@ export default async function MaterialDetailPage({
 
         <p className="mt-12 border-t border-[color:var(--color-line)] pt-6">
           <Link href="/materialien" className="text-sm font-semibold text-[color:var(--color-primary)]">
-            ← Zurück zur Materialübersicht
+            ← Zurück zur Workshopübersicht
           </Link>
         </p>
       </Container>

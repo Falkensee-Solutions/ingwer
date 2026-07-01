@@ -70,7 +70,7 @@ export default async function FormatDetailPage({
         lead={format.einleitung}
         ctas={[
           { href: mailto, label: format.cta, variant: "primary" },
-          { href: "/formate", label: "Alle Formate", variant: "ghost" },
+          { href: "/konzept#formate", label: "Alle Formate", variant: "ghost" },
         ]}
       />
 
@@ -156,10 +156,10 @@ export default async function FormatDetailPage({
 
       <Container padding="md">
         <CTASection
-          eyebrow="Materialien"
-          titel="Praxismaterialien zur Vorbereitung ansehen"
+          eyebrow="Workshops"
+          titel="Workshops und Methoden zur Vorbereitung ansehen"
           text="Workshops, Methoden, Ablaufpläne und Reflexionsfragen – als Unterstützung für die Vorbereitung in Ihrer Institution."
-          primaryCta={{ href: "/materialien", label: "Materialien öffnen" }}
+          primaryCta={{ href: "/materialien", label: "Workshops öffnen" }}
         />
       </Container>
     </>

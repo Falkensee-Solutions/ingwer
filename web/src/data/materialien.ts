@@ -3,6 +3,7 @@ import data from "../../content/materialien.json";
 export type MaterialKategorie =
   | "workshop"
   | "werkstatt"
+  | "methoden"
   | "jugendarbeit"
   | "ablaufplan"
   | "regelwerk"
@@ -54,6 +55,7 @@ export type Material = {
 export const KATEGORIE_LABEL: Record<MaterialKategorie, string> = {
   workshop: "Workshop-Material",
   werkstatt: "Werkstatt-Material",
+  methoden: "Methoden",
   jugendarbeit: "Jugendarbeit",
   ablaufplan: "Ablaufplan",
   regelwerk: "Regelwerk",

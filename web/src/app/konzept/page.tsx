@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { FormatCard } from "@/components/FormatCard";
 import { Hero } from "@/components/Hero";
 import { SectionHeader } from "@/components/SectionHeader";
+import { FORMATE } from "@/data/formate";
 
 export const metadata: Metadata = {
   title: "Konzept",
@@ -131,6 +133,27 @@ export default function KonzeptPage() {
           lead="Universitäten, Schulen, Ausbildungsinstitutionen, Gemeinden und Jugendarbeit: Für jede Zielgruppe gibt es ein eigenes Format."
         />
       </Container>
+
+      <section
+        id="formate"
+        aria-labelledby="formate-titel"
+        className="border-t border-[color:var(--color-line)] bg-[color:var(--color-bg-deep)]"
+      >
+        <Container padding="lg">
+          <SectionHeader
+            id="formate-titel"
+            eyebrow="Formate"
+            titel="Ein Konzept, unterschiedliche Zugänge"
+            lead="Das Konzepthandbuch beschreibt die Werkstatt als Format, das über Gemeinden, Schulen, Hochschulen, Ausbildungsinstitutionen und Träger organisiert werden kann. Zielgruppe, Vorbereitung und Werkstattprodukt werden jeweils angepasst – der Kern bleibt die mehrtägige Begegnung."
+          />
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {FORMATE.map((f) => (
+              <FormatCard key={f.slug} format={f} />
+            ))}
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

@@ -49,7 +49,7 @@ export default function WerkstattproduktePage() {
             <p className="relative mx-auto mt-4 max-w-2xl text-[color:var(--color-ink-soft)]">
               Sobald Teilnehmende schriftlich zugestimmt haben, veröffentlichen wir hier
               Texte, anonymisierte Zitate, künstlerische Arbeiten, Plakate oder Bilder von
-              Materialien. Bevorzugt werden Inhalte ohne erkennbare Gesichter.
+              Workshops und Methoden. Bevorzugt werden Inhalte ohne erkennbare Gesichter.
             </p>
             <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">
               <Link
@@ -62,7 +62,7 @@ export default function WerkstattproduktePage() {
                 href="/materialien"
                 className="inline-flex items-center rounded-full border border-[color:var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[color:var(--color-primary)] no-underline hover:bg-[color:var(--color-primary-soft)]"
               >
-                Zu den Materialien
+                Zu den Workshops
               </Link>
             </div>
           </div>

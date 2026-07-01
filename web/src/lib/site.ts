@@ -14,10 +14,10 @@ export const SITE: SiteContent = siteData as SiteContent;
 export const MAIN_NAV = [
   { href: "/", label: "Start" },
   { href: "/konzept", label: "Konzept" },
-  { href: "/formate", label: "Formate" },
-  { href: "/materialien", label: "Materialien" },
+  { href: "/mitmachen", label: "Mitmachen" },
+  { href: "/materialien", label: "Workshops" },
   { href: "/werkstattprodukte", label: "Werkstattprodukte" },
-  { href: "/termine", label: "Termine" },
+  { href: "/mitorganisieren", label: "Mitorganisieren" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/partner", label: "Partner" },
   { href: "/kontakt", label: "Kontakt" },

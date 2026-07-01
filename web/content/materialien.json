@@ -170,7 +170,7 @@
   {
     "slug": "interreligioeses-kochen",
     "titel": "Interreligiöses Kochen",
-    "kategorie": "jugendarbeit",
+    "kategorie": "methoden",
     "zielgruppen": ["alle"],
     "dauer": "2–4 Stunden",
     "gruppengroesse": "8–20 Personen",
@@ -193,7 +193,7 @@
   {
     "slug": "fragebox",
     "titel": "Fragebox",
-    "kategorie": "jugendarbeit",
+    "kategorie": "methoden",
     "zielgruppen": ["alle"],
     "dauer": "Begleitend über die gesamte Werkstatt",
     "kurzbeschreibung": "Anonyme Fragensammlung in einer Box. Sortierung durch das Leitungsteam, moderierte Beantwortung. Niedrigschwellige Teilhabe besonders bei sensiblen Themen.",
@@ -214,7 +214,7 @@
   {
     "slug": "chaosspiel",
     "titel": "Chaosspiel",
-    "kategorie": "jugendarbeit",
+    "kategorie": "methoden",
     "zielgruppen": ["jugendliche", "junge-erwachsene"],
     "dauer": "60–90 Minuten",
     "gruppengroesse": "12–40 Personen",
@@ -236,7 +236,7 @@
   {
     "slug": "wanderung-schoepfung",
     "titel": "Wanderung: Schöpfung, Natur, Besinnung",
-    "kategorie": "jugendarbeit",
+    "kategorie": "methoden",
     "zielgruppen": ["alle"],
     "dauer": "2–4 Stunden",
     "kurzbeschreibung": "Naturwahrnehmung, spirituelle Impulse, Austausch zu Schöpfung und Verantwortung. Stille Phasen und Kleingruppengespräche.",

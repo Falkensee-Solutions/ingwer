@@ -124,7 +124,7 @@ export function MaterialFilter({ materialien }: Props) {
 
         <div className="mt-4 flex items-center justify-between">
           <p className="text-sm text-[color:var(--color-ink-soft)]" aria-live="polite">
-            {gefiltert.length} {gefiltert.length === 1 ? "Material" : "Materialien"} angezeigt
+            {gefiltert.length} {gefiltert.length === 1 ? "Eintrag" : "Einträge"} angezeigt
           </p>
           <button
             type="button"
@@ -145,10 +145,10 @@ export function MaterialFilter({ materialien }: Props) {
       {gefiltert.length === 0 ? (
         <div className="mt-12 rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-sage-soft)]/40 p-10 text-center">
           <p className="font-semibold text-[color:var(--color-ink)]">
-            Keine Materialien gefunden
+            Keine Workshops oder Methoden gefunden
           </p>
           <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
-            Mit den aktuellen Filtern werden keine Materialien angezeigt. Setzen Sie die Filter zurück, um alle Materialien zu sehen.
+            Mit den aktuellen Filtern werden keine Workshops oder Methoden angezeigt. Setzen Sie die Filter zurück, um alle Einträge zu sehen.
           </p>
           <button
             type="button"

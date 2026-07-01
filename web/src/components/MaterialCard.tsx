@@ -12,6 +12,7 @@ import { cn } from "@/lib/cn";
 const KATEGORIE_FARBE: Record<MaterialKategorie, { bg: string; ink: string }> = {
   workshop: { bg: "var(--color-primary-soft)", ink: "var(--color-primary-ink)" },
   werkstatt: { bg: "var(--color-lavender-soft)", ink: "var(--color-lavender-ink)" },
+  methoden: { bg: "var(--color-sage-soft)", ink: "var(--color-sage-ink)" },
   jugendarbeit: { bg: "var(--color-sunny-soft)", ink: "var(--color-sunny-ink)" },
   ablaufplan: { bg: "var(--color-orange-soft)", ink: "var(--color-orange-ink)" },
   regelwerk: { bg: "var(--color-sage-soft)", ink: "var(--color-sage-ink)" },

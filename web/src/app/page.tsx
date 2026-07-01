@@ -43,7 +43,7 @@ export default function Home() {
         lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Begegnungs- und Bildungsformat für Menschen unterschiedlicher religiöser und weltanschaulicher Hintergründe. Im Mittelpunkt stehen gemeinsames Wohnen, gegenseitiges Kennenlernen, sichtbare religiöse und spirituelle Praxis, geschützte Gespräche und gemeinsames Arbeiten an Werkstattprodukten."
         ctas={[
           { href: "/konzept", label: "Konzept kennenlernen", variant: "primary" },
-          { href: "/materialien", label: "Materialien ansehen", variant: "ghost" },
+          { href: "/materialien", label: "Workshops ansehen", variant: "ghost" },
           { href: "/kontakt", label: "Werkstatt anfragen", variant: "secondary" },
         ]}
       />
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* Materialien-Teaser */}
+      {/* Workshops-Teaser */}
       <section
         aria-labelledby="materialien-teaser-titel"
         className="bg-[color:var(--color-lavender-soft)]/40"
@@ -156,15 +156,15 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeader
               id="materialien-teaser-titel"
-              eyebrow="Materialien"
-              titel="Praxismaterialien für Institutionen"
+              eyebrow="Workshops"
+              titel="Workshops und Methoden für Institutionen"
               lead="Workshopkonzepte, Methoden, Ablaufpläne, Regelwerk, Reflexionsfragen, Evaluation, Finanzierungstipps und Vorlagen."
             />
             <Link
               href="/materialien"
               className="text-sm font-semibold text-[color:var(--color-primary)]"
             >
-              Alle Materialien ansehen →
+              Alle Workshops ansehen →
             </Link>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -184,7 +184,7 @@ export default function Home() {
             titel="Aktuelle und geplante Werkstätten"
             lead="Werkstätten werden in Status angezeigt: fix, geplant oder in Klärung. Unsichere Termine werden bewusst nicht als final dargestellt."
           />
-          <Link href="/termine" className="text-sm font-semibold text-[color:var(--color-primary)]">
+          <Link href="/mitmachen#termine" className="text-sm font-semibold text-[color:var(--color-primary)]">
             Alle Termine ansehen →
           </Link>
         </div>
@@ -211,7 +211,7 @@ export default function Home() {
           variant="primary"
           eyebrow="Kontakt"
           titel="Werkstatt an Ihrer Institution durchführen?"
-          text="Schreiben Sie uns. Wir begleiten Planung, Materialien und Durchführung gemeinsam mit Ihnen."
+          text="Schreiben Sie uns. Wir begleiten Planung, Workshops, Methoden und Durchführung gemeinsam mit Ihnen."
           primaryCta={{ href: "/kontakt", label: "Werkstatt anfragen" }}
           secondaryCta={{ href: `mailto:${SITE.email}`, label: SITE.email, external: true }}
         />

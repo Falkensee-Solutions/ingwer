@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/formate",
     "/materialien",
     "/werkstattprodukte",
+    "/mitmachen",
+    "/mitorganisieren",
     "/termine",
     "/partner",
     "/kontakt",
