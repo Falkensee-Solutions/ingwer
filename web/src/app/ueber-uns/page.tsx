@@ -101,7 +101,7 @@ export default function UeberUnsPage() {
         claim="Ein Projekt, getragen von vielen Stimmen."
         lead="Die Interreligiöse Werkstatt entsteht im Zusammenspiel von Projektleitung, einem interreligiös zusammengesetzten Konzeptteam und vier Trägern aus christlichen, muslimischen und interreligiösen Kontexten. Wir bringen Erfahrung, Material und Begleitung mit – und wir benennen klar, was eine gelingende Werkstatt von Institutionen voraussetzt."
         ctas={[
-          { href: "/kontakt", label: "Werkstatt anfragen", variant: "primary" },
+          { href: "/mitorganisieren", label: "Werkstatt mitorganisieren", variant: "primary" },
           { href: "/partner", label: "Partner kennenlernen", variant: "ghost" },
         ]}
       />

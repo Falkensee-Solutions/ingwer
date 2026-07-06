@@ -43,7 +43,7 @@ export default function TeilnehmenPage() {
       <Hero
         eyebrow="Teilnehmen"
         titel="An einer Interreligiösen Werkstatt teilnehmen"
-        claim="Dialog wird lebendig, wenn Menschen sich begegnen."
+        claim="''Dialog wird lebendig, wenn Menschen sich begegnen.''"
         lead="Diese Seite richtet sich an Menschen, die selbst bei einer Werkstatt dabei sein möchten: einzeln, mit Freund:innen, als Jugendgruppe, Seminargruppe oder aus einer Gemeinde heraus."
         ctas={[
           { href: "#termine", label: "Termine ansehen", variant: "primary" },

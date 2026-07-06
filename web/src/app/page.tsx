@@ -43,8 +43,8 @@ export default function Home() {
         lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Begegnungs- und Bildungsformat für Menschen unterschiedlicher religiöser und weltanschaulicher Hintergründe. Im Mittelpunkt stehen gemeinsames Wohnen, gegenseitiges Kennenlernen, sichtbare religiöse und spirituelle Praxis, geschützte Gespräche und gemeinsames Arbeiten an Werkstattprodukten."
         ctas={[
           { href: "/konzept", label: "Konzept kennenlernen", variant: "primary" },
-          { href: "/materialien", label: "Workshops ansehen", variant: "ghost" },
-          { href: "/mitorganisieren", label: "Werkstatt anfragen", variant: "secondary" },
+          { href: "https://falkensee-solutions.github.io/ingwer/teilnehmen/", label: "Werkstatt teilnehmen", variant: "ghost" },
+          { href: "/mitorganisieren", label: "Werkstatt mitorganisieren", variant: "secondary" },
         ]}
       />
 
@@ -212,7 +212,7 @@ export default function Home() {
           eyebrow="Kontakt"
           titel="Werkstatt an Ihrer Institution durchführen?"
           text="Schreiben Sie uns. Wir begleiten Planung, Workshops, Methoden und Durchführung gemeinsam mit Ihnen."
-          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt anfragen" }}
+          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt mitorganisieren" }}
           secondaryCta={{ href: `mailto:${SITE.email}`, label: SITE.email, external: true }}
         />
       </Container>

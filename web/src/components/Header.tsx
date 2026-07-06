@@ -199,9 +199,9 @@ export function Header() {
           {/* CTA */}
           <Link
             href="/mitorganisieren"
-            className="ml-2 inline-flex items-center rounded-full bg-[color:var(--color-primary)] px-3 py-2 text-[0.86rem] font-bold text-white no-underline transition-opacity hover:opacity-90 xl:ml-3 xl:px-4 xl:text-[0.9rem]"
+            className="ml-2 inline-flex items-center rounded-full bg-[color:var(--color-accent)] px-3 py-2 text-[0.86rem] font-bold text-white no-underline transition-opacity hover:bg-[color:var(--color-accent-hover)] xl:ml-3 xl:px-4 xl:text-[0.9rem]"
           >
-            Werkstatt anfragen
+            Werkstatt mitorganisieren
           </Link>
         </nav>
 
@@ -325,9 +325,9 @@ export function Header() {
             <div className="mt-3 border-t border-[color:var(--color-line)]/60 pt-3">
               <Link
                 href="/mitorganisieren"
-                className="block rounded-full bg-[color:var(--color-primary)] px-4 py-2.5 text-center text-base font-bold text-white no-underline"
+                className="block rounded-full bg-[color:var(--color-accent)] px-4 py-2.5 text-center text-base font-bold text-white no-underline hover:bg-[color:var(--color-accent-hover)]"
               >
-                Werkstatt anfragen
+                Werkstatt mitorganisieren
               </Link>
             </div>
           </nav>

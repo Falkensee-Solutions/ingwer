@@ -6,7 +6,6 @@ import { CTASection } from "@/components/CTASection";
 import { TerminCard } from "@/components/TerminCard";
 import { FORMATE, getFormatBySlug } from "@/data/formate";
 import { getTermineByFormatSlug } from "@/data/termine";
-import { buildMailto } from "@/lib/mailto";
 
 type Params = { slug: string };
 
@@ -61,7 +60,6 @@ export default async function FormatDetailPage({
   const format = getFormatBySlug(slug);
   if (!format) notFound();
 
-  const mailto = buildMailto({ format: format.titel });
   const accent = FORMAT_ACCENT[format.slug] ?? FORMAT_ACCENT.universitaeten;
   const termine = getTermineByFormatSlug(format.slug);
 
@@ -72,7 +70,7 @@ export default async function FormatDetailPage({
         titel={format.titel}
         lead={format.einleitung}
         ctas={[
-          { href: mailto, label: format.cta, variant: "primary" },
+          { href: "/mitorganisieren", label: format.cta, variant: "primary" },
           { href: "/konzept#formate", label: "Alle Formate", variant: "ghost" },
         ]}
       />
@@ -140,14 +138,14 @@ export default async function FormatDetailPage({
                 className="relative text-lg font-bold"
                 style={{ color: accent.ink }}
               >
-                Format anfragen
+                Werkstatt mitorganisieren
               </h2>
               <p className="relative mt-2 text-sm text-[color:var(--color-ink-soft)]">
                 Schreiben Sie uns mit Angaben zu Institution, Zielgruppe und
                 gewünschtem Zeitraum.
               </p>
               <a
-                href={mailto}
+                href="/mitorganisieren"
                 className="relative mt-5 inline-flex w-full items-center justify-center rounded-full bg-[color:var(--color-primary)] px-4 py-2.5 text-sm font-semibold text-white no-underline hover:bg-[color:var(--color-primary-hover)]"
               >
                 {format.cta}
@@ -197,7 +195,7 @@ export default async function FormatDetailPage({
                 Schreiben Sie uns gern, wenn Sie eine Werkstatt planen möchten.
               </p>
               <a
-                href={mailto}
+                href="/mitorganisieren"
                 className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white no-underline hover:bg-[color:var(--color-primary-hover)]"
               >
                 {format.cta}
