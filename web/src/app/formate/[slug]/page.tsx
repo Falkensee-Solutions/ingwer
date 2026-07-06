@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
+import { TerminCard } from "@/components/TerminCard";
 import { FORMATE, getFormatBySlug } from "@/data/formate";
+import { getTermineByFormatSlug } from "@/data/termine";
 import { buildMailto } from "@/lib/mailto";
 
 type Params = { slug: string };
@@ -61,6 +63,7 @@ export default async function FormatDetailPage({
 
   const mailto = buildMailto({ format: format.titel });
   const accent = FORMAT_ACCENT[format.slug] ?? FORMAT_ACCENT.universitaeten;
+  const termine = getTermineByFormatSlug(format.slug);
 
   return (
     <>
@@ -152,6 +155,56 @@ export default async function FormatDetailPage({
             </div>
           </aside>
         </div>
+      </Container>
+
+      <Container padding="md">
+        <section
+          id="termine"
+          aria-labelledby="format-termine"
+          className="rounded-3xl border border-[color:var(--color-line)] p-7 md:p-10"
+          style={{
+            background: `color-mix(in srgb, ${accent.bg} 45%, var(--color-bg))`,
+          }}
+        >
+          <div className="mb-7 max-w-2xl">
+            <p className="eyebrow mb-2" style={{ color: accent.ink }}>
+              Termine
+            </p>
+            <h2
+              id="format-termine"
+              className="text-2xl font-bold text-[color:var(--color-ink)] md:text-[1.7rem]"
+            >
+              Termine für dieses Format
+            </h2>
+            <p className="mt-2 text-sm text-[color:var(--color-ink-soft)]">
+              Hier finden Sie geplante, bestätigte und abgeschlossene Werkstätten,
+              die diesem Format zugeordnet sind. Über die Detailseite erhalten Sie
+              weitere Informationen; bei freigegebenen oder geplanten Terminen können
+              Sie direkt eine Anmeldung oder Interessenbekundung anfragen.
+            </p>
+          </div>
+
+          {termine.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2">
+              {termine.map((termin) => (
+                <TerminCard key={termin.slug} termin={termin} showFormat={false} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6">
+              <p className="text-sm text-[color:var(--color-ink-soft)]">
+                Für dieses Format sind aktuell keine öffentlichen Termine eingetragen.
+                Schreiben Sie uns gern, wenn Sie eine Werkstatt planen möchten.
+              </p>
+              <a
+                href={mailto}
+                className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white no-underline hover:bg-[color:var(--color-primary-hover)]"
+              >
+                {format.cta}
+              </a>
+            </div>
+          )}
+        </section>
       </Container>
 
       <Container padding="md">

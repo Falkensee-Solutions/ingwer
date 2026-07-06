@@ -1,4 +1,5 @@
 import content from "../../content/termine.json";
+import type { FormatSlug } from "./formate";
 
 export type TerminStatus = "fix" | "geplant" | "in-klaerung" | "abgeschlossen";
 
@@ -11,6 +12,8 @@ export type TerminDownload = {
 export type Termin = {
   slug: string;
   titel: string;
+  /** Zugehöriges Werkstattformat für Filterung und Detailseiten. */
+  formatSlug: FormatSlug;
   /** Anzeige-Zeitraum, z. B. "29.01.–02.02.2027". Wird nicht maschinell sortiert. */
   zeitraum: string;
   /** Für Sortierung: ISO-Datum (Startdatum) oder null bei unklarem Datum. */
@@ -40,6 +43,21 @@ export const STATUS_TERMIN_BESCHREIBUNG: Record<TerminStatus, string> = {
 
 export const TERMINE: Termin[] = content.termine as Termin[];
 
+function sortiereTermine(a: Termin, b: Termin): number {
+  if (!a.sortDate && !b.sortDate) return 0;
+  if (!a.sortDate) return 1;
+  if (!b.sortDate) return -1;
+  return a.sortDate.localeCompare(b.sortDate);
+}
+
+export function getTerminBySlug(slug: string): Termin | undefined {
+  return TERMINE.find((t) => t.slug === slug);
+}
+
+export function getTermineByFormatSlug(formatSlug: FormatSlug): Termin[] {
+  return TERMINE.filter((t) => t.formatSlug === formatSlug).sort(sortiereTermine);
+}
+
 /** Reihenfolge für die Anzeige auf /termine. */
 export const STATUS_REIHENFOLGE: TerminStatus[] = [
   "fix",
@@ -58,12 +76,7 @@ export function getTermineNachStatus(): Record<TerminStatus, Termin[]> {
   for (const t of TERMINE) groups[t.status].push(t);
   // innerhalb der Gruppen nach Datum sortieren (null ans Ende)
   for (const status of STATUS_REIHENFOLGE) {
-    groups[status].sort((a, b) => {
-      if (!a.sortDate && !b.sortDate) return 0;
-      if (!a.sortDate) return 1;
-      if (!b.sortDate) return -1;
-      return a.sortDate.localeCompare(b.sortDate);
-    });
+    groups[status].sort(sortiereTermine);
   }
   return groups;
 }
@@ -71,11 +84,6 @@ export function getTermineNachStatus(): Record<TerminStatus, Termin[]> {
 /** Kommende Termine für den Startseiten-Teaser (alles außer "abgeschlossen"). */
 export function getKommendeTermine(limit = 3): Termin[] {
   return TERMINE.filter((t) => t.status !== "abgeschlossen")
-    .sort((a, b) => {
-      if (!a.sortDate && !b.sortDate) return 0;
-      if (!a.sortDate) return 1;
-      if (!b.sortDate) return -1;
-      return a.sortDate.localeCompare(b.sortDate);
-    })
+    .sort(sortiereTermine)
     .slice(0, limit);
 }

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { FORMATE } from "@/data/formate";
 import { MATERIALIEN } from "@/data/materialien";
+import { TERMINE } from "@/data/termine";
 
 // Notwendig für `output: "export"` (statischer Export für GitHub Pages).
 export const dynamic = "force-static";
@@ -27,11 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const formate = FORMATE.map((f) => `/formate/${f.slug}`);
+  const termine = TERMINE.map((t) => `/termine/${t.slug}`);
   const materialien = MATERIALIEN.filter((m) => m.status !== "entwurf").map(
     (m) => `/materialien/${m.slug}`
   );
 
-  return [...statisch, ...formate, ...materialien].map((path) => ({
+  return [...statisch, ...formate, ...termine, ...materialien].map((path) => ({
     url: `${BASE}${path}`,
     lastModified: new Date(),
   }));

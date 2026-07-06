@@ -202,6 +202,14 @@ collections:
             fields:
               - { name: slug, label: Slug, widget: string }
               - { name: titel, label: Titel, widget: string }
+              - name: formatSlug
+                label: Zugehöriges Format
+                widget: select
+                options:
+                  - { label: Universitäten und Hochschulen, value: universitaeten }
+                  - { label: Schulen, value: schulen }
+                  - { label: Ausbildungsinstitutionen, value: ausbildung }
+                  - { label: Gemeinden und Jugendarbeit, value: gemeinden }
               - { name: zeitraum, label: Zeitraum (Anzeige), widget: string, hint: "z. B. 29.01.–02.02.2027" }
               - { name: sortDate, label: Sortier-Datum (ISO YYYY-MM-DD), widget: string, required: false, hint: "Leer lassen, wenn Datum noch unklar" }
               - { name: ort, label: Ort, widget: string, required: false }

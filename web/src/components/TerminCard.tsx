@@ -1,6 +1,9 @@
+import Link from "next/link";
 import { STATUS_TERMIN_LABEL, type Termin, type TerminStatus } from "@/data/termine";
+import { getFormatBySlug } from "@/data/formate";
 import { cn } from "@/lib/cn";
 import { withBasePath } from "@/lib/basePath";
+import { buildMailto } from "@/lib/mailto";
 
 const STATUS_STYLE: Record<TerminStatus, string> = {
   fix: "bg-[color:var(--color-sage-soft)] text-[color:var(--color-sage-ink)]",
@@ -27,11 +30,40 @@ export function TerminBadge({ status }: { status: TerminStatus }) {
   );
 }
 
-export function TerminCard({ termin }: { termin: Termin }) {
+export function TerminCard({
+  termin,
+  showFormat = true,
+  showDetailsLink = true,
+}: {
+  termin: Termin;
+  showFormat?: boolean;
+  showDetailsLink?: boolean;
+}) {
+  const format = getFormatBySlug(termin.formatSlug);
+  const mailto = buildMailto({
+    format: format?.titel,
+    zeitraum: termin.zeitraum,
+    anliegen: `Ich interessiere mich für den Termin „${termin.titel}“ und möchte weitere Informationen zur Teilnahme oder Anmeldung erhalten.`,
+  });
+  const anmeldungLabel =
+    termin.status === "fix"
+      ? "Anmeldung anfragen"
+      : termin.status === "abgeschlossen"
+        ? null
+        : "Interesse bekunden";
+
   return (
     <article className="group rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]">
       <div className="mb-4 flex flex-wrap items-center gap-3">
         <TerminBadge status={termin.status} />
+        {showFormat && format ? (
+          <Link
+            href={`/formate/${format.slug}`}
+            className="rounded-full bg-[color:var(--color-primary-soft)] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[color:var(--color-primary-ink)] no-underline hover:bg-[color:var(--color-primary)] hover:text-white"
+          >
+            {format.titel}
+          </Link>
+        ) : null}
         <span className="text-sm font-semibold text-[color:var(--color-ink-soft)]">
           {termin.zeitraum}
         </span>
@@ -76,6 +108,24 @@ export function TerminCard({ termin }: { termin: Termin }) {
           </p>
         </div>
       ) : null}
+      <div className="mt-6 flex flex-wrap gap-2 border-t border-[color:var(--color-line)]/60 pt-5">
+        {showDetailsLink ? (
+          <Link
+            href={`/termine/${termin.slug}`}
+            className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-[color:var(--color-primary)] no-underline hover:bg-[color:var(--color-primary-soft)]"
+          >
+            Details ansehen
+          </Link>
+        ) : null}
+        {anmeldungLabel ? (
+          <a
+            href={mailto}
+            className="inline-flex items-center justify-center rounded-full bg-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-white no-underline hover:bg-[color:var(--color-primary-hover)]"
+          >
+            {anmeldungLabel}
+          </a>
+        ) : null}
+      </div>
     </article>
   );
 }
