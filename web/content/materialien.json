@@ -1,4 +1,5 @@
-[
+{
+  "materialien": [
   {
     "slug": "sensibilisierung-diskriminierung",
     "titel": "Sensibilisierung für Diskriminierung",
@@ -300,4 +301,5 @@
     "dateiFormat": "PDF",
     "sprache": "Deutsch"
   }
-]
+  ]
+}

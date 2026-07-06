@@ -1,4 +1,4 @@
-import data from "../../content/termine.json";
+import content from "../../content/termine.json";
 
 export type TerminStatus = "fix" | "geplant" | "in-klaerung" | "abgeschlossen";
 
@@ -38,7 +38,7 @@ export const STATUS_TERMIN_BESCHREIBUNG: Record<TerminStatus, string> = {
   abgeschlossen: "Werkstatt wurde bereits durchgeführt.",
 };
 
-export const TERMINE: Termin[] = data as Termin[];
+export const TERMINE: Termin[] = content.termine as Termin[];
 
 /** Reihenfolge für die Anzeige auf /termine. */
 export const STATUS_REIHENFOLGE: TerminStatus[] = [

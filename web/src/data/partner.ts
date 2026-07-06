@@ -1,4 +1,4 @@
-import data from "../../content/partner.json";
+import content from "../../content/partner.json";
 
 export type Partner = {
   slug: string;
@@ -10,4 +10,4 @@ export type Partner = {
   url: string | null;
 };
 
-export const PARTNER: Partner[] = data as Partner[];
+export const PARTNER: Partner[] = content.partner as Partner[];

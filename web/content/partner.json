@@ -1,4 +1,5 @@
-[
+{
+  "partner": [
   {
     "slug": "forum-dialog",
     "name": "Forum Dialog e.V.",
@@ -31,4 +32,5 @@
     "logoPfad": "/logos/house-of-one.svg",
     "url": null
   }
-]
+  ]
+}

@@ -1,4 +1,4 @@
-import data from "../../content/materialien.json";
+import content from "../../content/materialien.json";
 
 export type MaterialKategorie =
   | "workshop"
@@ -84,7 +84,7 @@ export const ZIELGRUPPE_LABEL: Record<MaterialZielgruppe, string> = {
   fachkraefte: "Fachkräfte und Lehrende",
 };
 
-export const MATERIALIEN: Material[] = data as Material[];
+export const MATERIALIEN: Material[] = content.materialien as Material[];
 
 export function getMaterialBySlug(slug: string): Material | undefined {
   return MATERIALIEN.find((m) => m.slug === slug);

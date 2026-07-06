@@ -1,4 +1,4 @@
-import data from "../../content/formate.json";
+import content from "../../content/formate.json";
 
 export type FormatSlug = "universitaeten" | "schulen" | "ausbildung" | "gemeinden";
 
@@ -17,7 +17,7 @@ export type Format = {
   cta: string;
 };
 
-export const FORMATE: Format[] = data as Format[];
+export const FORMATE: Format[] = content.formate as Format[];
 
 export function getFormatBySlug(slug: string): Format | undefined {
   return FORMATE.find((f) => f.slug === slug);

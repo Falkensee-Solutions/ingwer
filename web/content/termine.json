@@ -1,4 +1,5 @@
-[
+{
+  "termine": [
   {
     "slug": "iw-koerner-2027",
     "titel": "Interreligiöse Werkstatt Körner",
@@ -75,4 +76,5 @@
       }
     ]
   }
-]
+  ]
+}

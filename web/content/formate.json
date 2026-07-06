@@ -1,4 +1,5 @@
-[
+{
+  "formate": [
   {
     "slug": "universitaeten",
     "titel": "Universitäten und Hochschulen",
@@ -147,4 +148,5 @@
     ],
     "cta": "Gemeinde-Werkstatt anfragen"
   }
-]
+  ]
+}
