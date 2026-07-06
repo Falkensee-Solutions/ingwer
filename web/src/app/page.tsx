@@ -44,7 +44,7 @@ export default function Home() {
         ctas={[
           { href: "/konzept", label: "Konzept kennenlernen", variant: "primary" },
           { href: "/materialien", label: "Workshops ansehen", variant: "ghost" },
-          { href: "/kontakt", label: "Werkstatt anfragen", variant: "secondary" },
+          { href: "/mitorganisieren", label: "Werkstatt anfragen", variant: "secondary" },
         ]}
       />
 
@@ -184,7 +184,7 @@ export default function Home() {
             titel="Aktuelle und geplante Werkstätten"
             lead="Werkstätten werden in Status angezeigt: fix, geplant oder in Klärung. Unsichere Termine werden bewusst nicht als final dargestellt."
           />
-          <Link href="/mitmachen#termine" className="text-sm font-semibold text-[color:var(--color-primary)]">
+          <Link href="/teilnehmen#termine" className="text-sm font-semibold text-[color:var(--color-primary)]">
             Alle Termine ansehen →
           </Link>
         </div>
@@ -212,7 +212,7 @@ export default function Home() {
           eyebrow="Kontakt"
           titel="Werkstatt an Ihrer Institution durchführen?"
           text="Schreiben Sie uns. Wir begleiten Planung, Workshops, Methoden und Durchführung gemeinsam mit Ihnen."
-          primaryCta={{ href: "/kontakt", label: "Werkstatt anfragen" }}
+          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt anfragen" }}
           secondaryCta={{ href: `mailto:${SITE.email}`, label: SITE.email, external: true }}
         />
       </Container>

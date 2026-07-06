@@ -11,17 +11,53 @@ type SiteContent = {
 
 export const SITE: SiteContent = siteData as SiteContent;
 
-export const MAIN_NAV = [
-  { href: "/", label: "Start" },
+export type NavItem = {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+};
+
+export const MAIN_NAV: NavItem[] = [
   { href: "/konzept", label: "Konzept" },
-  { href: "/mitmachen", label: "Mitmachen" },
-  { href: "/materialien", label: "Workshops" },
-  { href: "/werkstattprodukte", label: "Werkstattprodukte" },
-  { href: "/mitorganisieren", label: "Mitorganisieren" },
-  { href: "/ueber-uns", label: "Über uns" },
-  { href: "/partner", label: "Partner" },
-  { href: "/kontakt", label: "Kontakt" },
-] as const;
+  {
+    href: "/formate",
+    label: "Formate",
+    children: [
+      { href: "/formate/universitaeten", label: "Universitäten & Hochschulen" },
+      { href: "/formate/schulen", label: "Schulen" },
+      { href: "/formate/ausbildung", label: "Ausbildung" },
+      { href: "/formate/gemeinden", label: "Gemeinden" },
+    ],
+  },
+  {
+    href: "/teilnehmen",
+    label: "Teilnehmen",
+    children: [
+      { href: "/teilnehmen", label: "Teilnahme-Infos" },
+      { href: "/termine", label: "Termine" },
+    ],
+  },
+  {
+    href: "/materialien",
+    label: "Materialien",
+    children: [
+      { href: "/materialien", label: "Alle Materialien" },
+      { href: "/werkstattprodukte", label: "Werkstattprodukte" },
+    ],
+  },
+];
+
+export const SECONDARY_NAV: NavItem[] = [
+  {
+    href: "/kontakt",
+    label: "Kontakt",
+    children: [
+      { href: "/kontakt", label: "Kontaktformular" },
+      { href: "/partner", label: "Partner" },
+      { href: "/ueber-uns", label: "Über uns" },
+    ],
+  },
+];
 
 export const FOOTER_NAV = [
   { href: "/kontakt", label: "Kontakt" },

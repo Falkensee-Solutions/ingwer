@@ -7,11 +7,19 @@ Die Website soll eine klare Hauptnavigation haben:
 1. Start  
 2. Konzept  
 3. Formate  
-4. Materialien  
-5. Werkstattprodukte  
-6. Termine  
-7. Partner  
-8. Kontakt  
+4. Mitorganisieren  
+5. Teilnehmen  
+6. Materialien  
+7. Werkstattprodukte  
+8. Termine  
+9. Partner  
+10. Kontakt  
+  
+Hinweis zur Zielgruppenführung:  
+  
+- Mitorganisieren ist der primäre Pfad für Institutionen, Gemeinden, Schulen, Hochschulen, Ausbildungsstätten, Träger und Kooperationspartner.  
+- Teilnehmen ist der Pfad für Einzelpersonen, Gruppen, Jugendgruppen, Studierende und Gemeindemitglieder.  
+- Mitmachen wird nicht mehr als zentraler Menüpunkt verwendet, weil der Begriff beide Anliegen vermischt. Die Seite kann als Übergangs- oder Auswahlseite bestehen bleiben.  
   
 Zusätzlich im Footer:  
   
@@ -108,6 +116,56 @@ Optional spätere Unterseiten:
 - `/materialien/werkstatt`  
 - `/materialien/jugendarbeit`  
 - `/materialien/downloads`  
+  
+### `/mitorganisieren`  
+  
+Institutioneller Einstieg  
+  
+Ziele:  
+  
+- Institutionen zeigen, wie sie eine Werkstatt ermöglichen oder mittragen können.  
+- Rollen, Verantwortung und Voraussetzungen transparent machen.  
+- Kooperationen anbahnen und Erstgespräche ermöglichen.  
+  
+Inhalte:  
+  
+- Für wen ist Mitorganisieren gedacht?  
+- Planungsschritte  
+- Rolle von Gemeinden, Schulen, Hochschulen, Ausbildungsstätten und Trägern  
+- Koordinierungsgruppe und Orgateam  
+- Was das Projektteam beiträgt  
+- Was von Institutionen erwartet wird  
+- Regelwerk-/Schutz-Hinweis  
+- Kontakt-CTA: Kooperation anfragen  
+  
+### `/teilnehmen`  
+  
+Teilnahme-Einstieg für Personen und Gruppen  
+  
+Ziele:  
+  
+- Menschen erklären, wie sie selbst an einer Werkstatt teilnehmen können.  
+- Erwartungen, Ablauf und Schutzrahmen verständlich machen.  
+- Aktuelle und geplante Termine zugänglich machen.  
+  
+Inhalte:  
+  
+- Warum teilnehmen?  
+- Wer kann teilnehmen?  
+- Einzelne Teilnahme und Gruppenanmeldung  
+- Was Teilnehmende mitbringen sollten  
+- Weg zur Teilnahme  
+- Aktuelle/geplante Termine  
+- Interesse anmelden  
+  
+### `/mitmachen`  
+  
+Übergangs- und Auswahlseite  
+  
+Diese Seite bündelt nicht mehr beide Inhalte, sondern führt gezielt weiter:  
+  
+- Institutionen zu `/mitorganisieren`  
+- Personen und Gruppen zu `/teilnehmen`  
   
 ### `/werkstattprodukte`  
   
