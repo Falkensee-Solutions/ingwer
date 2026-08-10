@@ -19,7 +19,7 @@ const KERNPRINZIPIEN = [
   },
   {
     titel: "Gemeinsame Unterkunft",
-    text: "Das gemeinsame Wohnen schafft einen privaten und vertrauensvollen Rahmen, in dem Begegnung nicht nur im Seminarraum geschieht.",
+    text: "Das Teilen eines Zimmers schafft einen privaten und vertrauensvollen Rahmen.",
   },
   {
     titel: "Sichtbare religiöse und spirituelle Praxis",
