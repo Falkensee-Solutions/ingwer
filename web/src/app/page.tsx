@@ -25,10 +25,6 @@ const KERNPRINZIPIEN = [
     titel: "Sichtbare religiöse und spirituelle Praxis",
     text: "Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken dürfen sichtbar sein und werden respektiert.",
   },
-  {
-    titel: "Dialog ohne Missionierung",
-    text: "Eigene Überzeugungen dürfen geteilt werden. Niemand wird überredet, bewertet oder gedrängt.",
-  },
 ];
 
 export default function Home() {
@@ -102,7 +98,7 @@ export default function Home() {
           <SectionHeader
             id="kern-titel"
             eyebrow="Kern des Formats"
-            titel="Vier Prinzipien, die den Unterschied machen"
+            titel="Die drei Kerninhalte des Formats"
           />
           <ul className="mt-10 grid gap-6 sm:grid-cols-2">
             {KERNPRINZIPIEN.map((p, i) => {
