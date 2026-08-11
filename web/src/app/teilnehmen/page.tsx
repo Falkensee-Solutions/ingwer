@@ -120,7 +120,7 @@ export default function TeilnehmenPage() {
         <SectionHeader
           id="termine-titel"
           eyebrow="Termine"
-          titel="Aktuelle und geplante Werkstätten"
+          titel="Anstehende Werkstätten"
           lead="Hier finden Sie die nächsten Werkstätten. Vorläufige Termine werden nicht als verbindliche Anmeldung dargestellt."
         />
         <div className="mt-8">

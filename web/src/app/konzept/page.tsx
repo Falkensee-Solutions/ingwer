@@ -17,14 +17,13 @@ export default function KonzeptPage() {
       <Hero
         eyebrow="Konzept"
         titel="Das Konzept"
-        claim="Begegnung braucht mehr als Information."
-        lead="Interreligiöser Dialog entsteht nicht nur durch Vorträge über Religion. Er entsteht dort, wo Menschen einander begegnen, Alltag teilen, Fragen stellen, zuhören und religiöse oder spirituelle Praxis im Leben anderer wahrnehmen können."
+        claim="Begegnung braucht mehr als Informationsaustausch."
+        lead="Dialog entsteht in der persönlichen Begegnung. Durch Menschen, ihren Alltag und ihre gelebte Spiritualität lernen wir Religionen kennen. Interreligiöser Dialog entwickelt sich dort, wo Menschen einander wahrnehmen."
       />
 
       <Container padding="lg" className="prose-iw max-w-3xl">
         <p>
-          Die Interreligiöse Werkstatt verbindet Bildungsarbeit, persönliche Begegnung,
-          Reflexion und gemeinsames Handeln.
+          Im Rahmen der Interreligiösen Werkstatt verbindet sich Bildungsarbeit, mit Reflexion und gemeinsamem Handeln.
         </p>
 
         <h2>Was unterscheidet die Werkstatt von einem Workshop?</h2>

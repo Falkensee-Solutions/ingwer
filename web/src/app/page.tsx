@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { PartnerLogoBar } from "@/components/PartnerLogoBar";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTASection } from "@/components/CTASection";
-import { FormatCard } from "@/components/FormatCard";
+import { ButtonLink } from "@/components/Button";
 import { MaterialCard } from "@/components/MaterialCard";
 import { TerminCard } from "@/components/TerminCard";
 import { FORMATE } from "@/data/formate";
@@ -26,6 +26,13 @@ const KERNPRINZIPIEN = [
     text: "Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken dürfen sichtbar sein und werden respektiert.",
   },
 ];
+
+const FORMAT_FARBEN: Record<string, string> = {
+  universitaeten: "var(--color-primary)",
+  schulen: "var(--color-accent)",
+  ausbildung: "var(--color-lavender)",
+  gemeinden: "var(--color-sage)",
+};
 
 export default function Home() {
   const teaserMaterialien = MATERIALIEN.filter((m) => m.status !== "entwurf").slice(0, 3);
@@ -136,10 +143,31 @@ export default function Home() {
           titel="Für wen ist das Format geeignet?"
           lead="Die Interreligiöse Werkstatt richtet sich an Institutionen, die Dialog erfahrbar machen möchten."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
           {FORMATE.map((f) => (
-            <FormatCard key={f.slug} format={f} />
+            <li
+              key={f.slug}
+              className="border-l-4 pl-5"
+              style={{ borderColor: FORMAT_FARBEN[f.slug] }}
+            >
+              <h3
+                className="text-xl font-bold leading-tight"
+                style={{ color: FORMAT_FARBEN[f.slug] }}
+              >
+                <Link href={`/formate/${f.slug}`} className="no-underline hover:underline">
+                  {f.titel}
+                </Link>
+              </h3>
+              <p className="mt-2 leading-relaxed text-[color:var(--color-ink-soft)]">
+                {f.kurz}
+              </p>
+            </li>
           ))}
+        </ul>
+        <div className="mt-10">
+          <ButtonLink href="/mitorganisieren" size="lg">
+            Meine Institution anmelden
+          </ButtonLink>
         </div>
       </Container>
 
@@ -195,7 +223,7 @@ export default function Home() {
       <Container padding="md">
         <CTASection
           eyebrow="Schutz und Haltung"
-          titel="Werkstätten brauchen Regeln."
+          titel="Interreligiösen Werkstätten brauchen Regeln."
           text="Alle Werkstätten folgen einem gemeinsamen Regelwerk. Es schützt die Würde der Teilnehmenden, verhindert Missionierung, achtet Privatsphäre und macht deutlich: Diskriminierung, Abwertung und Grenzverletzungen haben keinen Platz."
           primaryCta={{ href: "/regelwerk", label: "Regelwerk lesen" }}
         />
