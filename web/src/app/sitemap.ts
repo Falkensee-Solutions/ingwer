@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import { FORMATE } from "@/data/formate";
-import { MATERIALIEN } from "@/data/materialien";
 import { TERMINE } from "@/data/termine";
 
 // Notwendig für `output: "export"` (statischer Export für GitHub Pages).
@@ -13,27 +11,22 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.org";
 export default function sitemap(): MetadataRoute.Sitemap {
   const statisch = [
     "/",
-    "/konzept",
-    "/formate",
-    "/materialien",
-    "/werkstattprodukte",
-    "/mitorganisieren",
-    "/teilnehmen",
-    "/termine",
-    "/partner",
+    "/begegnung",
+    "/aktuell",
+    "/archiv",
+    "/archiv/2024",
+    "/archiv/2025",
+    "/archiv/2026",
+    "/faq",
     "/kontakt",
     "/regelwerk",
     "/impressum",
     "/datenschutz",
   ];
 
-  const formate = FORMATE.map((f) => `/formate/${f.slug}`);
   const termine = TERMINE.map((t) => `/termine/${t.slug}`);
-  const materialien = MATERIALIEN.filter((m) => m.status !== "entwurf").map(
-    (m) => `/materialien/${m.slug}`
-  );
 
-  return [...statisch, ...formate, ...termine, ...materialien].map((path) => ({
+  return [...statisch, ...termine].map((path) => ({
     url: `${BASE}${path}`,
     lastModified: new Date(),
   }));

@@ -18,52 +18,20 @@ export type NavItem = {
 };
 
 export const MAIN_NAV: NavItem[] = [
-  { href: "/konzept", label: "Konzept" },
-  {
-    href: "/formate",
-    label: "Formate",
-    children: [
-      { href: "/formate/universitaeten", label: "Universitäten & Hochschulen" },
-      { href: "/formate/schulen", label: "Schulen" },
-      { href: "/formate/ausbildung", label: "Ausbildung" },
-      { href: "/formate/gemeinden", label: "Gemeinden" },
-    ],
-  },
-  {
-    href: "/teilnehmen",
-    label: "Teilnehmen",
-    children: [
-      { href: "/teilnehmen", label: "Teilnahme-Infos" },
-      { href: "/termine", label: "Termine" },
-    ],
-  },
-  {
-    href: "/materialien",
-    label: "Materialien",
-    children: [
-      { href: "/materialien", label: "Alle Materialien" },
-      { href: "/werkstattprodukte", label: "Werkstattprodukte" },
-    ],
-  },
+  { href: "/begegnung", label: "Begegnung" },
+  { href: "/aktuell", label: "Aktuell" },
+  { href: "/archiv", label: "Archiv" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
-export const SECONDARY_NAV: NavItem[] = [
-  {
-    href: "/kontakt",
-    label: "Kontakt",
-    children: [
-      { href: "/kontakt", label: "Kontaktformular" },
-      { href: "/partner", label: "Partner" },
-      { href: "/ueber-uns", label: "Über uns" },
-    ],
-  },
-];
+export const SECONDARY_NAV: NavItem[] = [];
 
 export const FOOTER_NAV = [
   { href: "/kontakt", label: "Kontakt" },
   { href: "/regelwerk", label: "Regelwerk" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/partner", label: "Partner" },
+  { href: "/faq", label: "FAQ" },
   { href: "/impressum", label: "Impressum" },
   { href: "/datenschutz", label: "Datenschutz" },
 ] as const;

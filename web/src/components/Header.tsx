@@ -201,7 +201,7 @@ export function Header() {
             href="/mitorganisieren"
             className="ml-2 inline-flex items-center rounded-full bg-[color:var(--color-accent)] px-3 py-2 text-[0.86rem] font-bold text-white no-underline transition-opacity hover:bg-[color:var(--color-accent-hover)] xl:ml-3 xl:px-4 xl:text-[0.9rem]"
           >
-            Werkstatt mitorganisieren
+            Mitplanen
           </Link>
         </nav>
 

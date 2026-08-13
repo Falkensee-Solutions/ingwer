@@ -1,245 +1,32 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { PartnerLogoBar } from "@/components/PartnerLogoBar";
 import { SectionHeader } from "@/components/SectionHeader";
-import { CTASection } from "@/components/CTASection";
-import { ButtonLink } from "@/components/Button";
-import { MaterialCard } from "@/components/MaterialCard";
-import { TerminCard } from "@/components/TerminCard";
-import { FORMATE } from "@/data/formate";
-import { MATERIALIEN } from "@/data/materialien";
-import { getKommendeTermine } from "@/data/termine";
 import { SITE } from "@/lib/site";
 
-const KERNPRINZIPIEN = [
-  {
-    titel: "Mehrtägigkeit",
-    text: "Dialog braucht Zeit. Deshalb finden Werkstätten über mehrere Tage statt.",
-  },
-  {
-    titel: "Gemeinsame Unterkunft",
-    text: "Das Teilen eines Zimmers schafft einen privaten und vertrauensvollen Rahmen.",
-  },
-  {
-    titel: "Sichtbare religiöse und spirituelle Praxis",
-    text: "Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken dürfen sichtbar sein und werden respektiert.",
-  },
-];
-
-const FORMAT_FARBEN: Record<string, string> = {
-  universitaeten: "var(--color-primary)",
-  schulen: "var(--color-accent)",
-  ausbildung: "var(--color-lavender)",
-  gemeinden: "var(--color-sage)",
+export const metadata: Metadata = {
+  title: "Interreligiöse Werkstatt",
+  description: SITE.description,
 };
 
+const KERNINHALTE = [
+  ["Mehrtägigkeit", "Dialog braucht Zeit. Deshalb finden Werkstätten über mehrere Tage statt."],
+  ["Interreligiöse Zimmer", "In einem vertrauensvollen Rahmen tauschen sich die Teilnehmenden auch außerhalb des Seminarraums über Glaubenserfahrungen aus."],
+  ["Sichtbare religiöse und spirituelle Praxis", "Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken werden sichtbar praktiziert."],
+];
+
 export default function Home() {
-  const teaserMaterialien = MATERIALIEN.filter((m) => m.status !== "entwurf").slice(0, 3);
-  const kommendeTermine = getKommendeTermine(3);
-
-  return (
-    <>
-      <Hero
-        titel="Interreligiöse Werkstatt"
-        claim={SITE.claim}
-        lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Begegnungs- und Bildungsformat für Menschen unterschiedlicher religiöser und weltanschaulicher Hintergründe. Im Mittelpunkt stehen gemeinsames Wohnen, gegenseitiges Kennenlernen, sichtbare religiöse und spirituelle Praxis, geschützte Gespräche und gemeinsames Arbeiten an Werkstattprodukten."
-        ctas={[
-          { href: "/konzept", label: "Konzept kennenlernen", variant: "primary" },
-          { href: "https://falkensee-solutions.github.io/ingwer/teilnehmen/", label: "Werkstatt teilnehmen", variant: "ghost" },
-          { href: "/mitorganisieren", label: "Werkstatt mitorganisieren", variant: "secondary" },
-        ]}
-      />
-
-      <PartnerLogoBar />
-
-      {/* Was ist eine Werkstatt? */}
-      <Container as="section" padding="lg" ariaLabelledby="was-ist-titel">
-        <SectionHeader
-          id="was-ist-titel"
-          eyebrow="Format"
-          titel="Was ist eine Interreligiöse Werkstatt?"
-          lead="Eine Interreligiöse Werkstatt ist kein klassischer Workshop und keine reine Exkursion. Sie ist ein gemeinsamer Erfahrungsraum."
-        />
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
-          <div className="space-y-4 text-lg text-[color:var(--color-ink-soft)]">
-            <p>
-              Teilnehmende verbringen mehrere Tage miteinander, teilen Alltagssituationen,
-              erleben religiöse und spirituelle Praxis nebeneinander und kommen über
-              Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins
-              Gespräch.
-            </p>
-            <p>
-              Das Format schafft Nähe, ohne Unterschiede aufzulösen. Es lädt dazu ein, die
-              Perspektive anderer Menschen kennenzulernen und die eigene Haltung zu
-              reflektieren.
-            </p>
-          </div>
-
-          <aside
-            aria-hidden="true"
-            className="relative self-start overflow-hidden rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-sage-soft)]/50 p-7"
-          >
-            <span
-              className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[color:var(--color-lavender-soft)]/70"
-            />
-            <span
-              className="absolute -bottom-8 -left-6 h-20 w-20 rounded-full bg-[color:var(--color-orange-soft)]/70"
-            />
-            <p className="script-claim relative text-2xl leading-snug text-[color:var(--color-primary-ink)] md:text-[1.75rem]">
-              &bdquo;Begegnung beginnt da, wo Menschen einander beim Beten, Essen und Schweigen erleben dürfen.&ldquo;
-            </p>
-            <p className="relative mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink-muted)]">
-              Leitgedanke der Werkstatt
-            </p>
-          </aside>
-        </div>
-      </Container>
-
-      {/* Kernprinzipien */}
-      <section
-        aria-labelledby="kern-titel"
-        className="bg-[color:var(--color-sage-soft)]/40"
-      >
-        <Container padding="lg">
-          <SectionHeader
-            id="kern-titel"
-            eyebrow="Kern des Formats"
-            titel="Die drei Kerninhalte des Formats"
-          />
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2">
-            {KERNPRINZIPIEN.map((p, i) => {
-              const accent = [
-                { bg: "var(--color-sage)", ink: "#fff" },
-                { bg: "var(--color-lavender)", ink: "#fff" },
-                { bg: "var(--color-sunny)", ink: "var(--color-sunny-ink)" },
-                { bg: "var(--color-accent)", ink: "#fff" },
-              ][i % 4];
-              return (
-                <li
-                  key={p.titel}
-                  className="rounded-2xl border border-[color:var(--color-line)] bg-white p-6"
-                >
-                  <div
-                    className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold"
-                    style={{ background: accent.bg, color: accent.ink }}
-                  >
-                    {i + 1}
-                  </div>
-                  <h3 className="text-lg font-bold text-[color:var(--color-ink)]">{p.titel}</h3>
-                  <p className="mt-2 text-[15px] text-[color:var(--color-ink-soft)]">{p.text}</p>
-                </li>
-              );
-            })}
-          </ul>
-        </Container>
-      </section>
-
-      {/* Zielgruppen-Kacheln */}
-      <Container as="section" padding="lg" ariaLabelledby="zielgruppen-titel">
-        <SectionHeader
-          id="zielgruppen-titel"
-          eyebrow="Für wen"
-          titel="Für wen ist das Format geeignet?"
-          lead="Die Interreligiöse Werkstatt richtet sich an Institutionen, die Dialog erfahrbar machen möchten."
-        />
-        <ul className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
-          {FORMATE.map((f) => (
-            <li
-              key={f.slug}
-              className="border-l-4 pl-5"
-              style={{ borderColor: FORMAT_FARBEN[f.slug] }}
-            >
-              <h3
-                className="text-xl font-bold leading-tight"
-                style={{ color: FORMAT_FARBEN[f.slug] }}
-              >
-                <Link href={`/formate/${f.slug}`} className="no-underline hover:underline">
-                  {f.titel}
-                </Link>
-              </h3>
-              <p className="mt-2 leading-relaxed text-[color:var(--color-ink-soft)]">
-                {f.kurz}
-              </p>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-10">
-          <ButtonLink href="/mitorganisieren" size="lg">
-            Meine Institution anmelden
-          </ButtonLink>
-        </div>
-      </Container>
-
-      {/* Workshops-Teaser */}
-      <section
-        aria-labelledby="materialien-teaser-titel"
-        className="bg-[color:var(--color-lavender-soft)]/40"
-      >
-        <Container padding="lg">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <SectionHeader
-              id="materialien-teaser-titel"
-              eyebrow="Workshops"
-              titel="Workshops und Methoden für Institutionen"
-              lead="Workshopkonzepte, Methoden, Ablaufpläne, Regelwerk, Reflexionsfragen, Evaluation, Finanzierungstipps und Vorlagen."
-            />
-            <Link
-              href="/materialien"
-              className="text-sm font-semibold text-[color:var(--color-primary)]"
-            >
-              Alle Workshops ansehen →
-            </Link>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {teaserMaterialien.map((m) => (
-              <MaterialCard key={m.slug} material={m} />
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Termine-Teaser */}
-      <Container as="section" padding="lg" ariaLabelledby="termine-teaser-titel">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeader
-            id="termine-teaser-titel"
-            eyebrow="Termine"
-            titel="Aktuelle und geplante Werkstätten"
-            lead="Werkstätten werden in Status angezeigt: fix, geplant oder in Klärung. Unsichere Termine werden bewusst nicht als final dargestellt."
-          />
-          <Link href="/teilnehmen#termine" className="text-sm font-semibold text-[color:var(--color-primary)]">
-            Alle Termine ansehen →
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {kommendeTermine.map((t) => (
-            <TerminCard key={t.slug} termin={t} />
-          ))}
-        </div>
-      </Container>
-
-      {/* Regelwerk-Hinweis */}
-      <Container padding="md">
-        <CTASection
-          eyebrow="Schutz und Haltung"
-          titel="Interreligiösen Werkstätten brauchen Regeln."
-          text="Alle Werkstätten folgen einem gemeinsamen Regelwerk. Es schützt die Würde der Teilnehmenden, verhindert Missionierung, achtet Privatsphäre und macht deutlich: Diskriminierung, Abwertung und Grenzverletzungen haben keinen Platz."
-          primaryCta={{ href: "/regelwerk", label: "Regelwerk lesen" }}
-        />
-      </Container>
-
-      {/* Kontakt-CTA */}
-      <Container padding="md">
-        <CTASection
-          variant="primary"
-          eyebrow="Kontakt"
-          titel="Werkstatt an Ihrer Institution durchführen?"
-          text="Schreiben Sie uns. Wir begleiten Planung, Workshops, Methoden und Durchführung gemeinsam mit Ihnen."
-          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt mitorganisieren" }}
-          secondaryCta={{ href: `mailto:${SITE.email}`, label: SITE.email, external: true }}
-        />
-      </Container>
-    </>
-  );
+  return <>
+    <Hero titel="Interreligiöse Werkstatt" claim={SITE.claim} lead="Die Interreligiöse Werkstatt ist ein Bildungsformat vom Forum Dialog e.V. für junge Menschen mit evangelischen, katholischen oder muslimischen Hintergründen. Gleichzeitig sind alle interessierten Menschen mit einer dialogoffenen Weltanschauung willkommen. Im Mittelpunkt steht eine mehrtägige Exkursion. Das Ziel hierbei ist das gegenseitige Kennenlernen, wertschätzende Gespräche im geschützten Raum, das Teilen von Mahlzeiten und Zimmern sowie die Arbeit an einem interreligiös-kreativen Projekt, bei dem der Dialog greifbar wird." ctas={[{ href: "/aktuell#teilnehmen", label: "Werkstatt teilnehmen", variant: "primary" }, { href: "/aktuell#mitplanen", label: "Werkstatt mitplanen", variant: "secondary" }]} />
+    <Container as="section" padding="lg" ariaLabelledby="konzept-titel">
+      <SectionHeader id="konzept-titel" eyebrow="Konzept" titel="Das Konzept" lead="Dialog entsteht in der persönlichen Begegnung." />
+      <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed text-[color:var(--color-ink-soft)]"><p>Durch Menschen, ihren Alltag und ihre gelebte Spiritualität lernen wir Religionen kennen. Interreligiöser Dialog entwickelt sich dort, wo Menschen einander in und mit ihrer religiösen Identität wahrnehmen.</p><p>Im Rahmen der Interreligiösen Werkstatt kommt es zu Begegnungen, die einen authentischen Austausch ermöglichen. Die Einzigartigkeit der eigenen Perspektive soll dabei erkundet und greifbar gemacht werden. Dialog ist dann die Erfahrung, das Eigene im Anderen zu erkennen.</p></div>
+    </Container>
+    <section className="border-y border-[color:var(--color-line)] bg-[color:var(--color-bg-deep)]"><Container padding="lg"><SectionHeader eyebrow="Format" titel="Das Format" lead="Die Interreligiöse Werkstatt führt Gruppen verschiedener Institutionen und/oder Glaubensrichtungen zusammen. Sie bildet den Höhepunkt des Projektes im Anschluss an die vorbereitenden Workshops." /><div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed text-[color:var(--color-ink-soft)]"><p>Teilnehmende verbringen mehrere Tage miteinander, teilen Alltagssituationen, erleben religiöse und spirituelle Praxis nebeneinander und kommen über Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins Gespräch.</p><p>Das Format schafft Nähe, ohne Unterschiede aufzulösen. Was vorher abstrakt war, wird konkret. In einem geschützten Rahmen kann jeder Teilnehmende offen seine eigene Perspektive einbringen.</p></div></Container></section>
+    <Container as="section" padding="lg" ariaLabelledby="kern-titel"><SectionHeader id="kern-titel" eyebrow="Kern des Formats" titel="Die drei Kerninhalte des Formats" /><ul className="mt-10 grid gap-6 md:grid-cols-3">{KERNINHALTE.map(([titel, text]) => <li key={titel} className="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6"><h3 className="text-lg font-bold text-[color:var(--color-ink)]">{titel}</h3><p className="mt-3 text-[color:var(--color-ink-soft)]">{text}</p></li>)}</ul></Container>
+    <PartnerLogoBar />
+    <Container padding="md"><div className="rounded-3xl bg-[color:var(--color-primary)] p-8 text-white"><h2 className="text-3xl font-bold">Mehr über die Begegnung</h2><p className="mt-3 max-w-2xl text-white/85">Die grundlegende Struktur und ein möglicher Ablauf werden auf der Seite Begegnung beschrieben.</p><Link href="/begegnung" className="mt-6 inline-flex rounded-full bg-white px-5 py-3 font-bold text-[color:var(--color-primary)] no-underline">Begegnung kennenlernen</Link></div></Container>
+  </>;
 }
