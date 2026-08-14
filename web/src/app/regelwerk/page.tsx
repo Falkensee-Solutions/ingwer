@@ -23,7 +23,7 @@ export default function RegelwerkPage() {
       <Container padding="lg">
         <SectionHeader
           eyebrow="Regeln"
-          titel="Die 17 Regeln im Überblick"
+          titel="Die Regeln im Überblick"
           lead="Klicken Sie auf eine Regel, um die ausführliche Fassung zu lesen."
         />
         <div className="mt-10">

@@ -3,104 +3,62 @@
     {
       "nr": 1,
       "titel": "Würde und Respekt",
-      "kurz": "Jeder Mensch hat Würde und wird mit Respekt und Aufmerksamkeit behandelt.",
-      "lang": "Jeder Mensch hat Würde und wird mit Respekt und Aufmerksamkeit behandelt. – unabhängig von Religion, Konfession, Weltanschauung, Herkunft, Geschlecht, sexueller Orientierung, Alter, Behinderung, sozialer Lage und Lebensführung."
+      "kurz": "Jeder Mensch hat Würde.",
+      "lang": "Jeder Mensch hat Würde. Es gilt, sie mit Respekt und Aufmerksamkeit zu behandeln – unabhängig von Religion, Konfession, Weltanschauung, Herkunft, Geschlecht, sexueller Orientierung, Alter, Behinderung, sozialer Lage und Lebensführung."
     },
     {
       "nr": 2,
       "titel": "Selbstbeschreibung statt Zuschreibung",
-      "kurz": "Jede Person spricht für sich selbst.",
-      "lang": "Niemand wird auf seine Religion, Gruppe, Kultur oder Weltanschauung reduziert. Statt „Ihr glaubt doch …“ werden Fragen offen und respektvoll gestellt: „Wie ist das für Sie?“"
+      "kurz": "Jede Person spricht nur für sich selbst.",
+      "lang": "Jede Person spricht nur für sich selbst. Niemand wird auf seine Religion, Gruppe, Kultur oder Weltanschauung reduziert."
     },
     {
       "nr": 3,
       "titel": "Keine Missionierung",
       "kurz": "Eigene Überzeugungen dürfen geteilt, aber nicht aufgedrängt werden.",
-      "lang": "Missionierung, Bekehrungsversuche und weltanschauliche Überredung sind nicht erlaubt. Eigene Überzeugungen dürfen geteilt werden – ohne Druck oder Bewertung anderer."
+      "lang": "Eigene Überzeugungen dürfen geteilt, aber nicht aufgedrängt werden. Missionierung, Bekehrungsversuche und weltanschauliche Überredung sind nicht erlaubt."
     },
     {
       "nr": 4,
       "titel": "Ich-Perspektive",
       "kurz": "Aus der eigenen Erfahrung sprechen.",
-      "lang": "Teilnehmende sprechen aus eigener Erfahrung: „Ich glaube …“, „Für mich bedeutet …“, „In meiner Praxis ist …“."
+      "lang": "Teilnehmende sprechen aus eigener Erfahrung."
     },
     {
       "nr": 5,
       "titel": "Aktives Zuhören",
       "kurz": "Erst verstehen, dann antworten.",
-      "lang": "Aufmerksam zuhören, andere ausreden lassen und versuchen zu verstehen, bevor man antwortet."
+      "lang": "Aufmerksam zuhören, andere ausreden lassen und versuchen, die Perspektive zu verstehen, bevor man antwortet."
     },
     {
       "nr": 6,
       "titel": "Fragen sind willkommen",
-      "kurz": "Ehrliche Fragen sind erlaubt – persönliche Antworten bleiben freiwillig.",
+      "kurz": "Ehrliche Fragen sind ausdrücklich erlaubt.",
       "lang": "Ehrliche Fragen sind ausdrücklich erlaubt. Niemand ist verpflichtet, persönliche oder intime Fragen zu beantworten."
     },
     {
       "nr": 7,
       "titel": "Vertraulichkeit",
-      "kurz": "Was in der Werkstatt geteilt wird, bleibt dort.",
+      "kurz": "Persönliche Erfahrungen bleiben geschützt.",
       "lang": "Persönliche Erfahrungen und Aussagen aus der Werkstatt werden ohne Zustimmung nicht nach außen getragen."
     },
     {
       "nr": 8,
       "titel": "Keine Diskriminierung",
       "kurz": "Diskriminierung, Abwertung und Menschenfeindlichkeit haben keinen Platz.",
-      "lang": "Rassistische, antisemitische, antimuslimische, sexistische, queerfeindliche, behindertenfeindliche und klassistische Aussagen werden nicht toleriert. Diskriminierende Aussagen werden angesprochen und gemeinsam reflektiert."
+      "lang": "Diskriminierung, Abwertung und Menschenfeindlichkeit haben keinen Platz."
     },
     {
       "nr": 9,
       "titel": "Religiöse und weltanschauliche Praxis",
-      "kurz": "Gebet, Stille, Fasten, Speiseregeln, Feiertage und Symbole werden respektiert.",
-      "lang": "Religiöse und weltanschauliche Praxis – einschließlich Gebet, Meditation, Stille, Fasten, Speiseregeln, Feiertagen, Kleidung und Symbolen oder dem bewussten Verzicht auf religiöse Praxis – wird respektiert."
+      "kurz": "Religiöse und weltanschauliche Praxis wird respektiert.",
+      "lang": "Gebet, Stille, Fasten, Speiseregeln, Feiertage und Symbole werden respektiert."
     },
     {
       "nr": 10,
       "titel": "Freiwilligkeit und Grenzen",
       "kurz": "Teilnahme an Gesprächen, Übungen und Ritualen ist freiwillig.",
-      "lang": "Teilnahme an Gesprächen, Übungen, Gebeten, Ritualen und persönlichen Erzählungen ist freiwillig. „Nein“ wird akzeptiert."
-    },
-    {
-      "nr": 11,
-      "titel": "Sprache",
-      "kurz": "Wertschätzende Sprache verwenden, bei Unsicherheit nachfragen.",
-      "lang": "Wertschätzende Sprache verwenden. Bei Unsicherheit über Begriffe nachfragen oder Korrekturen annehmen."
-    },
-    {
-      "nr": 12,
-      "titel": "Privatsphäre und Körpergrenzen",
-      "kurz": "Rückzugsräume und persönliche Gegenstände werden respektiert.",
-      "lang": "Räume, Rückzugsorte und persönliche Gegenstände werden ohne Erlaubnis nicht betreten oder berührt. Körperkontakt nur mit Einverständnis."
-    },
-    {
-      "nr": 13,
-      "titel": "Fotos, Videos und Social Media",
-      "kurz": "Aufnahmen nur mit Zustimmung. Veröffentlichung nur mit Freigabe.",
-      "lang": "Fotos, Videos und Aufnahmen nur mit Zustimmung. Veröffentlichung nur mit ausdrücklicher Freigabe. Niemand erscheint gegen seinen Willen auf Bildern oder Posts."
-    },
-    {
-      "nr": 14,
-      "titel": "Verantwortung für die Gemeinschaft",
-      "kurz": "Pünktlichkeit, Verlässlichkeit und Rücksicht gehören zum gemeinsamen Rahmen.",
-      "lang": "Alle Teilnehmenden tragen zum Gelingen der Werkstatt bei: Pünktlichkeit, Verlässlichkeit, Rücksichtnahme und Beteiligung im Rahmen der eigenen Möglichkeiten."
-    },
-    {
-      "nr": 15,
-      "titel": "Konflikte werden angesprochen",
-      "kurz": "Konflikte und Verletzungen werden nicht ignoriert.",
-      "lang": "Konflikte, Irritationen oder Verletzungen werden nicht ignoriert. Sie können direkt, in kleiner Runde oder mit Unterstützung des Leitungsteams angesprochen werden."
-    },
-    {
-      "nr": 16,
-      "titel": "Leitungsteam und Schutzauftrag",
-      "kurz": "Das Leitungsteam ist Ansprechpartner für Unsicherheiten, Konflikte und Grenzverletzungen.",
-      "lang": "Das Leitungsteam sorgt für die Einhaltung der Regeln und ist Ansprechpartner für Unsicherheiten, Konflikte, Grenzverletzungen und Diskriminierungserfahrungen."
-    },
-    {
-      "nr": 17,
-      "titel": "Gemeinsames Ziel",
-      "kurz": "Unterschiede verstehen, Vorurteile abbauen, Respekt einüben.",
-      "lang": "Ziel ist nicht, alle Unterschiede aufzulösen. Ziel ist, einander besser zu verstehen, Vorurteile abzubauen und respektvollen Umgang einzuüben."
+      "lang": "Teilnahme an Gesprächen, Übungen und Ritualen ist freiwillig."
     }
   ],
   "schutzAbschnitte": [

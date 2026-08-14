@@ -1,6 +1,6 @@
 import type { Regel } from "@/data/regelwerk";
 
-// 17 Regeln → 4 thematische Farbgruppen, damit das Akkordeon visuell ordnet.
+// Zehn Regeln → thematische Farbgruppen, damit das Akkordeon visuell ordnet.
 function farbeFuerRegel(nr: number): string {
   if (nr <= 4) return "var(--color-sage)"; // Würde, Selbstbeschreibung, Respekt
   if (nr <= 8) return "var(--color-lavender)"; // Dialog, keine Missionierung
