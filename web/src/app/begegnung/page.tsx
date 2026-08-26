@@ -77,21 +77,8 @@ export default function BegegnungPage() {
 
       <Container as="section" padding="lg" ariaLabelledby="zielgruppen-titel">
         <SectionHeader id="zielgruppen-titel" eyebrow="Anpassung" titel="Anpassung an unterschiedliche Zielgruppen" />
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {[
-            ["Junge Erwachsene aus Gemeinden", "Persönliche Ansprache und der Aufbau langfristiger Beziehungen können im Mittelpunkt stehen."],
-            ["Schulen", "Vorbereitung, Aufsicht, Schutz, Elterninformation und Unterbringung können besonders berücksichtigt werden."],
-            ["Hochschulen", "Die Werkstatt kann in Seminare, Module oder Studienangebote eingebunden werden."],
-            ["Ausbildungsinstitutionen", "Der Transfer in die pädagogische und soziale Berufspraxis kann stärker betont werden."],
-          ].map(([titel, text]) => (
-            <article key={titel} className="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6">
-              <h3 className="text-lg font-bold text-[color:var(--color-ink)]">{titel}</h3>
-              <p className="mt-2 text-[color:var(--color-ink-soft)]">{text}</p>
-            </article>
-          ))}
-        </div>
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[color:var(--color-ink-soft)]">
-          Der Kern bleibt die mehrtägige Begegnung, in der religiöse und weltanschauliche Perspektiven sichtbar werden und Menschen miteinander ins Gespräch kommen.
+          Die Werkstatt kann an unterschiedliche Zielgruppen und Rahmenbedingungen angepasst werden. Der Kern bleibt die mehrtägige Begegnung, in der religiöse und weltanschauliche Perspektiven sichtbar werden und Menschen miteinander ins Gespräch kommen.
         </p>
       </Container>
     </>
