@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Vergangene Workshops, Werkstätten und Veranstaltungen.",
 };
 
-const JAHRE = ["2024", "2025", "2026"];
+const JAHRE = ["2025", "2026"];
 
 export default function ArchivPage() {
   return (
@@ -26,9 +26,6 @@ export default function ArchivPage() {
             </li>
           ))}
         </ul>
-      </Container>
-      <Container padding="lg" className="border-t border-[color:var(--color-line)]">
-        <SectionHeader eyebrow="Archivmaterialien" titel="Dokumentation und Rückblicke" lead="Mögliche sichtbare Archivmaterialien sind Fotos, Reels, Flyer, Broschüren, kurze Projektberichte, konkrete Veranstaltungsdaten, kurze Dokumentationen, Rückblicke sowie Rückmeldungen und Evaluationen." />
       </Container>
     </>
   );

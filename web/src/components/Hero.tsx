@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { ButtonLink } from "./Button";
 import { Container } from "./Container";
 
@@ -5,7 +6,7 @@ type Props = {
   eyebrow?: string;
   titel: string;
   claim?: string;
-  lead?: string;
+  lead?: ReactNode;
   ctas?: Array<{ href: string; label: string; variant?: "primary" | "secondary" | "ghost" | "subtle" }>;
 };
 
@@ -62,9 +63,9 @@ export function Hero({ eyebrow, titel, claim, lead, ctas }: Props) {
             </p>
           ) : null}
           {lead ? (
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-[color:var(--color-ink-soft)] md:text-xl">
+            <div className="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-[color:var(--color-ink-soft)] md:text-xl">
               {lead}
-            </p>
+            </div>
           ) : null}
           {ctas && ctas.length > 0 ? (
             <div className="mt-10 flex flex-wrap gap-3">
