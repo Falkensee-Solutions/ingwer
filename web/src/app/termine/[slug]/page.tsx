@@ -66,7 +66,7 @@ export default async function TerminDetailPage({
         lead={`${termin.zeitraum}${termin.ort ? ` · ${termin.ort}` : ""}`}
         ctas={[
           ...(anmeldungLabel
-            ? [{ href: mailto, label: anmeldungLabel, variant: "primary" as const }]
+            ? [{ href: mailto, label: anmeldungLabel, variant: "participate" as const }]
             : []),
           { href: `/formate/${format.slug}#termine`, label: "Zum Format", variant: "ghost" },
         ]}

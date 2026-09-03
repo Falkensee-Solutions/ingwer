@@ -70,7 +70,7 @@ export default async function FormatDetailPage({
         titel={format.titel}
         lead={format.einleitung}
         ctas={[
-          { href: "/mitorganisieren", label: format.cta, variant: "primary" },
+          { href: "/mitorganisieren", label: "Werkstatt planen", variant: "plan" },
           { href: "/konzept#formate", label: "Alle Formate", variant: "ghost" },
         ]}
       />
@@ -138,7 +138,7 @@ export default async function FormatDetailPage({
                 className="relative text-lg font-bold"
                 style={{ color: accent.ink }}
               >
-                Werkstatt mitorganisieren
+                Werkstatt planen
               </h2>
               <p className="relative mt-2 text-sm text-[color:var(--color-ink-soft)]">
                 Schreiben Sie uns mit Angaben zu Institution, Zielgruppe und

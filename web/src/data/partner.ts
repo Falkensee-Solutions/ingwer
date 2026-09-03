@@ -5,7 +5,7 @@ export type Partner = {
   name: string;
   rolle: string;
   beschreibung: string;
-  /** Logo-Pfad relativ zu /public. Datei muss separat eingefügt werden. */
+  /** Logo-Pfad relativ zu /public. */
   logoPfad: string | null;
   url: string | null;
 };

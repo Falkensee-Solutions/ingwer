@@ -84,7 +84,7 @@ export default function MitorganisierenPage() {
         claim="Interreligiöse Begegnung braucht institutionelle Partner."
         lead="Die Interreligiöse Werkstatt entsteht dort, wo Gemeinden, Schulen, Hochschulen, Ausbildungsstätten, Träger und religiöse Institutionen Verantwortung teilen. Wenn Ihre Institution Menschen für Dialog gewinnen, Räume öffnen oder ein Format mittragen möchte, begleiten wir Sie von der ersten Idee bis zur Auswertung."
         ctas={[
-          { href: "/kontakt", label: "Kooperation anfragen", variant: "primary" },
+          { href: "/kontakt", label: "Werkstatt planen", variant: "plan" },
           { href: "/konzept#formate", label: "Formate ansehen", variant: "ghost" },
         ]}
       />
@@ -157,7 +157,7 @@ export default function MitorganisierenPage() {
           eyebrow="Erstgespräch"
           titel="Möchte Ihre Institution eine Werkstatt mittragen?"
           text="Schreiben Sie uns, in welchem Kontext Sie eine Werkstatt denken: Zielgruppe, mögliche Partner, Zeitraum und vorhandene Ressourcen reichen für den ersten Schritt aus."
-          primaryCta={{ href: "/kontakt", label: "Kooperation anfragen" }}
+          primaryCta={{ href: "/kontakt", label: "Werkstatt planen", variant: "plan" }}
           secondaryCta={{ href: "/regelwerk", label: "Regelwerk lesen" }}
         />
       </Container>

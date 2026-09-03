@@ -46,8 +46,8 @@ export default function TeilnehmenPage() {
         claim="''Dialog wird lebendig, wenn Menschen sich begegnen.''"
         lead="Diese Seite richtet sich an Menschen, die selbst bei einer Werkstatt dabei sein möchten: einzeln, mit Freund:innen, als Jugendgruppe, Seminargruppe oder aus einer Gemeinde heraus."
         ctas={[
-          { href: "#termine", label: "Termine ansehen", variant: "primary" },
-          { href: "/kontakt", label: "Interesse anmelden", variant: "ghost" },
+          { href: "#termine", label: "Termine ansehen", variant: "participate" },
+          { href: "/kontakt", label: "Werkstatt teilnehmen", variant: "participate" },
         ]}
       />
 
@@ -142,7 +142,7 @@ export default function TeilnehmenPage() {
           eyebrow="Interesse"
           titel="Sie möchten bei einer Werkstatt dabei sein?"
           text="Schreiben Sie uns kurz, ob Sie einzeln, mit Freund:innen oder als Gruppe teilnehmen möchten."
-          primaryCta={{ href: "/kontakt", label: "Interesse anmelden" }}
+          primaryCta={{ href: "/kontakt", label: "Werkstatt teilnehmen", variant: "participate" }}
           secondaryCta={{ href: "/regelwerk", label: "Regelwerk lesen" }}
         />
       </Container>

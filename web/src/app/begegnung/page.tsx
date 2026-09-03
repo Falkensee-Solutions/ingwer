@@ -36,11 +36,11 @@ export default function BegegnungPage() {
     <>
       <Hero
         eyebrow="Begegnung"
-        titel="Von der Kontaktaufnahme zur gemeinsamen Werkstatt"
+        titel="Anfangen"
         lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Format, in dem Menschen verschiedener religiöser Hintergründe zusammenkommen, ihre religiöse Identität sichtbar leben und sich über Glaubenspraxis austauschen. Der Ablauf dient als Orientierung und kann an Gemeinden, Institutionen, Zielgruppe, Veranstaltungsort und verfügbare Zeit angepasst werden."
         ctas={[
-          { href: "/aktuell#teilnehmen", label: "Teilnehmen", variant: "primary" },
-          { href: "/aktuell#mitplanen", label: "Werkstatt mitplanen", variant: "ghost" },
+          { href: "/aktuell#teilnehmen", label: "Werkstatt teilnehmen", variant: "participate" },
+          { href: "/aktuell#mitplanen", label: "Werkstatt planen", variant: "plan" },
         ]}
       />
 
@@ -63,12 +63,15 @@ export default function BegegnungPage() {
           <SectionHeader eyebrow="Ablauf" titel="Die fünf Phasen" />
           <ol className="mt-10 space-y-6">
             {PHASEN.map((phase, index) => (
-              <li key={phase.titel} className="grid gap-5 rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6 md:grid-cols-[5rem_1fr] md:p-8">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--color-sage)] text-lg font-bold text-white">{index + 1}</span>
-                <div>
-                  <h3 className="text-xl font-bold text-[color:var(--color-ink)]">{phase.titel}</h3>
-                  <p className="mt-3 leading-relaxed text-[color:var(--color-ink-soft)]">{phase.text}</p>
-                </div>
+              <li key={phase.titel}>
+                <details className="group rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-6 md:p-8">
+                  <summary className="grid cursor-pointer list-none gap-5 md:grid-cols-[5rem_1fr_auto] md:items-center [&::-webkit-details-marker]:hidden">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--color-sage)] text-lg font-bold text-white">{index + 1}</span>
+                    <h3 className="text-xl font-bold text-[color:var(--color-ink)]">{phase.titel}</h3>
+                    <span aria-hidden="true" className="text-2xl font-light leading-none text-[color:var(--color-primary)] transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-6 leading-relaxed text-[color:var(--color-ink-soft)] md:ml-[5rem]">{phase.text}</p>
+                </details>
               </li>
             ))}
           </ol>

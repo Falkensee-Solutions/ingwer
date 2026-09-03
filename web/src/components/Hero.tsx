@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ButtonLink } from "./Button";
+import { ButtonLink, type Variant } from "./Button";
 import { Container } from "./Container";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   titel: string;
   claim?: string;
   lead?: ReactNode;
-  ctas?: Array<{ href: string; label: string; variant?: "primary" | "secondary" | "ghost" | "subtle" }>;
+  ctas?: Array<{ href: string; label: string; variant?: Variant }>;
 };
 
 export function Hero({ eyebrow, titel, claim, lead, ctas }: Props) {
@@ -73,7 +73,7 @@ export function Hero({ eyebrow, titel, claim, lead, ctas }: Props) {
                 <ButtonLink
                   key={cta.href}
                   href={cta.href}
-                  variant={cta.variant ?? (i === 0 ? "primary" : "ghost")}
+                  variant={cta.variant ?? (i === 0 ? "participate" : "ghost")}
                   size="lg"
                 >
                   {cta.label}

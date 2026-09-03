@@ -55,8 +55,8 @@ export default function AktuellPage() {
       </section>
 
       <Container as="section" id="mitplanen" padding="lg" ariaLabelledby="mitplanen-titel">
-        <SectionHeader id="mitplanen-titel" eyebrow="Werkstatt mitplanen" titel="Eine Interreligiöse Werkstatt gemeinsam vorbereiten" lead="Das Projekt der Interreligiösen Werkstatt ist modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt bestehen, wenngleich Inhalt und Aufbau je individuell nach Absprache angepasst werden können. Die Bedürfnisse und Voraussetzungen der jeweiligen Gruppe werden in jedem Fall berücksichtigt." />
-        <div className="mt-8"><CTASection variant="primary" eyebrow="Mitplanen" titel="Werkstatt mitplanen" text="" primaryCta={{ href: "/kontakt", label: "Werkstatt mitplanen" }} /></div>
+        <SectionHeader id="mitplanen-titel" eyebrow="Werkstatt planen" titel="Eine Interreligiöse Werkstatt gemeinsam vorbereiten" lead="Das Projekt der Interreligiösen Werkstatt ist modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt bestehen, wenngleich Inhalt und Aufbau je individuell nach Absprache angepasst werden können. Die Bedürfnisse und Voraussetzungen der jeweiligen Gruppe werden in jedem Fall berücksichtigt." />
+        <div className="mt-8"><CTASection variant="primary" eyebrow="Werkstatt planen" titel="Werkstatt planen" text="" primaryCta={{ href: "/kontakt", label: "Werkstatt planen", variant: "plan" }} /></div>
       </Container>
     </>
   );

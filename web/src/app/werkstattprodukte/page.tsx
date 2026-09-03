@@ -56,7 +56,7 @@ export default function WerkstattproduktePage() {
                 href="/mitorganisieren"
                 className="inline-flex items-center rounded-full bg-[color:var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-white no-underline hover:bg-[color:var(--color-primary-hover)]"
               >
-                Werkstatt mitorganisieren
+                Werkstatt planen
               </Link>
               <Link
                 href="/materialien"
@@ -96,10 +96,10 @@ export default function WerkstattproduktePage() {
 
       <Container padding="md">
         <CTASection
-          eyebrow="Werkstatt mitorganisieren"
+          eyebrow="Werkstatt planen"
           titel="Eigene Werkstatt mit Ergebnis"
           text="Wir unterstützen Institutionen dabei, ein eigenes Werkstattprodukt zu erarbeiten – ob Text, Kunst, Musik oder Video."
-          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt mitorganisieren" }}
+          primaryCta={{ href: "/mitorganisieren", label: "Werkstatt planen", variant: "plan" }}
         />
       </Container>
     </>

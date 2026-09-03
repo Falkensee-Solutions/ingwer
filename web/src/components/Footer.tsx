@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_NAV, SITE } from "@/lib/site";
 
@@ -22,6 +23,18 @@ export function Footer() {
               Ein Projekt von Forum Dialog e.V. in
               Kooperation mit EKBO, Erzbistum Berlin und House of One.
             </p>
+            <div className="mt-8 border-t border-[color:var(--color-line)]/60 pt-6">
+              <p className="text-sm leading-relaxed text-[color:var(--color-ink-soft)]">
+                Gefördert durch:
+              </p>
+              <Image
+                src="/logos/senat-logo.png"
+                alt="Logo des Berliner Senats"
+                width={3544}
+                height={591}
+                className="mt-3 h-auto w-56 max-w-full"
+              />
+            </div>
           </div>
 
           <div>

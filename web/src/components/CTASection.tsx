@@ -1,4 +1,4 @@
-import { ButtonLink } from "./Button";
+import { ButtonLink, type Variant } from "./Button";
 import { Container } from "./Container";
 import { SectionHeader } from "./SectionHeader";
 
@@ -6,8 +6,8 @@ type Props = {
   eyebrow?: string;
   titel: string;
   text: string;
-  primaryCta?: { href: string; label: string; external?: boolean };
-  secondaryCta?: { href: string; label: string; external?: boolean };
+  primaryCta?: { href: string; label: string; external?: boolean; variant?: Variant };
+  secondaryCta?: { href: string; label: string; external?: boolean; variant?: Variant };
   variant?: "soft" | "primary";
 };
 
@@ -73,7 +73,9 @@ export function CTASection({
             <ButtonLink
               href={primaryCta.href}
               external={primaryCta.external}
-              variant={variant === "primary" ? "secondary" : "primary"}
+              variant={
+                primaryCta.variant ?? (variant === "primary" ? "secondary" : "primary")
+              }
               size="lg"
             >
               {primaryCta.label}
@@ -83,7 +85,9 @@ export function CTASection({
             <ButtonLink
               href={secondaryCta.href}
               external={secondaryCta.external}
-              variant={variant === "primary" ? "subtle" : "ghost"}
+              variant={
+                secondaryCta.variant ?? (variant === "primary" ? "subtle" : "ghost")
+              }
               size="lg"
             >
               {secondaryCta.label}

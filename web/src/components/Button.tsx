@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "secondary" | "ghost" | "subtle";
+export type Variant =
+  | "primary"
+  | "secondary"
+  | "ghost"
+  | "subtle"
+  | "participate"
+  | "plan";
 type Size = "md" | "lg";
 
 const VARIANT: Record<Variant, string> = {
@@ -13,6 +19,10 @@ const VARIANT: Record<Variant, string> = {
     "bg-transparent text-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-soft)] border border-[color:var(--color-primary)]",
   subtle:
     "bg-[color:var(--color-surface)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-bg-deep)] border border-[color:var(--color-line)]",
+  participate:
+    "bg-[color:var(--color-sage-ink)] text-white hover:bg-[color:var(--color-sage-ink)]/85 border border-[color:var(--color-sage-ink)] shadow-[0_1px_0_rgba(255,255,255,0.1)_inset,0_10px_22px_-14px_rgba(45,103,87,0.7)]",
+  plan:
+    "bg-[color:var(--color-accent)] text-white hover:bg-[color:var(--color-accent-hover)] border border-[color:var(--color-accent)] shadow-[0_1px_0_rgba(255,255,255,0.1)_inset,0_10px_22px_-14px_rgba(198,106,43,0.55)]",
 };
 
 const SIZE: Record<Size, string> = {

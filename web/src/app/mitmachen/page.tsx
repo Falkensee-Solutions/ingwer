@@ -15,18 +15,18 @@ export const metadata: Metadata = {
 const WEGE = [
   {
     eyebrow: "Für Institutionen",
-    titel: "Werkstatt mitorganisieren",
+    titel: "Werkstatt planen",
     text: "Für Schulen, Hochschulen, Ausbildungsstätten, Gemeinden, Träger und Partner, die eine Werkstatt ermöglichen, Räume öffnen, Teilnehmende gewinnen oder Verantwortung im Orgateam übernehmen möchten.",
     href: "/mitorganisieren",
-    label: "Mitorganisieren",
+    label: "Werkstatt planen",
     hinweis: "Passend, wenn Sie für eine Institution, Gemeinde oder Organisation anfragen.",
   },
   {
     eyebrow: "Für Personen und Gruppen",
-    titel: "An einer Werkstatt teilnehmen",
+    titel: "Werkstatt teilnehmen",
     text: "Für Einzelpersonen, Freund:innen, Jugendgruppen, Seminargruppen, Studierende und Gemeindemitglieder, die selbst an einer Interreligiösen Werkstatt teilnehmen möchten.",
     href: "/teilnehmen",
-    label: "Teilnehmen",
+    label: "Werkstatt teilnehmen",
     hinweis: "Passend, wenn Sie selbst dabei sein oder eine Gruppe anmelden möchten.",
   },
 ];
@@ -38,10 +38,10 @@ export default function MitmachenPage() {
         eyebrow="Mitmachen"
         titel="Der richtige Einstieg in die Interreligiöse Werkstatt"
         claim="Mitmachen heißt: entweder ermöglichen oder teilnehmen."
-        lead="Die Website unterscheidet zwei Wege: Institutionen können eine Werkstatt mitorganisieren, Personen und Gruppen können an einer Werkstatt teilnehmen. Wählen Sie den passenden Einstieg."
+        lead="Die Website unterscheidet zwei Wege: Institutionen können eine Werkstatt planen, Personen und Gruppen können an einer Werkstatt teilnehmen. Wählen Sie den passenden Einstieg."
         ctas={[
-          { href: "/mitorganisieren", label: "Für Institutionen", variant: "primary" },
-          { href: "/teilnehmen", label: "Für Teilnehmende", variant: "ghost" },
+          { href: "/mitorganisieren", label: "Werkstatt planen", variant: "plan" },
+          { href: "/teilnehmen", label: "Werkstatt teilnehmen", variant: "participate" },
         ]}
       />
 
@@ -72,7 +72,11 @@ export default function MitmachenPage() {
                 </HinweisBox>
               </div>
               <div className="mt-7">
-                <ButtonLink href={weg.href} size="lg">
+                <ButtonLink
+                  href={weg.href}
+                  variant={weg.href === "/teilnehmen" ? "participate" : "plan"}
+                  size="lg"
+                >
                   {weg.label}
                 </ButtonLink>
               </div>
