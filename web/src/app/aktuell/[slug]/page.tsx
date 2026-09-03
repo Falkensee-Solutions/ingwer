@@ -51,7 +51,7 @@ export default async function TerminDetailPage({
     anliegen: `Ich interessiere mich für den Termin „${termin.titel}“ und möchte weitere Informationen zur Teilnahme oder Anmeldung erhalten.`,
   });
   const anmeldungLabel =
-    termin.status === "fix"
+    termin.status === "bestätigt"
       ? "Anmeldung anfragen"
       : termin.status === "abgeschlossen"
         ? null

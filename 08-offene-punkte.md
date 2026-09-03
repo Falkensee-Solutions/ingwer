@@ -41,10 +41,10 @@
   
 Aktueller Stand aus Planung:  
   
-- IW Körner: 29.01.–02.02., fix, Jahreszahl prüfen  
-- IW Lazarus: 06.–09.04. oder 13.–16.04., in Klärung  
+- IW Körner: 29.01.–02.02., bestätigt, Jahreszahl prüfen
+- IW Lazarus: 06.–09.04. oder 13.–16.04., in Vorbereitung
 - IW Schulen: voraussichtlich Juni 2027  
-- IW Simojoki: voraussichtlich August 2027, in Klärung  
+- IW Simojoki: voraussichtlich August 2027, in Vorbereitung
 - IW Gemeinden/Frauen: 20.–24.10.2027, Idee/geplant  
   
 ## Sprache  

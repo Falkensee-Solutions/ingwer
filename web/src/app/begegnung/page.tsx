@@ -36,11 +36,11 @@ export default function BegegnungPage() {
     <>
       <Hero
         eyebrow="Begegnung"
-        titel="Anfangen"
+        titel="Von der Kontaktaufnahme zur gemeinsamen Werkstatt"
         lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Format, in dem Menschen verschiedener religiöser Hintergründe zusammenkommen, ihre religiöse Identität sichtbar leben und sich über Glaubenspraxis austauschen. Der Ablauf dient als Orientierung und kann an Gemeinden, Institutionen, Zielgruppe, Veranstaltungsort und verfügbare Zeit angepasst werden."
         ctas={[
           { href: "/aktuell#teilnehmen", label: "Werkstatt teilnehmen", variant: "participate" },
-          { href: "/aktuell#mitplanen", label: "Werkstatt planen", variant: "plan" },
+          { href: "/angebote#mitplanen", label: "Werkstatt planen", variant: "plan" },
         ]}
       />
 

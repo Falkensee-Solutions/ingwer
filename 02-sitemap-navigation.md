@@ -4,16 +4,12 @@
   
 Die Website soll eine klare Hauptnavigation haben:  
   
-1. Start  
-2. Konzept  
-3. Formate  
-4. Mitorganisieren  
-5. Teilnehmen  
-6. Materialien  
-7. Werkstattprodukte  
-8. Termine  
-9. Partner  
-10. Kontakt  
+1. Aktuell  
+2. Begegnung  
+3. Angebote  
+4. Archiv  
+5. Über uns  
+6. Kontakt  
   
 Hinweis zur Zielgruppenführung:  
   
@@ -183,16 +179,19 @@ Inhalte:
 - anonymisierte Zitate  
 - Fotos ohne erkennbare Gesichter  
   
-### `/termine`  
+### `/aktuell` – aktuelle Veranstaltungen
   
 Aktuelle und geplante Werkstätten  
   
 Termine müssen nach Status unterschieden werden:  
   
-- fix  
+- Bestätigt
 - geplant  
-- in Klärung  
-- abgeschlossen  
+- in Vorbereitung
+
+Abgeschlossene Veranstaltungen werden nicht als aktuelle Veranstaltungen geführt.
+
+Die Angebotsbereiche „Workshops und Besuche“ sowie „Werkstatt planen“ befinden sich auf `/angebote`.
   
 Keine unsicheren Termine als endgültig darstellen.  
   

@@ -216,7 +216,7 @@ collections:
               - name: status
                 label: Status
                 widget: select
-                options: [fix, geplant, in-klaerung, abgeschlossen]
+                options: [bestätigt, geplant, in-vorbereitung, abgeschlossen]
                 default: geplant
               - { name: zielgruppe, label: Zielgruppe, widget: string }
               - { name: beschreibung, label: Beschreibung, widget: text }

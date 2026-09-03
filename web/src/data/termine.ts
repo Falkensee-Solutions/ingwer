@@ -1,7 +1,7 @@
 import content from "../../content/termine.json";
 import type { FormatSlug } from "./formate";
 
-export type TerminStatus = "fix" | "geplant" | "in-klaerung" | "abgeschlossen";
+export type TerminStatus = "bestätigt" | "geplant" | "in-vorbereitung" | "abgeschlossen";
 
 export type TerminDownload = {
   label: string;
@@ -27,17 +27,17 @@ export type Termin = {
 };
 
 export const STATUS_TERMIN_LABEL: Record<TerminStatus, string> = {
-  fix: "Fix bestätigt",
+  bestätigt: "Bestätigt",
   geplant: "Geplant",
-  "in-klaerung": "In Klärung",
+  "in-vorbereitung": "in Vorbereitung",
   abgeschlossen: "Abgeschlossen",
 };
 
 export const STATUS_TERMIN_BESCHREIBUNG: Record<TerminStatus, string> = {
-  fix: "Termin ist verbindlich bestätigt.",
+  bestätigt: "Termin ist verbindlich bestätigt.",
   geplant: "Termin ist geplant, jedoch noch nicht final freigegeben.",
-  "in-klaerung":
-    "Termin und Rahmenbedingungen werden derzeit zwischen den Beteiligten geklärt.",
+  "in-vorbereitung":
+    "Termin und Rahmenbedingungen werden derzeit vorbereitet und abgestimmt.",
   abgeschlossen: "Werkstatt wurde bereits durchgeführt.",
 };
 
@@ -56,29 +56,6 @@ export function getTerminBySlug(slug: string): Termin | undefined {
 
 export function getTermineByFormatSlug(formatSlug: FormatSlug): Termin[] {
   return TERMINE.filter((t) => t.formatSlug === formatSlug).sort(sortiereTermine);
-}
-
-/** Reihenfolge für die Anzeige auf /termine. */
-export const STATUS_REIHENFOLGE: TerminStatus[] = [
-  "fix",
-  "geplant",
-  "in-klaerung",
-  "abgeschlossen",
-];
-
-export function getTermineNachStatus(): Record<TerminStatus, Termin[]> {
-  const groups: Record<TerminStatus, Termin[]> = {
-    fix: [],
-    geplant: [],
-    "in-klaerung": [],
-    abgeschlossen: [],
-  };
-  for (const t of TERMINE) groups[t.status].push(t);
-  // innerhalb der Gruppen nach Datum sortieren (null ans Ende)
-  for (const status of STATUS_REIHENFOLGE) {
-    groups[status].sort(sortiereTermine);
-  }
-  return groups;
 }
 
 /** Kommende Termine für den Startseiten-Teaser (alles außer "abgeschlossen"). */

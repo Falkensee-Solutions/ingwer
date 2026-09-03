@@ -114,7 +114,7 @@ Es gibt zwei Wege, Inhalte zu pflegen:
 - `slug`-Felder (bestimmen URLs – Änderungen brechen Links)
 - TS-Typen unter `src/data/*.ts`
 - Statuswerte: nur die bereits vorhandenen Werte verwenden
-  (`fix | geplant | in-klaerung | abgeschlossen` bzw. `oeffentlich |
+  (`bestätigt | geplant | in-vorbereitung | abgeschlossen` bzw. `oeffentlich |
   in-ueberarbeitung | auf-anfrage | entwurf`)
 
 **Längere Fließtexte** (z. B. die Konzeptseite) stehen weiterhin als JSX in den
@@ -124,10 +124,10 @@ bei Bedarf bitte den GitHub-Web-Editor verwenden (Vorsicht mit HTML-Tags wie
 
 ### Termine — `content/termine.json`
 
-- Status: `fix`, `geplant`, `in-klaerung`, `abgeschlossen`
+- Status: `bestätigt`, `geplant`, `in-vorbereitung`, `abgeschlossen`
 - Felder: `titel`, `zeitraum` (Anzeigetext), `sortDate` (für Reihenfolge),
   `ort`, `zielgruppe`, `beschreibung`, optional `hinweis` und `downloads[]`
-- Reihenfolge auf der Seite: erst fix, dann geplant, in-klaerung, abgeschlossen.
+- Aktuelle Veranstaltungen erscheinen auf `/aktuell`; abgeschlossene Einträge bleiben historische Detailinhalte.
   Innerhalb jeder Gruppe nach `sortDate`.
 
 ### Materialien — `content/materialien.json`

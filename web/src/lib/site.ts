@@ -18,11 +18,11 @@ export type NavItem = {
 };
 
 export const MAIN_NAV: NavItem[] = [
-  { href: "/begegnung", label: "Begegnung" },
   { href: "/aktuell", label: "Aktuell" },
+  { href: "/begegnung", label: "Begegnung" },
+  { href: "/angebote", label: "Angebote" },
   { href: "/archiv", label: "Archiv" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export const SECONDARY_NAV: NavItem[] = [];

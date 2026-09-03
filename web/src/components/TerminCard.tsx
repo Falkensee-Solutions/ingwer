@@ -6,10 +6,10 @@ import { withBasePath } from "@/lib/basePath";
 import { buildMailto } from "@/lib/mailto";
 
 const STATUS_STYLE: Record<TerminStatus, string> = {
-  fix: "bg-[color:var(--color-sage-soft)] text-[color:var(--color-sage-ink)]",
+  bestätigt: "bg-[color:var(--color-sage-soft)] text-[color:var(--color-sage-ink)]",
   geplant:
     "bg-[color:var(--color-orange-soft)] text-[color:var(--color-orange-ink)]",
-  "in-klaerung":
+  "in-vorbereitung":
     "bg-[color:var(--color-sunny-soft)] text-[color:var(--color-sunny-ink)]",
   abgeschlossen:
     "bg-[color:var(--color-surface-alt)] text-[color:var(--color-ink-muted)]",
@@ -46,7 +46,7 @@ export function TerminCard({
     anliegen: `Ich interessiere mich für den Termin „${termin.titel}“ und möchte weitere Informationen zur Teilnahme oder Anmeldung erhalten.`,
   });
   const anmeldungLabel =
-    termin.status === "fix"
+    termin.status === "bestätigt"
       ? "Anmeldung anfragen"
       : termin.status === "abgeschlossen"
         ? null
@@ -54,20 +54,22 @@ export function TerminCard({
 
   return (
     <article className="group rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-surface)] p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-primary)]/40 hover:shadow-[var(--shadow-card-hover)]">
-      <div className="mb-4 flex flex-wrap items-center gap-3">
+      <div className="mb-3 flex flex-wrap items-center gap-3">
         <TerminBadge status={termin.status} />
-        {showFormat && format ? (
+        <span className="text-sm font-semibold text-[color:var(--color-ink-soft)]">
+          {termin.zeitraum}
+        </span>
+      </div>
+      {showFormat && format ? (
+        <div className="mb-4">
           <Link
             href={`/formate/${format.slug}`}
             className="rounded-full bg-[color:var(--color-primary-soft)] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[color:var(--color-primary-ink)] no-underline hover:bg-[color:var(--color-primary)] hover:text-white"
           >
             {format.titel}
           </Link>
-        ) : null}
-        <span className="text-sm font-semibold text-[color:var(--color-ink-soft)]">
-          {termin.zeitraum}
-        </span>
-      </div>
+        </div>
+      ) : null}
       <h3 className="text-[1.3rem] font-bold leading-snug tracking-[-0.015em] text-[color:var(--color-ink)]">
         {termin.titel}
       </h3>
@@ -111,7 +113,7 @@ export function TerminCard({
       <div className="mt-6 flex flex-wrap gap-2 border-t border-[color:var(--color-line)]/60 pt-5">
         {showDetailsLink ? (
           <Link
-            href={`/termine/${termin.slug}`}
+            href={`/aktuell/${termin.slug}`}
             className="inline-flex items-center justify-center rounded-full border border-[color:var(--color-primary)] px-4 py-2 text-sm font-semibold text-[color:var(--color-primary)] no-underline hover:bg-[color:var(--color-primary-soft)]"
           >
             Details ansehen

@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/begegnung",
     "/aktuell",
+    "/angebote",
     "/archiv",
     "/archiv/2024",
     "/archiv/2025",
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/datenschutz",
   ];
 
-  const termine = TERMINE.map((t) => `/termine/${t.slug}`);
+  const termine = TERMINE.map((t) => `/aktuell/${t.slug}`);
 
   return [...statisch, ...termine].map((path) => ({
     url: `${BASE}${path}`,

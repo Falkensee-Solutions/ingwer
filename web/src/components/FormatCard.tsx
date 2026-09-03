@@ -27,6 +27,9 @@ export function FormatCard({ format }: { format: Format }) {
           {format.titel}
         </Link>
       </h3>
+      <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--color-ink-muted)]">
+        Variante: {format.titel}
+      </p>
       <p className="mt-3 text-[0.98rem] leading-relaxed text-[color:var(--color-ink-soft)]">
         {format.kurz}
       </p>

@@ -6,7 +6,8 @@
 >
 > - Startseite mit kurzer Konzeptbeschreibung
 > - `/begegnung` als zentrale Prozessseite
-> - `/aktuell` mit den drei Wegen Teilnehmen, Workshop anfragen und Werkstatt mitplanen
+> - `/aktuell` mit aktuellen Veranstaltungen
+> - `/angebote` mit Workshops, Besuchen und Werkstattplanung
 > - `/archiv` mit chronologisch geordneten Projekten und Veranstaltungen
 > - `/ueber-uns`
 > - `/kontakt`
@@ -23,13 +24,11 @@
 - Texte werden hauptsächlich anderen Seiten und Abschnitten zugeordnet.
 - Die frühere eigene Seite `/konzept` entfällt zunächst.
 - Die kurze Konzeptbeschreibung wird auf der Startseite aufgenommen.
-- Eine eigene allgemeine Seite `/angebote` entfällt zunächst.
+- `/angebote` bündelt die vorbereitenden Workshops, Besuche und die gemeinsame Werkstattplanung.
 - Eine eigene Seite `/termine` entfällt.
 - Aktuelle Workshops und Werkstätten werden auf `/aktuell` zusammengeführt.
-- Die drei zentralen Wege auf `/aktuell` sind:
-  1. Teilnehmen
-  2. Workshop anfragen
-  3. Werkstatt mitplanen
+- Die aktuellen Veranstaltungen stehen auf `/aktuell`.
+- Die Angebote und die Werkstattplanung stehen auf `/angebote`.
 - Die globalen Handlungsaufforderungen sind:
   - Teilnehmen
   - Mitplanen
@@ -73,7 +72,7 @@
 ### Globale Handlungsaufforderungen
 
 - Teilnehmen → `/aktuell#teilnehmen`
-- Mitplanen → `/aktuell#mitplanen`
+- Mitplanen → `/angebote#mitplanen`
 
 ### Mobile Navigation und Barrierefreiheit
 
@@ -89,7 +88,6 @@ Die folgenden bisherigen Bereiche werden zunächst nicht als eigene sichtbare Ha
 
 - `/konzept`
 - `/formate`
-- `/angebote`
 - `/termine`
 - `/werkstätten`
 - `/workshop`
@@ -145,7 +143,7 @@ Einzelne aktuelle Veranstaltungen können technisch weiterhin eigene Detailseite
 
 - **Buttons:**
   - Werkstatt teilnehmen → `/aktuell#teilnehmen`
-  - Werkstatt mitplanen → `/aktuell#mitplanen`
+  - Werkstatt mitplanen → `/angebote#mitplanen`
 
 > Die bisherige externe Teilnahme-URL wird zunächst nicht als globale Zielroute verwendet. Technisch ist zu prüfen, ob sie später weiterhin benötigt wird.
 
@@ -208,7 +206,7 @@ Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken 
 
 - **Buttons:**
   - Teilnehmen → `/aktuell#teilnehmen`
-  - Werkstatt mitplanen → `/aktuell#mitplanen`
+  - Werkstatt mitplanen → `/angebote#mitplanen`
 
 ## Begegnung braucht Vorbereitung
 
@@ -575,7 +573,7 @@ Nicht enthalten:
 - **Hinweis:** Förderung des Senats
 
 - **Buttons:**
-  - Werkstatt mitplanen → `/aktuell#mitplanen`
+  - Werkstatt mitplanen → `/angebote#mitplanen`
   - Partner kennenlernen → `/ueber-uns#partner`
 
 ## Träger

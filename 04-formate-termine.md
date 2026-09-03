@@ -47,7 +47,7 @@ Unverzichtbarer Kern:
   
 ## Beispiel: IW Körner  
   
-Status: fix  
+Status: bestätigt
   
 Zeitraum: 29.01.–02.02.  
   
@@ -84,7 +84,7 @@ Hinweis für Website:
   
 ## Beispiel: Lazarus-Schulen  
   
-Status: geplant/in Klärung  
+Status: geplant/in Vorbereitung
   
 Mögliche Zeiträume:  
   
