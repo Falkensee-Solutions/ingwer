@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const PHASEN = [
   {
-    titel: "Kontaktaufnahme",
-    text: "Am Anfang stehen Gemeinden, Institutionen und Gruppen, die bereit sind, ihren Bekanntenkreis für eine solche Veranstaltung zu öffnen, für die Teilnahme zu werben und das Format gemeinsam zu tragen. Gerade die persönliche Ansprache schafft Vertrauen und ermöglicht es, Fragen, Erwartungen und mögliche Vorbehalte frühzeitig zu besprechen. Von Beginn an sollte offen kommuniziert werden, dass es um Dialog und nicht um Missionierung geht.",
+    titel: "Zueinadner finden",
+    text: "x",
   },
   {
     titel: "Individuelle Planung",
@@ -26,7 +26,7 @@ const PHASEN = [
     text: "Die Interreligiöse Werkstatt ist eine mehrtägige Begegnung mit gemeinsamer Unterkunft. Die Teilnehmenden teilen Alltag und Mahlzeiten, erleben religiöse und spirituelle Praxis und kommen über Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins Gespräch. Zur Werkstatt gehören je nach Zielgruppe und Rahmen gemeinsames Ankommen, thematische Einheiten, Dialogrunden, Gespräche, Besuche von Gotteshäusern, Mahlzeiten, Zeiten für Gebet, Stille und Besinnung sowie gemeinsame Auswertung.",
   },
   {
-    titel: "Nachbereitung und Weiterentwicklung",
+    titel: "Nachbereitung",
     text: "Die Erfahrungen aus der Werkstatt werden gemeinsam ausgewertet. Tägliche Reflexionsrunden, religionsinterne Gespräche, persönliche Rückmeldungen und eine abschließende Evaluation können miteinander verbunden werden. Die Erfahrungen werden dokumentiert und für weitere Werkstätten genutzt. So wird das Format Schritt für Schritt weiterentwickelt und kann langfristige Beziehungen und weitere gemeinsame Projekte ermöglichen.",
   },
 ];
@@ -37,12 +37,12 @@ export default function BegegnungPage() {
       <Hero
         eyebrow="Begegnung"
         titel="Begegnung braucht Vorbereitung"
-        lead="Die Interreligiöse Werkstatt beginnt nicht erst mit der mehrtägigen gemeinsamen Zeit. Bereits im Vorfeld entstehen Kontakte, werden Vertrauen und Kooperation aufgebaut und die Teilnehmenden auf die Begegnung vorbereitet."
+        lead="Die gemeinsamen Zeit beginnt nicht mit der Werkstatt. Bereits im Vorfeld müssen Kontakte entstehen und vertrauen aufgebaut werden. Hierfür gehen wir in Phasen vor."
       />
 
       <section className="border-y border-[color:var(--color-line)] bg-[color:var(--color-bg-deep)]">
         <Container padding="lg">
-          <SectionHeader eyebrow="Ablauf" titel="Die fünf Phasen" />
+          <SectionHeader eyebrow="Ablauf" titel="Unsere fünf Phasen" />
           <ol className="mt-10 space-y-6">
             {PHASEN.map((phase, index) => (
               <li key={phase.titel}>

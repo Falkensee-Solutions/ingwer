@@ -1,14 +1,16 @@
-# Aktueller Stand der Website
+# Wortgetreue Textdokumentation der Website
 
-> Vollständige Bestandsaufnahme der aktuell implementierten Next.js-Seiten, dynamischen Routen und nicht verlinkten Legacy-Seiten.
+> Dokumentation der sichtbaren Texte aus dem aktuellen Website-Code. Die Website-Texte in den Routenkapiteln werden wörtlich wiedergegeben; technische Hinweise und Quellen sind davon getrennt.
 >
 > **Stand:** 03.09.2026  
 > **Projekt:** Interreligiöse Werkstatt  
 > **Quelle:** `web/src/app`, `web/src/components`, `web/src/data`, `web/content`
 
-## 1. Überblick
+## 1. Überblick und Dokumentationsregeln
 
-Die Website wird als Next.js-Anwendung unter `web/` betrieben. Die sichtbaren Seiten liegen überwiegend unter `web/src/app`.
+Die Website wird als Next.js-Anwendung unter `web/` betrieben. Die sichtbaren Seiten liegen überwiegend unter `web/src/app`. Dynamische Texte werden aus den jeweils genannten JSON- oder TypeScript-Datenquellen übernommen.
+
+**Wichtig:** Überschriften wie „Route“, „Datei“, „Quelle“ und „Datenquelle“ sind redaktionelle Dokumentationsangaben. Alle nachfolgenden eingerückten Website-Texte, Überschriften, Labels und CTA-Texte stammen aus dem aktuellen Code oder den aktuell gerenderten Daten.
 
 ### Implementierte Routentypen
 
@@ -97,18 +99,31 @@ Der frühere Menüpunkt **Kontakt** ist entfernt.
 
 - **Titel:** Interreligiöse Werkstatt
 - **Claim:** Lernen durch Begegnung
-- **Inhalt:** Die Interreligiöse Werkstatt wird als mehrtägiges Begegnungs- und Bildungsformat für junge Menschen mit unterschiedlichen religiösen und weltanschaulichen Hintergründen vorgestellt. Im Mittelpunkt stehen gemeinsames Wohnen, Kennenlernen, geschützte Gespräche, religiöse Praxis und ein gemeinsames Werkstattprojekt.
+- **Text 1:** Die Interreligiöse Werkstatt ist ein Bildungsformat vom Forum Dialog e.V. für junge Menschen mit evangelischen, katholischen oder muslimischen Hintergründen. Gleichzeitig sind alle interessierten Menschen mit einer dialogoffenen Weltanschauung willkommen.
+- **Text 2:** Im Mittelpunkt steht eine mehrtägige Exkursion. Das Ziel hierbei ist das gegenseitige Kennenlernen, wertschätzende Gespräche im geschützten Raum, das Teilen von Mahlzeiten und Zimmern sowie die Arbeit an einem interreligiös-kreativen Projekt, bei dem der Dialog greifbar wird.
+
+## Buttons
+
+- **Werkstatt teilnehmen** → `/aktuell#teilnehmen`
+- **Werkstatt planen** → `/angebote#mitplanen`
 
 ## Abschnitte
 
-- **Das Konzept** – Dialog entsteht in der persönlichen Begegnung.
-- **Das Format** – Beschreibung der Werkstatt als mehrtägige Exkursion und gemeinsamer Erfahrungsraum.
+- **Eyebrow:** Konzept
+- **Titel:** Das Konzept
+- **Lead:** Dialog entsteht in der persönlichen Begegnung.
+- **Text:** Durch Menschen, ihren Alltag und ihre gelebte Spiritualität lernen wir Religionen kennen. Interreligiöser Dialog entwickelt sich dort, wo Menschen einander in und mit ihrer religiösen Identität wahrnehmen.
+- **Text:** Im Rahmen der Interreligiösen Werkstatt kommt es zu Begegnungen, die einen authentischen Austausch ermöglichen. Die Einzigartigkeit der eigenen Perspektive soll dabei erkundet und greifbar gemacht werden. Dialog ist dann die Erfahrung, das Eigene im Anderen zu erkennen.
+- **Eyebrow:** Format
+- **Titel:** Das Format
+- **Lead:** Die Interreligiöse Werkstatt führt Gruppen verschiedener Institutionen und Glaubensrichtungen zusammen. Sie bildet den Höhepunkt des Projektes im Anschluss an die vorbereitenden Workshops.
+- **Text:** Teilnehmende verbringen mehrere Tage miteinander, teilen Alltagssituationen, erleben religiöse und spirituelle Praxis nebeneinander und kommen über Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins Gespräch.
+- **Text:** Das Format schafft Nähe, ohne Unterschiede aufzulösen. Was vorher abstrakt war, wird konkret. In einem geschützten Rahmen kann jeder Teilnehmende offen seine eigene Perspektive einbringen.
 - **Die drei Kerninhalte des Formats**
-  - Mehrtägigkeit
-  - Interreligiöse Zimmer beziehungsweise gemeinsame Unterkunft
-  - Sichtbare religiöse und spirituelle Praxis
+  - **Mehrtägigkeit:** Dialog braucht Zeit. Deshalb finden Werkstätten über mehrere Tage statt.
+  - **Interreligiöse Zimmer:** In einem vertrauensvollen Rahmen tauschen sich die Teilnehmenden auch außerhalb des Seminarraums über Glaubenserfahrungen aus.
+  - **Sichtbare religiöse und spirituelle Praxis:** Gebet, Stille, Besinnung, Rituale, Speiseregeln und religiöse Alltagspraktiken werden sichtbar praktiziert.
 - Partnerlogo-Leiste: **In Kooperation mit**
-- CTA: **Mehr über die Begegnung** / **Begegnung kennenlernen**
 
 ## Verlinkungen
 
@@ -262,22 +277,23 @@ Weitere Links:
 
 ## Hero
 
-- **Titel:** Von der Kontaktaufnahme zur gemeinsamen Werkstatt
-- **Inhalt:** Die Seite erklärt den Weg von der ersten Kontaktaufnahme bis zur Durchführung und Auswertung einer Werkstatt.
+- **Eyebrow:** Begegnung
+- **Titel:** Begegnung braucht Vorbereitung
+- **Text:** Die Interreligiöse Werkstatt beginnt nicht erst mit der mehrtägigen gemeinsamen Zeit. Bereits im Vorfeld entstehen Kontakte, werden Vertrauen und Kooperation aufgebaut und die Teilnehmenden auf die Begegnung vorbereitet.
 
 ## Die fünf Phasen
 
-1. **Kontaktaufnahme** – Interesse klären und passende Institutionen beziehungsweise Gruppen zusammenbringen.
-2. **Individuelle Planung** – Zielgruppe, Rahmen, Schutz und organisatorische Bedingungen klären.
-3. **Vorbereitende Workshops** – religiöse und weltanschauliche Hintergründe, Dialog und Regeln vorbereiten.
-4. **Die mehrtägige Werkstatt** – gemeinsames Wohnen, Essen, religiöse Praxis, Besuche, Gespräche und Werkstattarbeit.
-5. **Nachbereitung und Weiterentwicklung** – Erfahrungen auswerten und Folgekontakte ermöglichen.
+1. **Kontaktaufnahme:** Am Anfang stehen Gemeinden, Institutionen und Gruppen, die bereit sind, ihren Bekanntenkreis für eine solche Veranstaltung zu öffnen, für die Teilnahme zu werben und das Format gemeinsam zu tragen. Gerade die persönliche Ansprache schafft Vertrauen und ermöglicht es, Fragen, Erwartungen und mögliche Vorbehalte frühzeitig zu besprechen. Von Beginn an sollte offen kommuniziert werden, dass es um Dialog und nicht um Missionierung geht.
+2. **Individuelle Planung:** Die erste Planung findet auf zwei Ebenen statt: Die beteiligten Gemeinden oder Institutionen öffnen ihren Bekanntenkreis und ermöglichen Teilnahme; zugleich bildet sich ein möglichst paritätisch besetztes Organisationsteam. In der Planung werden unter anderem Zielgruppe, Gruppengröße, Zeitraum, Veranstaltungsort, Unterkunft, religiöse Bedürfnisse, Verpflegung, Schutz und Dialogregeln berücksichtigt.
+3. **Vorbereitende Workshops:** Die vorbereitenden Workshops sensibilisieren die Teilnehmenden und bereiten sie auf die gemeinsame Zeit vor. Sie ermöglichen einen fundierten Einstieg in das christliche und muslimische Glaubensverständnis, schaffen Raum für Begegnung und Austausch, machen für Diskriminierung und Fremdzuschreibungen sensibel und vermitteln Regeln und Grenzen der Interreligiösen Werkstatt. Auswahl und Reihenfolge können an Zielgruppe und Schwerpunkt angepasst werden.
+4. **Die mehrtägige Werkstatt:** Die Interreligiöse Werkstatt ist eine mehrtägige Begegnung mit gemeinsamer Unterkunft. Die Teilnehmenden teilen Alltag und Mahlzeiten, erleben religiöse und spirituelle Praxis und kommen über Glauben, Weltanschauung, Werte und gesellschaftliche Verantwortung ins Gespräch. Zur Werkstatt gehören je nach Zielgruppe und Rahmen gemeinsames Ankommen, thematische Einheiten, Dialogrunden, Gespräche, Besuche von Gotteshäusern, Mahlzeiten, Zeiten für Gebet, Stille und Besinnung sowie gemeinsame Auswertung.
+5. **Nachbereitung und Weiterentwicklung:** Die Erfahrungen aus der Werkstatt werden gemeinsam ausgewertet. Tägliche Reflexionsrunden, religionsinterne Gespräche, persönliche Rückmeldungen und eine abschließende Evaluation können miteinander verbunden werden. Die Erfahrungen werden dokumentiert und für weitere Werkstätten genutzt. So wird das Format Schritt für Schritt weiterentwickelt und kann langfristige Beziehungen und weitere gemeinsame Projekte ermöglichen.
 
-## Weitere Inhalte
+## Abschnitt
 
-- Begegnung braucht Vorbereitung.
-- Vertrauen und ein paritätisch zusammengesetztes Organisationsteam sind wichtig.
-- Das Format wird an unterschiedliche Zielgruppen angepasst.
+- **Eyebrow:** Anpassung
+- **Titel:** Anpassung an unterschiedliche Zielgruppen
+- **Text:** Die Werkstatt kann an unterschiedliche Zielgruppen und Rahmenbedingungen angepasst werden. Der Kern bleibt die mehrtägige Begegnung, in der religiöse und weltanschauliche Perspektiven sichtbar werden und Menschen miteinander ins Gespräch kommen.
 
 ## CTAs
 
@@ -294,7 +310,7 @@ Weitere Links:
 
 - **Eyebrow:** Vorbereitung
 - **Titel:** Workshops und Besuche
-- Beschreibung vorbereitender Workshops, Besuche und Methoden.
+- **Lead:** Folgende Angebote bieten wir als Vorbereitung für die mehrtägige Werkstatt an:
 
 ## Workshop-Angebote
 
@@ -308,6 +324,7 @@ Weitere Links:
 ## CTA-Bereich
 
 - **Titel:** Eine Interreligiöse Werkstatt gemeinsam vorbereiten
+- **Lead:** Das Projekt der Interreligiösen Werkstatt ist modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt bestehen, wenngleich Inhalt und Aufbau je individuell nach Absprache angepasst werden können. Die Bedürfnisse und Voraussetzungen der jeweiligen Gruppe werden in jedem Fall berücksichtigt.
 - Workshop anfragen → `/kontakt`
 - Werkstatt planen → `/kontakt`
 
@@ -367,13 +384,15 @@ Die Karten tragen aktuell den Eyebrow **2026** und den Platzhalter-Lead **x**.
 
 - **Titel:** Das Konzept
 - **Claim:** Begegnung braucht mehr als Informationsaustausch.
-- **Kernaussage:** Dialog entsteht in der persönlichen Begegnung, im Alltag und in gelebter Spiritualität.
+- **Lead:** Dialog entsteht in der persönlichen Begegnung. Durch Menschen, ihren Alltag und ihre gelebte Spiritualität lernen wir Religionen kennen. Interreligiöser Dialog entwickelt sich dort, wo Menschen einander wahrnehmen.
 
 ## Abschnitte
 
 - **Was unterscheidet die Werkstatt von einem Workshop?**
-  - Ein Workshop kann Wissen vermitteln.
-  - Eine Werkstatt schafft einen Erfahrungsraum.
+  - Im Rahmen der Interreligiösen Werkstatt verbindet sich Bildungsarbeit, mit Reflexion und gemeinsamem Handeln.
+  - Ein Workshop kann Wissen vermitteln. Eine Werkstatt schafft einen Erfahrungsraum.
+  - Teilnehmende verbringen mehrere Tage gemeinsam. Sie essen zusammen, wohnen am selben Ort, nehmen an gemeinsamen Aktivitäten teil, erleben Gebet oder Stille, besuchen Gotteshäuser und reflektieren ihre Erfahrungen in begleiteten Gesprächsformaten.
+  - Dadurch entsteht ein anderer Zugang zu Religion und Weltanschauung: weniger abstrakt, persönlicher und nachhaltiger.
 - **Pädagogischer Ansatz**
   - Kurzinputs
   - moderierte Dialogrunden
@@ -393,7 +412,13 @@ Die Karten tragen aktuell den Eyebrow **2026** und den Platzhalter-Lead **x**.
   - neue Perspektiven
   - Dialogkompetenz
   - Reflexionsfähigkeit
-  - Sensibilisierung für Diskriminierung
+  - Vertrauen in Dialogprozesse
+- **Eyebrow:** Nächster Schritt
+- **Titel:** Welches Format passt zu Ihrer Institution?
+- **Lead:** Universitäten, Schulen, Ausbildungsinstitutionen, Gemeinden und Jugendarbeit: Für jede Zielgruppe gibt es ein eigenes Format.
+- **Eyebrow:** Formate
+- **Titel:** Ein Konzept, unterschiedliche Zugänge
+- **Lead:** Das Konzepthandbuch beschreibt die Werkstatt als Format, das über Gemeinden, Schulen, Hochschulen, Ausbildungsinstitutionen und Träger organisiert werden kann. Zielgruppe, Vorbereitung und Werkstattprodukt werden jeweils angepasst – der Kern bleibt die mehrtägige Begegnung.
 - **Welches Format passt zu Ihrer Institution?**
 - **Ein Konzept, unterschiedliche Zugänge**
 
@@ -408,7 +433,7 @@ Die vier Formate werden über `FORMATE` aus `web/content/formate.json` eingebund
 ## Hero
 
 - **Titel:** Formate für unterschiedliche Institutionen
-- **Kernaussage:** Die Werkstatt ist modular; Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt unterscheiden sich je nach Institution.
+- **Lead:** Die Interreligiöse Werkstatt ist modular gedacht. Je nach Institution unterscheiden sich Zielgruppe, Vorbereitung, Einbindung und Werkstattprodukt – das Kernformat bleibt gleich.
 
 ## Formatkarten
 
