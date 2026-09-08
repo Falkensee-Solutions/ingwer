@@ -3,6 +3,7 @@ import { ButtonLink, type Variant } from "./Button";
 import { Container } from "./Container";
 
 type Props = {
+  /** @deprecated Eyebrows werden nicht mehr dargestellt. */
   eyebrow?: string;
   titel: string;
   claim?: string;
@@ -10,7 +11,7 @@ type Props = {
   ctas?: Array<{ href: string; label: string; variant?: Variant }>;
 };
 
-export function Hero({ eyebrow, titel, claim, lead, ctas }: Props) {
+export function Hero({ titel, claim, lead, ctas }: Props) {
   return (
     <section
       aria-labelledby="hero-titel"
@@ -42,15 +43,6 @@ export function Hero({ eyebrow, titel, claim, lead, ctas }: Props) {
 
       <Container padding="lg" className="relative py-20 md:py-28 lg:py-32">
         <div className="max-w-3xl">
-          {eyebrow ? (
-            <p className="eyebrow mb-6 inline-flex items-center gap-2">
-              <span
-                aria-hidden="true"
-                className="inline-block h-[1px] w-8 bg-[color:var(--color-accent-hover)]"
-              />
-              {eyebrow}
-            </p>
-          ) : null}
           <h1
             id="hero-titel"
             className="display-title text-[2.5rem] sm:text-5xl md:text-[4.2rem] lg:text-[5rem] text-[color:var(--color-ink)]"

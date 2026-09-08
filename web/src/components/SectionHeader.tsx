@@ -1,6 +1,7 @@
 import { cn } from "@/lib/cn";
 
 type Props = {
+  /** @deprecated Eyebrows werden nicht mehr dargestellt. */
   eyebrow?: string;
   titel: string;
   lead?: string;
@@ -12,7 +13,6 @@ type Props = {
 };
 
 export function SectionHeader({
-  eyebrow,
   titel,
   lead,
   as = "h2",
@@ -30,15 +30,6 @@ export function SectionHeader({
 
   return (
     <div className={cn(align === "center" ? "text-center mx-auto max-w-2xl" : "max-w-3xl", className)}>
-      {eyebrow ? (
-        <p className="eyebrow mb-4 inline-flex items-center gap-2">
-          <span
-            aria-hidden="true"
-            className="inline-block h-[1px] w-6 bg-[color:var(--color-accent-hover)]"
-          />
-          {eyebrow}
-        </p>
-      ) : null}
       <Heading id={id} className={cn(size, "text-[color:var(--color-ink)]")}>
         {titel}
       </Heading>

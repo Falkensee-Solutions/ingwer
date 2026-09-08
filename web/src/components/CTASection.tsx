@@ -3,6 +3,7 @@ import { Container } from "./Container";
 import { SectionHeader } from "./SectionHeader";
 
 type Props = {
+  /** @deprecated Eyebrows werden nicht mehr dargestellt. */
   eyebrow?: string;
   titel: string;
   text: string;
@@ -12,7 +13,6 @@ type Props = {
 };
 
 export function CTASection({
-  eyebrow,
   titel,
   text,
   primaryCta,
@@ -47,17 +47,6 @@ export function CTASection({
       ) : null}
       <Container padding="md" className="relative py-12 md:flex md:items-center md:justify-between md:gap-12 md:py-14">
         <div className="max-w-2xl">
-          {eyebrow ? (
-            <p
-              className={`eyebrow mb-4 ${
-                variant === "primary"
-                  ? "!text-white/70"
-                  : ""
-              }`}
-            >
-              {eyebrow}
-            </p>
-          ) : null}
           <h2
             id="cta-titel"
             className={`text-[1.8rem] font-extrabold leading-tight tracking-[-0.02em] md:text-[2.2rem] ${
