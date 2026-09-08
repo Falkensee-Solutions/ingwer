@@ -34,15 +34,11 @@ const PHASEN = [
 export default function BegegnungPage() {
   return (
     <>
-
-      <Container as="section" padding="lg" ariaLabelledby="vorbereitung-titel">
-        <SectionHeader
-          id="vorbereitung-titel"
-          eyebrow="Vorbereitung"
-          titel="Begegnung braucht Vorbereitung"
-          lead="Die Interreligiöse Werkstatt beginnt nicht erst mit der mehrtägigen gemeinsamen Zeit. Bereits im Vorfeld entstehen Kontakte, werden Vertrauen und Kooperation aufgebaut und die Teilnehmenden auf die Begegnung vorbereitet."
-        />
-      </Container>
+      <Hero
+        eyebrow="Begegnung"
+        titel="Begegnung braucht Vorbereitung"
+        lead="Die Interreligiöse Werkstatt beginnt nicht erst mit der mehrtägigen gemeinsamen Zeit. Bereits im Vorfeld entstehen Kontakte, werden Vertrauen und Kooperation aufgebaut und die Teilnehmenden auf die Begegnung vorbereitet."
+      />
 
       <section className="border-y border-[color:var(--color-line)] bg-[color:var(--color-bg-deep)]">
         <Container padding="lg">
