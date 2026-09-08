@@ -34,15 +34,6 @@ const PHASEN = [
 export default function BegegnungPage() {
   return (
     <>
-      <Hero
-        eyebrow="Begegnung"
-        titel="Von der Kontaktaufnahme zur gemeinsamen Werkstatt"
-        lead="Die Interreligiöse Werkstatt ist ein mehrtägiges Format, in dem Menschen verschiedener religiöser Hintergründe zusammenkommen, ihre religiöse Identität sichtbar leben und sich über Glaubenspraxis austauschen. Der Ablauf dient als Orientierung und kann an Gemeinden, Institutionen, Zielgruppe, Veranstaltungsort und verfügbare Zeit angepasst werden."
-        ctas={[
-          { href: "/aktuell#teilnehmen", label: "Werkstatt teilnehmen", variant: "participate" },
-          { href: "/angebote#mitplanen", label: "Werkstatt planen", variant: "plan" },
-        ]}
-      />
 
       <Container as="section" padding="lg" ariaLabelledby="vorbereitung-titel">
         <SectionHeader
@@ -51,11 +42,6 @@ export default function BegegnungPage() {
           titel="Begegnung braucht Vorbereitung"
           lead="Die Interreligiöse Werkstatt beginnt nicht erst mit der mehrtägigen gemeinsamen Zeit. Bereits im Vorfeld entstehen Kontakte, werden Vertrauen und Kooperation aufgebaut und die Teilnehmenden auf die Begegnung vorbereitet."
         />
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[color:var(--color-ink-soft)]">
-          Das Konzepthandbuch richtet sich an Gemeinden, Kirchen, Moscheevereine,
-          Jugendgruppen und weitere religiöse Institutionen, die eine eigene
-          Interreligiöse Werkstatt planen möchten.
-        </p>
       </Container>
 
       <section className="border-y border-[color:var(--color-line)] bg-[color:var(--color-bg-deep)]">
