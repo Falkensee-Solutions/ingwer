@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { PartnerLogoBar } from "@/components/PartnerLogoBar";
@@ -19,7 +18,7 @@ const KERNINHALTE = [
 
 export default function Home() {
   return <>
-    <Hero titel="Interreligiöse Werkstatt" claim={SITE.claim} lead={<><p>Die Interreligiöse Werkstatt ist ein Bildungsformat vom Forum Dialog e.V. für junge Menschen mit evangelischen, katholischen oder muslimischen Hintergründen. Gleichzeitig sind alle interessierten Menschen mit einer dialogoffenen Weltanschauung willkommen.</p><p>Im Mittelpunkt steht eine mehrtägige Exkursion. Das Ziel hierbei ist das gegenseitige Kennenlernen, wertschätzende Gespräche im geschützten Raum, das Teilen von Mahlzeiten und Zimmern sowie die Arbeit an einem interreligiös-kreativen Projekt, bei dem der Dialog greifbar wird.</p></>} ctas={[{ href: "/aktuell#teilnehmen", label: "An Werkstatt teilnehmen", variant: "participate" }, { href: "/angebote#mitplanen", label: "Werkstatt planen", variant: "plan" }]} />
+    <Hero titel="Interreligiöse Werkstatt" claim={SITE.claim} lead={<><p>Die Interreligiöse Werkstatt ist ein Bildungsformat des Forum Dialog e.V. für junge Menschen mit evangelischen, katholischen oder muslimischen Hintergründen. Gleichzeitig sind alle interessierten Menschen mit einer dialogoffenen Weltanschauung willkommen.</p><p>Im Mittelpunkt steht eine mehrtägige Exkursion. Ziel sind das gegenseitige Kennenlernen, wertschätzende Gespräche im geschützten Raum, das Teilen von Mahlzeiten und Zimmern sowie die Arbeit an einem interreligiös-kreativen Projekt, bei dem Dialog greifbar wird.</p></>} ctas={[{ href: "/aktuell#teilnehmen", label: "An Werkstatt teilnehmen", variant: "participate" }, { href: "/angebote#mitplanen", label: "Werkstatt planen", variant: "plan" }]} />
     <Container as="section" padding="lg" ariaLabelledby="konzept-titel">
       <SectionHeader id="konzept-titel" eyebrow="Konzept" titel="Das Konzept" lead="Dialog entsteht in der persönlichen Begegnung." />
       <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed text-[color:var(--color-ink-soft)]"><p>Durch Menschen, ihren Alltag und ihre gelebte Spiritualität lernen wir Religionen kennen. Interreligiöser Dialog entwickelt sich dort, wo Menschen einander in und mit ihrer religiösen Identität wahrnehmen.</p><p>Im Rahmen der Interreligiösen Werkstatt kommt es zu Begegnungen, die einen authentischen Austausch ermöglichen. Die Einzigartigkeit der eigenen Perspektive soll dabei erkundet und greifbar gemacht werden. Dialog ist dann die Erfahrung, das Eigene im Anderen zu erkennen.</p></div>
