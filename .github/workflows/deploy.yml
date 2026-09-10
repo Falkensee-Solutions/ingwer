@@ -37,10 +37,10 @@ jobs:
 
       - name: Build (Next.js static export)
         env:
-          # Project-Page-Hosting → URL ist https://<org>.github.io/<repo>/.
-          # Repo-Name in Kleinbuchstaben verwenden (GitHub Pages ist case-sensitive).
-          NEXT_PUBLIC_BASE_PATH: /ingwer
-          NEXT_PUBLIC_SITE_URL: https://falkensee-solutions.github.io/ingwer
+          # Die Custom Domain wird direkt aus der Domain-Wurzel ausgeliefert.
+          NEXT_OUTPUT_EXPORT: "true"
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://werkstatt.forumdialog.org
         run: npm run build
 
       - name: Disable Jekyll

@@ -1,19 +1,17 @@
 import type { NextConfig } from "next";
 
-// Statischer Export wird über die Env-Variable NEXT_PUBLIC_BASE_PATH
-// (gesetzt im GitHub-Actions-Workflow) aktiviert. Lokal (`npm run dev`)
-// bleibt der klassische Next-Server inkl. Rewrites aktiv.
+// Export-Modus und URL-Unterpfad sind getrennt: Eine GitHub-Pages-Seite mit
+// eigener Domain wird statisch exportiert, liegt aber direkt unter `/`.
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const isStaticExport = basePath.length > 0;
+const isStaticExport = process.env.NEXT_OUTPUT_EXPORT === "true";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   ...(isStaticExport
     ? {
-        // GitHub Pages serviert statische Dateien aus /<repo>/...
+        // Nur GitHub Project Pages benötigen einen Unterpfad wie /repo.
         output: "export",
-        basePath,
-        assetPrefix: basePath,
+        ...(basePath ? { basePath, assetPrefix: basePath } : {}),
         // GH Pages liefert /pfad/ → /pfad/index.html aus; trailingSlash sorgt
         // dafür, dass Next.js entsprechende Verzeichnisstruktur generiert.
         trailingSlash: true,

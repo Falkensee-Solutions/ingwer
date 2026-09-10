@@ -31,7 +31,6 @@ export const FOOTER_NAV = [
   { href: "/kontakt", label: "Kontakt" },
   { href: "/regelwerk", label: "Regelwerk" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/faq", label: "FAQ" },
   { href: "/impressum", label: "Impressum" },
   { href: "/datenschutz", label: "Datenschutz" },
 ] as const;
